@@ -1,0 +1,12 @@
+{
+  "extends": ["next", "prettier"],
+  "ignorePatterns": ["node_modules/"],
+  "overrides": [
+    {
+      "files": ["*.jsx", "*.js"],
+      "rules": {
+        "@next/next/no-img-element": "off"
+      }
+    }
+  ]
+}

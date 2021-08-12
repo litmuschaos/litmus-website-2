@@ -1,0 +1,37 @@
+@import "@styles/scss/layoutMixins";
+@import "@styles/scss/Variables.scss";
+
+h1.heading {
+  line-height: 1;
+  font-size: 1.5rem;
+  @include mediumScreens {
+    font-size: 2.2rem;
+  }
+  @include largeScreens {
+    font-size: 3rem;
+  }
+}
+
+h2.bodyHead {
+  line-height: 1.2;
+  font-size: 1.5rem;
+  font-weight: 600;
+  @include mediumScreens {
+    font-size: 1.9rem;
+  }
+  @include largeScreens {
+    font-size: 2.3rem;
+  }
+}
+
+h3.subHeading {
+  line-height: 1.2;
+  font-weight: 500;
+  font-size: 1.1rem;
+  @include mediumScreens {
+    font-size: 1.3rem;
+  }
+  @include largeScreens {
+    font-size: 1.5rem;
+  }
+}

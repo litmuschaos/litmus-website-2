@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# vercel
+.vercel
+
+.idea/
+
+#vscode
+.vscode
+
+#lottie-animations
+components/Animations/
+
+#sitemap
+/public/sitemap.xml
+
+#package-lock
+packagae-lock.json

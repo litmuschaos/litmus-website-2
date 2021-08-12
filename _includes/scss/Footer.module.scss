@@ -1,0 +1,102 @@
+@import "@styles/scss/layoutMixins";
+@import "@styles/scss/Variables.scss";
+
+div.cncfLogoCont {
+  background-image: url("/footer/footer-back.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  @include mediumScreens {
+    padding: 2rem;
+    min-height: 400px;
+  }
+  div.cncfLogo {
+    display: inline-block;
+    border-radius: 12px;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0px 7px 22px 0px #0000000f;
+    @include mediumScreens {
+      padding: 2rem;
+    }
+    svg {
+      height: 40px;
+      width: auto;
+      @include mediumScreens {
+        height: 50px;
+      }
+    }
+  }
+  p {
+    margin-top: 1rem;
+    max-width: 350px;
+    text-align: center;
+  }
+}
+div.footerFluidCont {
+  background: #1c0732;
+  div.footerCont {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column-reverse;
+    @include mediumScreens {
+      flex-direction: row;
+    }
+    div.companyDetCont {
+      max-width: 440px;
+      svg {
+        height: 50px;
+        margin-bottom: 2rem;
+        width: auto;
+        display: inline-block;
+      }
+    }
+    div.linkContainer {
+      flex-grow: 1;
+      color: #ffffff;
+      gap: 1rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      @include largeScreens {
+        gap: 4rem;
+        display: flex;
+        flex-direction: row;
+      }
+      @include mediumScreens {
+        justify-content: flex-end;
+      }
+      div {
+        h2 {
+          color: $litmus-blue-light;
+          font-weight: 500;
+          font-size: 1rem;
+        }
+        ul {
+          li {
+            margin: 0.5rem 0;
+            span {
+              a {
+                font-size: 0.9rem;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+        &:last-child {
+          grid-column: span 2;
+        }
+      }
+    }
+  }
+}
+
+svg.CNLogo {
+  height: 20px;
+}

@@ -1,0 +1,72 @@
+// Mobile First
+@mixin superSmallScreens {
+  @media (min-width: 400px) {
+    @content;
+  }
+}
+@mixin tinyScreens {
+  @media (min-width: 320px) {
+    @content;
+  }
+}
+@mixin smallScreens {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+@mixin mediumScreens {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin largeScreens {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin extraLargeScreens {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+@mixin superLargeScreens {
+  @media (min-width: 1536px) {
+    @content;
+  }
+}
+// Desktop First
+@mixin superSmallScreensDesk {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+@mixin tinyScreensDesk {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+@mixin smallScreensDesk {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+@mixin mediumScreensDesk {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin largeScreensDesk {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin extraLargeScreensDesk {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+@mixin superLargeScreensDesk {
+  @media (max-width: 1536px) {
+    @content;
+  }
+}

@@ -1,0 +1,145 @@
+@import "@styles/scss/layoutMixins";
+@import "@styles/scss/Variables.scss";
+
+.btn {
+  width: 382px;
+}
+
+.btnSelected {
+  background: #231a47;
+  border: 1px solid #a93ddb;
+  box-shadow: 0 0.3px 0.9px rgba(0, 0, 0, 0.1),
+    0 1.6px 3.6px rgba(0, 0, 0, 0.13);
+  border-radius: 10px;
+}
+
+.btnUnselected {
+  border: 1px solid #696f8c;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.box {
+  border-radius: 10px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.testimonyCard {
+  display: flex;
+  filter: drop-shadow(0px 4.8px 14.4px rgba(0, 0, 0, 0.18));
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  border-radius: 10px;
+}
+
+.cardLeft {
+  background: #2445dc;
+  border-radius: 10px 10px 100px 0;
+  @include mediumScreens {
+    border-radius: 10px 0 100px 10px;
+  }
+}
+
+.cncfBg {
+  background: url("/landing_images/ellipse.svg") no-repeat;
+}
+
+.slideNavigator {
+  height: 100px;
+  width: 1px;
+}
+
+.communitySlideShow {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.communitySlider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+}
+
+.communitySlide {
+  display: inline-block;
+  width: 100%;
+}
+
+div.heroCont {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  flex-direction: column;
+  @include mediumScreens {
+    flex-direction: row;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  div.textCont {
+    width: 100%;
+    min-width: auto;
+    @include mediumScreens {
+      width: 40%;
+      min-width: 400px;
+    }
+  }
+  div.heroImg {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    video {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  div.gitContainer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+    @include mediumScreens {
+      gap: 1rem;
+      justify-content: flex-start;
+    }
+    div.gitPart {
+      border: 1px solid #cfd3e3;
+      background: linear-gradient(133.06deg, #f9fafc 1.78%, #eef1f7 64.41%);
+      display: flex;
+      align-items: center;
+      border-radius: 6px;
+      box-shadow: 0px 1.6px 3.5px 0px #00000021, 0px 0.3px 0.9px 0px #0000001a;
+      div.gitLink {
+        padding: 0.1rem 0.3rem;
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        overflow: hidden;
+        @include smallScreens {
+          padding: 0.2rem 0.5rem;
+        }
+        img {
+          height: 15px;
+          width: auto;
+        }
+        span {
+          font-size: 0.9rem;
+        }
+      }
+      div.gitCount {
+        padding: 0.1rem 0.3rem;
+        border-left: 1px solid #cfd3e3;
+        overflow: hidden;
+        @include smallScreens {
+          padding: 0.2rem 0.5rem;
+        }
+        span {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
