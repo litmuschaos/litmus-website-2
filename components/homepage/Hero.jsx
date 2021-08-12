@@ -1,6 +1,6 @@
 import { GithubButton } from "@components/SVG/NavbarSVG"
 import { OutlinedButton, RegularButton } from "@includes/CTA"
-import styles from "@includes/scss/Landing.module.scss"
+import styles from "@includes/scss/Hero.module.scss"
 import { HeroHead, Paragraph } from "@includes/Texts"
 import { Container } from "@layouts/Container"
 import Image from "next/image"

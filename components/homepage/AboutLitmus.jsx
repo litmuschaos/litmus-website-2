@@ -1,4 +1,4 @@
-import styles from "@includes/scss/Landing.module.scss"
+import styles from "@includes/scss/Hero.module.scss"
 import { SkewedContainerFluid, SkewedGradient } from "@layouts/Container"
 import { useState } from "react"
 

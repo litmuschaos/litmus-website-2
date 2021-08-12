@@ -1,6 +1,6 @@
 import { eventUtils } from "@components/homepage/utils/eventUtils"
 import { TextLink } from "@includes/CTA"
-import styles from "@includes/scss/Landing.module.scss"
+import styles from "@includes/scss/Hero.module.scss"
 import { BodyHead, Paragraph } from "@includes/Texts"
 import { Container } from "@layouts/Container"
 import { useState } from "react"
