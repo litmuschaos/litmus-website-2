@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://litmuschaos.io/
+
+# Sitemaps
+Sitemap: https://litmuschaos.io/sitemap.xml

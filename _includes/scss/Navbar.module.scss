@@ -1,0 +1,290 @@
+@import "@styles/scss/layoutMixins";
+@import "@styles/scss/Variables.scss";
+
+div.navbarContFluidScrolled {
+  box-shadow: 0px 1.2px 3.6px rgba(0, 0, 0, 0.1),
+    0px 6.4px 14.4px rgba(0, 0, 0, 0.13);
+}
+
+div.navbarContFluid {
+  z-index: 40;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  div.navbarCont {
+    nav.navbar {
+      width: 100%;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      div.logoCont {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          img {
+            height: 40px;
+            @include mediumScreens {
+              height: 50px;
+            }
+          }
+        }
+      }
+      ul.navLinks {
+        display: none;
+        @include mediumScreens {
+          display: flex;
+        }
+        align-items: center;
+        li {
+          display: inline-block;
+          @include mediumScreens {
+            margin: 0 0.8rem;
+          }
+          @include largeScreens {
+            margin: 0 1rem;
+          }
+          &:first-child {
+            margin-left: 0;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            width: 100%;
+          }
+          div.dropDownDesktop {
+            position: absolute;
+            right: 1rem;
+            left: 1rem;
+            display: none;
+            transition: all 100ms ease-in;
+            @include largeScreens {
+              right: 0;
+              left: auto;
+            }
+            div.overHead {
+              width: 100%;
+              height: 20px;
+              background: transparent;
+            }
+            div.dropDownBody {
+              z-index: 50;
+              width: 100%;
+              height: calc(100% - 20px);
+              background: #fff;
+              box-shadow: 0px 1.2px 3.6px rgba(0, 0, 0, 0.1),
+                0px 6.4px 14.4px rgba(0, 0, 0, 0.13);
+              border-radius: 6px;
+              display: flex;
+              justify-content: space-between;
+              table.docsDropDown {
+                tr {
+                  margin: 0.375rem 0;
+                  display: block;
+                  &:first-child {
+                    margin-top: 0;
+                  }
+                  &:last-child {
+                    margin-bottom: 0;
+                  }
+                }
+              }
+              @include largeScreens {
+                width: max-content;
+              }
+              div.mainMenuItemCont {
+                padding: 2rem;
+                div.primaryLink {
+                  display: inline-flex;
+                  align-items: center;
+                  div {
+                    margin-left: 1rem;
+                  }
+                  &:hover {
+                    svg {
+                      &.documentationSVG {
+                        path {
+                          fill: #0098dd;
+                        }
+                      }
+                      &.touch {
+                        path {
+                          fill: #128359;
+                          &:first-child {
+                            fill: #00cc9a;
+                          }
+                          &:nth-child(3),
+                          &:nth-child(4),
+                          &:nth-child(5) {
+                            stroke: #128359;
+                          }
+                        }
+                      }
+                      &.involved {
+                        path {
+                          fill: #0098dd;
+                        }
+                      }
+                      &.adopters {
+                        path {
+                          fill: #f2536d;
+                        }
+                      }
+                    }
+                    p {
+                      &.documentation {
+                        color: #0098dd;
+                      }
+                      &.tutorials {
+                        color: #00cc9a;
+                      }
+                      &.involved {
+                        color: #0098dd;
+                      }
+                      &.adopters {
+                        color: #f2536d;
+                      }
+                    }
+                  }
+                }
+                div.secondaryLinks {
+                  margin-top: 2rem;
+                }
+              }
+              div.subMenuItemCont {
+                background: #f1f5f9;
+                padding: 2rem;
+                display: flex;
+                border-top-right-radius: 6px;
+                border-bottom-right-radius: 6px;
+              }
+            }
+          }
+          &:hover {
+            span {
+              color: #1c0732;
+            }
+            div.dropDownDesktop {
+              display: block;
+            }
+          }
+        }
+      }
+      div.hamMenu {
+        cursor: pointer;
+        width: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include mediumScreens {
+          display: none;
+        }
+        span {
+          display: block;
+          height: 3px;
+          width: 100%;
+          border-radius: 1px;
+          background: #5b44ba;
+          transition: all 100ms ease-in;
+          &:first-child {
+            margin-bottom: 5px;
+          }
+        }
+      }
+      div.hamOpen {
+        span {
+          &:first-child {
+            transform: rotate(45deg) translateX(5.5px);
+          }
+          &:last-child {
+            transform: rotate(-45deg) translateX(5.5px);
+          }
+        }
+      }
+    }
+  }
+}
+
+div.navbarMobileContFluid {
+  height: calc(100vh - 70px);
+  background-color: #fff;
+  z-index: 100;
+  padding-top: 1rem;
+  @include mediumScreens {
+    display: none;
+  }
+  div.navbarMobileCont {
+    height: calc(100% - 3rem);
+    div.linkMainCont {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      ul.mobileNavbarUL {
+        li {
+          font-size: 1rem;
+          font-weight: 500;
+          color: #696f8c;
+          padding: 0.5rem 0;
+          margin: 1rem 0;
+          &:first-child {
+            margin-top: 0;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+          span {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+        }
+      }
+      div.openMobileMenuCont {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        background-color: #fff;
+        span.backToggle {
+          display: flex;
+          align-items: center;
+          font-size: 1rem;
+          font-weight: 500;
+          color: #696f8c;
+          padding: 0.5rem 0;
+          svg {
+            margin-right: 1rem;
+          }
+        }
+        div.dropDownContMobile {
+          height: calc(100% - 40px);
+          overflow-y: auto;
+          div.secondaryLinks {
+            background: #f1f5f9;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 6px;
+            div.mobileSecondaryLinkCont {
+              div {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

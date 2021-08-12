@@ -1,0 +1,42 @@
+@import "@styles/scss/layoutMixins";
+@import "@styles/scss/Variables.scss";
+
+div.featureCard {
+  border: 1px solid #a93ddb;
+  padding: 2.5rem 1.5rem;
+  border-radius: 9px;
+  overflow: hidden;
+  min-height: 260px;
+  @include mediumScreens {
+    min-height: auto;
+  }
+}
+div.cardBackImg {
+  background-image: url("/landing_images/feature-back.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 50%;
+}
+
+div.featureCardCont {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  @include mediumScreens {
+    margin-top: 4rem;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include largeScreens {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

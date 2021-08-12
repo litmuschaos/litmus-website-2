@@ -1,0 +1,52 @@
+name: lint-check
+
+on:
+  push:
+    branches-ignore:
+      - main
+  pull_request:
+    branches:
+      - main
+      - staging
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci
+      - uses: actions/cache@v2
+        id: cache-build
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+
+  next-lint:
+    name: run eslint
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - uses: actions/cache@v2
+        id: restore-build
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+
+      - name: eslint-check
+        run: npm run next-lint && npm run lint --silent
+
+  prettier:
+    name: run prettier
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - uses: actions/cache@v2
+        id: restore-build
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+
+      - name: prettier-check
+        run: npm run prettier --silent

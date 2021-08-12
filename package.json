@@ -1,0 +1,35 @@
+{
+  "name": "litmus-2.0",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start",
+    "postbuild": "next-sitemap --config sitemap.config.js",
+    "lint": "eslint . --quiet --max-warnings 0",
+    "next-lint": "next lint",
+    "prettier": "prettier --check .",
+    "prettier-fix": "prettier --write ."
+  },
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "next": "11.0.1",
+    "next-seo": "^4.26.0",
+    "next-sitemap": "^1.6.148",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-slick": "^0.28.1",
+    "sass": "^1.35.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "eslint": "7.30.0",
+    "eslint-config-next": "11.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "2.3.2",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4"
+  }
+}

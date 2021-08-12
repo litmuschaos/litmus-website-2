@@ -1,0 +1,94 @@
+@import "@styles/scss/layoutMixins";
+@import "@styles/scss/Variables.scss";
+
+div.adopterListCardCont {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  @include mediumScreens {
+    gap: 6rem;
+  }
+  div.adopterListCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    div.adopterLogoCont {
+      width: 100%;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 6.400000095367432px 14.399999618530273px 0px #00000021,
+        0px 1.2000000476837158px 3.5999999046325684px 0px #0000001a;
+      border-radius: 10px;
+      @include mediumScreens {
+        width: 480px;
+        height: 290px;
+      }
+      img {
+        max-width: 80%;
+        max-height: 80%;
+      }
+    }
+    div.adopterTextCont {
+      width: 100%;
+      @include mediumScreens {
+        width: 50%;
+      }
+    }
+  }
+}
+
+div.videoModal {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 200;
+  touch-action: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div.videoCont {
+    border-radius: 20px;
+    width: 95%;
+    height: 95%;
+    background: #fff;
+    position: relative;
+    padding-top: 5rem;
+    @include mediumScreens {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    span {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+    }
+    div.iframeCont {
+      position: relative;
+      overflow: hidden;
+      max-width: 600px;
+      max-height: 338px;
+      width: 90vw;
+      height: 50.85vw;
+      margin: 0 auto;
+      @include mediumScreens {
+        margin: 0;
+      }
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
