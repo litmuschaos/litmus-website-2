@@ -1,5 +1,5 @@
 import { testimonialUtils } from "@components/homepage/utils/testimonialUtils"
-import styles from "@includes/scss/Landing.module.scss"
+import styles from "@includes/scss/Hero.module.scss"
 import { BodyHead } from "@includes/Texts"
 import { Container } from "@layouts/Container"
 import { useState, useEffect } from "react"

@@ -9,6 +9,9 @@
 
 .idea
 
+#sitemap
+/public/sitemap.xml
+
 # testing
 /coverage
 
