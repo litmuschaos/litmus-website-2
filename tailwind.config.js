@@ -23,12 +23,7 @@ module.exports = {
         intuit: "#000000",
         orange: "#000000",
         lenskart: "#005797",
-        anutanetworks: "#03B5B0",
-        kitopiLight: "#E1F0F2",
-        intuitLink: "#0077C5",
-        orangeLink: "#FF6600",
-        lenskartLink: "#005797",
-        anutanetworksLink: "#03B5B0"
+        anutanetworks: "#03B5B0"
       },
       backgroundImage: theme => ({
         halodoc: "url('/adoptersPage/halodocHero.webp')",

@@ -41,7 +41,7 @@ const CommunityList = () => {
       subHeading: "Blog",
       paragraph:
         "Join us in writing blogs about experiments, features, and your experience. Use the #litmuschaos tag for your blog to get featured.",
-      linkText: "View Blogs",
+      linkText: "View Blog",
       imgUrl: "/communityPage/litmusBlogs.svg",
       link: "https://dev.to/t/litmuschaos"
     }

@@ -4,13 +4,13 @@ import { Container } from "@layouts/Container"
 const Why = ({ data }) => {
   return (
     <Container>
-      <div className="flex w-5/6 mx-auto">
+      <div className="flex w-5/6 mx-auto flex-col md:flex-row">
         <img
-          className="inline self-start"
+          className="inline self-start h-10 md:h-20"
           src={`/adoptersPage/${data.key}/why.svg`}
           alt="bullet point"
         />
-        <div className="ml-4 md:ml-8">
+        <div className="mt-4 md:mt-0 md:ml-8">
           <SubHeading>{data.why.heading}</SubHeading>
           <br />
           <Paragraph hint>{data.why.subtext}</Paragraph>
@@ -30,13 +30,13 @@ const Why = ({ data }) => {
 const How = ({ data }) => {
   return (
     <Container>
-      <div className="flex w-5/6 mx-auto">
+      <div className="flex w-5/6 mx-auto flex-col md:flex-row">
         <img
-          className="inline self-start"
+          className="inline self-start h-10 md:h-20"
           src={`/adoptersPage/${data.key}/how.svg`}
           alt="bullet point"
         />
-        <div className="ml-4 md:ml-8">
+        <div className="mt-4 md:mt-0 md:ml-8">
           <SubHeading>{data.how.heading}</SubHeading>
           <br />
           <Paragraph hint>{data.how.subtext}</Paragraph>
@@ -56,13 +56,13 @@ const How = ({ data }) => {
 const Benefits = ({ data }) => {
   return (
     <Container>
-      <div className="flex w-5/6 mx-auto">
+      <div className="flex w-5/6 mx-auto flex-col md:flex-row">
         <img
-          className="inline self-start"
+          className="inline self-start h-10 md:h-20"
           src={`/adoptersPage/${data.key}/benefits.svg`}
           alt="bullet point"
         />
-        <div className="ml-4 md:ml-8">
+        <div className="mt-4 md:mt-0 md:ml-8">
           <SubHeading>{data.benefits.heading}</SubHeading>
           <br />
           <Paragraph hint>{data.benefits.subtext}</Paragraph>
@@ -82,13 +82,13 @@ const Benefits = ({ data }) => {
 const Other = ({ data }) => {
   return (
     <Container>
-      <div className="flex w-5/6 mx-auto">
+      <div className="flex w-5/6 mx-auto flex-col md:flex-row">
         <img
-          className="inline self-start"
+          className="inline self-start h-10 md:h-20"
           src={`/adoptersPage/${data.key}/other.svg`}
           alt="bullet point"
         />
-        <div className="ml-4 md:ml-8">
+        <div className="mt-4 md:mt-0 md:ml-8">
           <SubHeading>{data.other.heading}</SubHeading>
           <Paragraph hint>
             {data.other.videoUrl && (
@@ -96,7 +96,7 @@ const Other = ({ data }) => {
                 <br />
                 Video:{" "}
                 <a
-                  className={`text-${data.key}Link`}
+                  style={{ color: data.colors.col3 }}
                   rel="noopener noreferrer"
                   href={data.other.videoUrl}
                 >
@@ -107,7 +107,7 @@ const Other = ({ data }) => {
                     <br />
                     Blog:{" "}
                     <a
-                      className={`text-${data.key}Link`}
+                      style={{ color: data.colors.col3 }}
                       rel="noopener noreferrer"
                       href={data.other.blogUrl}
                     >
@@ -126,7 +126,7 @@ const Other = ({ data }) => {
 
 const Comment = ({ data }) => {
   return (
-    <div className="pt-20">
+    <div>
       {data.why && <Why data={data} />}
       <br />
       <br />

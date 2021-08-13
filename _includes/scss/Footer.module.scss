@@ -44,16 +44,24 @@ div.footerFluidCont {
     padding-top: 5rem;
     padding-bottom: 5rem;
     display: flex;
-    gap: 2rem;
     flex-direction: column-reverse;
     @include mediumScreens {
       flex-direction: row;
     }
     div.companyDetCont {
-      max-width: 440px;
+      margin-right: 0;
+      margin-top: 2rem;
+      @include mediumScreens {
+        max-width: 440px;
+        margin-right: 2rem;
+        margin-top: 0;
+      }
       svg {
         height: 50px;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+        @include mediumScreens {
+          margin-bottom: 2rem;
+        }
         width: auto;
         display: inline-block;
       }
