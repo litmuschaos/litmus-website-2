@@ -30,7 +30,11 @@ const Features = () => {
           <h3 className="text-xl md:text-2xl text-success font-medium mt-4 mb-2">
             And many more features
           </h3>
-          <TextLink href="#" dark>
+          <TextLink
+            href="https://docs.litmuschaos.io/docs/next/introduction/features"
+            external
+            dark
+          >
             View more features
           </TextLink>
         </div>

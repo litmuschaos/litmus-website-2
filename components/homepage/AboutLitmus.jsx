@@ -1,6 +1,7 @@
 import styles from "@includes/scss/Hero.module.scss"
 import { SkewedContainerFluid, SkewedGradient } from "@layouts/Container"
 import { useState } from "react"
+import { BodyHead } from "@includes/Texts"
 
 const Button = ({ children, current, onButtonClick, count, img }) => (
   <div className={"flex flex-col mx-auto"}>
@@ -42,7 +43,6 @@ const Button = ({ children, current, onButtonClick, count, img }) => (
 )
 
 const DesktopView = ({ current, handleChange }) => {
-  const [text, setText] = useState("helm install litmuschaos/litmus")
   const divToRender = () => {
     if (current === 0) {
       return (
@@ -54,14 +54,14 @@ const DesktopView = ({ current, handleChange }) => {
     } else if (current === 1) {
       return (
         <img
-          src={"/landing_images/about_litmus/get_started.svg"}
+          src={"/landing_images/about_litmus/get_started_border.svg"}
           alt="LitmusChaos"
         />
       )
     } else if (current === 2) {
       return (
         <img
-          src={"/landing_images/about_litmus/scale_operations.svg"}
+          src={"/landing_images/about_litmus/scale_operations_border.svg"}
           alt="LitmusChaos"
         />
       )
@@ -104,17 +104,17 @@ const MobileView = () => {
   const utils = [
     {
       name: "Overview",
-      img: "overview",
+      img: "overview_mobile",
       icon: "brain"
     },
     {
-      name: "Getting Started",
-      img: "getting_started",
+      name: "Get Started",
+      img: "get_started_mobile",
       icon: "fast_forward"
     },
     {
       name: "Scale Chaos Operations",
-      img: "scale_operations",
+      img: "scale_operations_mobile",
       icon: "refresh"
     }
   ]
@@ -129,13 +129,14 @@ const MobileView = () => {
               <img
                 src={`/landing_images/about_litmus/${info.icon}.svg`}
                 alt="LitmusChaos"
+                className={"h-7"}
               />
-              <span className={"text-2xl ml-4"}>{info.name}</span>
+              <span className={"text-sm sm:text-lg ml-4"}>{info.name}</span>
             </div>
             <div>
               <img
                 src={`/landing_images/about_litmus/${info.img}.svg`}
-                className={"w-11/12 md:w-3/5 mx-auto mb-32 mt-20"}
+                className={"w-11/12 md:w-3/5 mx-auto mb-24 mt-12"}
                 alt="LitmusChaos"
               />
             </div>
@@ -155,10 +156,12 @@ const AboutLitmus = () => {
     <>
       <SkewedGradient color={skewBg} />
       <SkewedContainerFluid color="#1C0732" angle="-6">
-        <p className={"mb-12 text-white text-4xl font-bold"}>
-          About <br />
-          <span style={{ color: "#878EDE" }}>LitmusChaos</span> Project
-        </p>
+        <BodyHead dark className={"mb-10"}>
+          <span className={"block"}>About</span>
+          <span className={"block"}>
+            <span style={{ color: "#878EDE" }}>LitmusChaos</span> Project
+          </span>
+        </BodyHead>
         <DesktopView
           current={current}
           handleChange={state => setCurrent(state)}

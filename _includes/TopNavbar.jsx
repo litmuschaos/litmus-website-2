@@ -12,7 +12,6 @@ import {
   ObservablitySVG,
   ResourcesSVG,
   SdkSVG,
-  TouchSVG,
   TutorialsSVG,
   UserGuideSVG
 } from "@components/SVG/NavbarSVG"
@@ -88,7 +87,7 @@ const TopNavbar = () => {
                   <div className={styles.overHead}></div>
                   <div className={styles.dropDownBody}>
                     <div className={styles.mainMenuItemCont}>
-                      <Link href="https://docs.litmuschaos.io/docs/getstarted/">
+                      <Link href="https://docs.litmuschaos.io/">
                         <a target="_blank" rel="noopener noreferrer">
                           <div className={styles.primaryLink}>
                             <DocumentationSVG />
@@ -119,8 +118,12 @@ const TopNavbar = () => {
                           </tr>
                           <tr>
                             <td>
-                              <Link href="#">
-                                <a className="text-hint text-sm hover:text-primary transition-all">
+                              <Link href="https://docs.litmuschaos.io/docs/getting-started/installation#prerequisites">
+                                <a
+                                  className="text-hint text-sm hover:text-primary transition-all"
+                                  target="_blank"
+                                  rel="noopener norefferer"
+                                >
                                   Pre-requisites
                                 </a>
                               </Link>
@@ -128,17 +131,25 @@ const TopNavbar = () => {
                           </tr>
                           <tr>
                             <td>
-                              <Link href="#">
-                                <a className="text-hint text-sm hover:text-primary transition-all">
-                                  Installations
+                              <Link href="https://docs.litmuschaos.io/docs/getting-started/installation">
+                                <a
+                                  className="text-hint text-sm hover:text-primary transition-all"
+                                  target="_blank"
+                                  rel="noopener norefferer"
+                                >
+                                  Installation
                                 </a>
                               </Link>
                             </td>
                           </tr>
                           <tr>
                             <td>
-                              <Link href="#">
-                                <a className="text-hint text-sm hover:text-primary transition-all">
+                              <Link href="https://docs.litmuschaos.io/docs/getting-started/run-your-first-workflow">
+                                <a
+                                  className="text-hint text-sm hover:text-primary transition-all"
+                                  target="_blank"
+                                  rel="noopener norefferer"
+                                >
                                   Create Workflows
                                 </a>
                               </Link>
@@ -146,8 +157,12 @@ const TopNavbar = () => {
                           </tr>
                           <tr>
                             <td>
-                              <Link href="#">
-                                <a className="text-hint text-sm hover:text-primary transition-all">
+                              <Link href="https://docs.litmuschaos.io/docs/concepts/observe-workflow">
+                                <a
+                                  className="text-hint text-sm hover:text-primary transition-all"
+                                  target="_blank"
+                                  rel="noopener norefferer"
+                                >
                                   Observe Workflows
                                 </a>
                               </Link>
@@ -162,8 +177,12 @@ const TopNavbar = () => {
                           </tr>
                           <tr>
                             <td>
-                              <Link href="#">
-                                <a className="text-hint text-sm flex items-center hover:text-primary transition-all">
+                              <Link href="https://docs.litmuschaos.io/docs/concepts/gitops">
+                                <a
+                                  className="text-hint text-sm flex items-center hover:text-primary transition-all"
+                                  target="_blank"
+                                  rel="noopener norefferer"
+                                >
                                   <GitOPS />
                                   GitOps
                                 </a>
@@ -172,8 +191,12 @@ const TopNavbar = () => {
                           </tr>
                           <tr>
                             <td>
-                              <Link href="#">
-                                <a className="text-hint text-sm flex items-center hover:text-primary transition-all">
+                              <Link href="https://docs.litmuschaos.io/docs/user-guides/overview">
+                                <a
+                                  className="text-hint text-sm flex items-center hover:text-primary transition-all"
+                                  target="_blank"
+                                  rel="noopener norefferer"
+                                >
                                   <UserGuideSVG />
                                   Advanced User Guides
                                 </a>
@@ -182,8 +205,12 @@ const TopNavbar = () => {
                           </tr>
                           <tr>
                             <td>
-                              <Link href="#">
-                                <a className="text-hint text-sm flex items-center hover:text-primary transition-all">
+                              <Link href="https://docs.litmuschaos.io/docs/concepts/litmus">
+                                <a
+                                  className="text-hint text-sm flex items-center hover:text-primary transition-all"
+                                  target="_blank"
+                                  rel="noopener norefferer"
+                                >
                                   <ArchitectureSVg />
                                   Design & Architecture
                                 </a>
@@ -192,8 +219,12 @@ const TopNavbar = () => {
                           </tr>
                           <tr>
                             <td>
-                              <Link href="#">
-                                <a className="text-hint text-sm flex items-center hover:text-primary transition-all">
+                              <Link href="https://docs.litmuschaos.io/docs/concepts/workflow-statistics">
+                                <a
+                                  className="text-hint text-sm flex items-center hover:text-primary transition-all"
+                                  target="_blank"
+                                  rel="noopener norefferer"
+                                >
                                   <ObservablitySVG />
                                   Observability
                                 </a>
@@ -217,10 +248,11 @@ const TopNavbar = () => {
                         </tr>
                         <tr>
                           <td>
-                            <Link href="#">
+                            <Link href="https://docs.litmuschaos.io/tutorials">
                               <a
-                                href="#"
                                 className="text-hint text-sm flex items-center hover:text-primary transition-all"
+                                target="_blank"
+                                rel="noopener norefferer"
                               >
                                 <TutorialsSVG />
                                 Tutorials
@@ -230,10 +262,11 @@ const TopNavbar = () => {
                         </tr>
                         <tr>
                           <td>
-                            <Link href="#">
+                            <Link href="https://docs.litmuschaos.io/docs/introduction/other-links">
                               <a
-                                href="#"
                                 className="text-hint text-sm flex items-center hover:text-primary transition-all"
+                                target="_blank"
+                                rel="noopener norefferer"
                               >
                                 <ResourcesSVG />
                                 Resources
@@ -253,10 +286,11 @@ const TopNavbar = () => {
                         </tr>
                         <tr>
                           <td>
-                            <Link href="#">
+                            <Link href="https://litmuschaos.github.io/litmus/graphql/v2.0.0/api.html">
                               <a
-                                href="#"
                                 className="text-hint text-sm flex items-center hover:text-primary transition-all"
+                                target="_blank"
+                                rel="noopener norefferer"
                               >
                                 <ApiSVG />
                                 Full API reference
@@ -266,11 +300,8 @@ const TopNavbar = () => {
                         </tr>
                         <tr>
                           <td>
-                            <Link href="#">
-                              <a
-                                href="#"
-                                className="text-hint text-sm flex items-center hover:text-primary transition-all"
-                              >
+                            <Link href="https://github.com/litmuschaos/litmus-go">
+                              <a className="text-hint text-sm flex items-center hover:text-primary transition-all">
                                 <SdkSVG />
                                 SDK
                               </a>
@@ -282,7 +313,7 @@ const TopNavbar = () => {
                   </div>
                 </div>
               </li>
-              <li>
+              {/* <li>
                 <span
                   className={`text-hint transition-all text-sm lg:text-base cursor-pointer font-medium ${styles.navLink}`}
                 >
@@ -292,8 +323,8 @@ const TopNavbar = () => {
                   <div className={styles.overHead}></div>
                   <div className={styles.dropDownBody}>
                     <div className={`${styles.mainMenuItemCont}`}>
-                      <Link href="#">
-                        <a>
+                      <Link href="https://docs.litmuschaos.io/tutorials">
+                        <a target="_blank" rel="noopener norefferer">
                           <div className={styles.primaryLink}>
                             <TouchSVG />
                             <div>
@@ -386,7 +417,20 @@ const TopNavbar = () => {
                     </div>
                   </div>
                 </div>
+              </li> */}
+              {/* Temporary Link */}
+              <li>
+                <Link href="https://docs.litmuschaos.io/tutorials/">
+                  <a
+                    className={`text-hint hover:text-primary transition-all text-sm lg:text-base font-medium ${styles.navLink}`}
+                    target="_blank"
+                    rel="noopener norefferer"
+                  >
+                    Tutorials
+                  </a>
+                </Link>
               </li>
+              {/* Temporary Link */}
               <li>
                 <Link href="https://hub.litmuschaos.io/">
                   <a
@@ -503,11 +547,21 @@ const TopNavbar = () => {
                     <MobileArrows />
                   </span>
                 </li>
-                <li onClick={SetTutorial}>
+                {/* <li onClick={SetTutorial}>
                   <span>
                     Tutorials
                     <MobileArrows />
                   </span>
+                </li> */}
+                <li>
+                  <Link href="https://docs.litmuschaos.io/tutorials/">
+                    <a target="_blank" rel="noopener norefferer">
+                      <span>
+                        Tutorials
+                        <MobileArrows />
+                      </span>
+                    </a>
+                  </Link>
                 </li>
                 <li>
                   <Link href="https://hub.litmuschaos.io/">
@@ -533,7 +587,7 @@ const TopNavbar = () => {
                     Docs
                   </span>
                   <div className={styles.dropDownContMobile}>
-                    <Link href="https://docs.litmuschaos.io/docs/getstarted/">
+                    <Link href="https://docs.litmuschaos.io/">
                       <a target="_blank" rel="noopener noreferrer">
                         <div className={`flex py-4 items-center`}>
                           <DocumentationSVG />
@@ -563,8 +617,12 @@ const TopNavbar = () => {
                       <tbody>
                         <tr>
                           <td>
-                            <Link href="#">
-                              <a className="w-full block py-1 text-sm text-hint">
+                            <Link href="https://docs.litmuschaos.io/docs/getting-started/installation#prerequisites">
+                              <a
+                                className="w-full block py-1 text-sm text-hint"
+                                target="_blank"
+                                rel="noopener norefferer"
+                              >
                                 Pre-requisites
                               </a>
                             </Link>
@@ -572,17 +630,25 @@ const TopNavbar = () => {
                         </tr>
                         <tr>
                           <td>
-                            <Link href="#">
-                              <a className="w-full block py-1 text-sm text-hint">
-                                Installations
+                            <Link href="https://docs.litmuschaos.io/docs/getting-started/installation">
+                              <a
+                                className="w-full block py-1 text-sm text-hint"
+                                target="_blank"
+                                rel="noopener norefferer"
+                              >
+                                Installation
                               </a>
                             </Link>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            <Link href="#">
-                              <a className="w-full block py-1 text-sm text-hint">
+                            <Link href="https://docs.litmuschaos.io/docs/getting-started/run-your-first-workflow">
+                              <a
+                                className="w-full block py-1 text-sm text-hint"
+                                target="_blank"
+                                rel="noopener norefferer"
+                              >
                                 Create Workflows
                               </a>
                             </Link>
@@ -590,8 +656,12 @@ const TopNavbar = () => {
                         </tr>
                         <tr>
                           <td>
-                            <Link href="#">
-                              <a className="w-full block py-1 text-sm text-hint">
+                            <Link href="https://docs.litmuschaos.io/docs/concepts/observe-workflow">
+                              <a
+                                className="w-full block py-1 text-sm text-hint"
+                                target="_blank"
+                                rel="noopener norefferer"
+                              >
                                 Observe Workflows
                               </a>
                             </Link>
@@ -612,8 +682,12 @@ const TopNavbar = () => {
                       <tbody>
                         <tr>
                           <td>
-                            <Link href="#">
-                              <a className="w-full flex py-1 text-sm text-hint">
+                            <Link href="https://docs.litmuschaos.io/docs/concepts/gitops">
+                              <a
+                                className="w-full flex py-1 text-sm text-hint"
+                                target="_blank"
+                                rel="noopener norefferer"
+                              >
                                 <GitOPS /> GitOps
                               </a>
                             </Link>
@@ -621,8 +695,12 @@ const TopNavbar = () => {
                         </tr>
                         <tr>
                           <td>
-                            <Link href="#">
-                              <a className="w-full flex py-1 text-sm text-hint">
+                            <Link href="https://docs.litmuschaos.io/docs/user-guides/overview">
+                              <a
+                                className="w-full flex py-1 text-sm text-hint"
+                                target="_blank"
+                                rel="noopener norefferer"
+                              >
                                 <UserGuideSVG /> Advanced User Guides
                               </a>
                             </Link>
@@ -630,8 +708,12 @@ const TopNavbar = () => {
                         </tr>
                         <tr>
                           <td>
-                            <Link href="#">
-                              <a className="w-full flex py-1 text-sm text-hint">
+                            <Link href="https://docs.litmuschaos.io/docs/concepts/litmus">
+                              <a
+                                className="w-full flex py-1 text-sm text-hint"
+                                target="_blank"
+                                rel="noopener norefferer"
+                              >
                                 <ArchitectureSVg /> Design & Architecture
                               </a>
                             </Link>
@@ -639,8 +721,12 @@ const TopNavbar = () => {
                         </tr>
                         <tr>
                           <td>
-                            <Link href="#">
-                              <a className="w-full flex py-1 text-sm text-hint">
+                            <Link href="https://docs.litmuschaos.io/docs/concepts/workflow-statistics">
+                              <a
+                                className="w-full flex py-1 text-sm text-hint"
+                                target="_blank"
+                                rel="noopener norefferer"
+                              >
                                 <ObservablitySVG /> Observability
                               </a>
                             </Link>
@@ -662,8 +748,12 @@ const TopNavbar = () => {
                         <tbody>
                           <tr>
                             <td>
-                              <Link href="#">
-                                <a className="w-full flex py-1 text-sm text-hint">
+                              <Link href="https://docs.litmuschaos.io/tutorials">
+                                <a
+                                  className="w-full flex py-1 text-sm text-hint"
+                                  target="_blank"
+                                  rel="noopener norefferer"
+                                >
                                   <TutorialsSVG /> Tutorials
                                 </a>
                               </Link>
@@ -671,8 +761,12 @@ const TopNavbar = () => {
                           </tr>
                           <tr>
                             <td>
-                              <Link href="#">
-                                <a className="w-full flex py-1 text-sm text-hint">
+                              <Link href="https://docs.litmuschaos.io/docs/introduction/other-links">
+                                <a
+                                  className="w-full flex py-1 text-sm text-hint"
+                                  target="_blank"
+                                  rel="noopener norefferer"
+                                >
                                   <ResourcesSVG /> Resources
                                 </a>
                               </Link>
@@ -693,8 +787,12 @@ const TopNavbar = () => {
                         <tbody>
                           <tr>
                             <td>
-                              <Link href="#">
-                                <a className="w-full flex py-1 text-sm text-hint">
+                              <Link href="https://litmuschaos.github.io/litmus/graphql/v2.0.0/api.html">
+                                <a
+                                  className="w-full flex py-1 text-sm text-hint"
+                                  target="_blank"
+                                  rel="noopener norefferer"
+                                >
                                   <ApiSVG /> Full API reference
                                 </a>
                               </Link>
@@ -702,8 +800,12 @@ const TopNavbar = () => {
                           </tr>
                           <tr>
                             <td>
-                              <Link href="#">
-                                <a className="w-full flex py-1 text-sm text-hint">
+                              <Link href="https://github.com/litmuschaos/litmus-go">
+                                <a
+                                  className="w-full flex py-1 text-sm text-hint"
+                                  target="_blank"
+                                  rel="noopener norefferer"
+                                >
                                   <SdkSVG /> SDK
                                 </a>
                               </Link>
@@ -786,15 +888,15 @@ const TopNavbar = () => {
                 ""
               )}
 
-              {tutorialOpen ? (
+              {/* {tutorialOpen ? (
                 <div className={styles.openMobileMenuCont}>
                   <span className={styles.backToggle} onClick={SetTutorial}>
                     <MobileArrowBack />
                     Tutorials
                   </span>
                   <div className={styles.dropDownContMobile}>
-                    <Link href="#">
-                      <a>
+                    <Link href="https://docs.litmuschaos.io/tutorials">
+                      <a target="_blank" rel="noopener norefferer">
                         <div className={`flex py-4 items-center`}>
                           <TouchSVG />
                           <div className="ml-2">
@@ -886,7 +988,7 @@ const TopNavbar = () => {
                 </div>
               ) : (
                 ""
-              )}
+              )} */}
             </div>
           </Container>
         </ContainerFluid>

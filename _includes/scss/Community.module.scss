@@ -13,7 +13,6 @@ div.comminityListCard {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
   @include mediumScreens {
     flex-direction: row;
   }
@@ -21,6 +20,7 @@ div.comminityListCard {
     width: 100%;
     height: 180px;
     display: flex;
+    margin-bottom: 2rem;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 1.2px 3.6px rgba(0, 0, 0, 0.1),
@@ -28,6 +28,8 @@ div.comminityListCard {
     border-radius: 10px;
     @include mediumScreens {
       max-width: 480px;
+      margin-bottom: 0;
+      margin-right: 2rem;
       width: 50%;
       height: 300px;
     }
