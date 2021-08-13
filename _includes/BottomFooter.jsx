@@ -121,7 +121,7 @@ const BottomFooter = props => {
           </div>
         </Container>
         <Container className="pb-12 flex justify-center items-center">
-          <span className="flex gap-1 items-baseline flex-col md:flex-row">
+          <span className="flex gap-1 items-center md:items-baseline flex-col md:flex-row">
             <Paragraph dark className="font-medium">
               Originally created by
             </Paragraph>

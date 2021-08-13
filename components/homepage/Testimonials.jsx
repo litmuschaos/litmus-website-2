@@ -2,8 +2,8 @@ import { testimonialUtils } from "@components/homepage/utils/testimonialUtils"
 import styles from "@includes/scss/Hero.module.scss"
 import { BodyHead } from "@includes/Texts"
 import { Container } from "@layouts/Container"
-import { useState, useEffect } from "react"
 import Link from "next/link"
+import { useState } from "react"
 
 const logos = ["orange", "red_hat", "kitopi", "container_solutions"]
 
@@ -130,7 +130,7 @@ const Navigator = ({ handleChange, count }) => {
         <div
           key={idx}
           onClick={() => handleChange(idx)}
-          className={`cursor-pointer h-16 lg:h-24 rounded-lg px-6 lg:px-12 flex items-center ${
+          className={`cursor-pointer h-16 lg:h-24 rounded-lg px-3 lg:px-12 flex items-center ${
             idx === count ? "bg-white py-4" : ""
           }`}
           style={{
@@ -140,7 +140,7 @@ const Navigator = ({ handleChange, count }) => {
         >
           <img
             src={`/landing_images/testimonial_logos/${logo}.png`}
-            className={"h-12"}
+            className="max-h-10"
             alt="ChaosNative"
           />
         </div>

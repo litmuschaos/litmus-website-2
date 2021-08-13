@@ -6,13 +6,13 @@ const utils = [
     name: "Documentation",
     desc: "Start Chaos Engineering with LitmusChaos",
     icon: "file",
-    link: "#"
+    link: "https://docs.litmuschaos.io/"
   },
   {
     name: "Full API reference",
     desc: "Explore complete reference documentation for the Litmus API.",
     icon: "api",
-    link: "#"
+    link: "https://litmuschaos.github.io/litmus/graphql/v2.0.0/api.html"
   },
   {
     name: "Got a Question?",

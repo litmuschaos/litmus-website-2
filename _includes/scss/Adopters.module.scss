@@ -60,12 +60,10 @@ div.videoModal {
     height: 95%;
     background: #fff;
     position: relative;
-    padding-top: 5rem;
-    @include mediumScreens {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
     span {
       position: absolute;
       right: 1rem;
@@ -74,8 +72,8 @@ div.videoModal {
     div.iframeCont {
       position: relative;
       overflow: hidden;
-      max-width: 600px;
-      max-height: 338px;
+      max-width: 800px;
+      max-height: 450px;
       width: 90vw;
       height: 50.85vw;
       margin: 0 auto;
