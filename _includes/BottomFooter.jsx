@@ -65,7 +65,13 @@ const BottomFooter = props => {
               trademarks. For a list of trademarks of The Linux Foundation,
               please see our{" "}
               <Link href="https://www.linuxfoundation.org/trademark-usage/">
-                <a className="text-accent">Trademark Usage page</a>
+                <a
+                  className="text-accent"
+                  target="_blank"
+                  rel="noopener norefferer"
+                >
+                  Trademark Usage page
+                </a>
               </Link>
               .
             </Paragraph>

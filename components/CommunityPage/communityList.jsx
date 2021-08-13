@@ -34,7 +34,7 @@ const CommunityList = () => {
         "Want real-time, live conversation with LitmusChaos maintainers and contributors? Join our community meetings.",
       linkText: "Explore Events",
       imgUrl: "/communityPage/meetupsAndSyncups.svg",
-      link: "#"
+      link: "https://www.meetup.com/Chaos-Engineering-Meetup-Group/events/"
     },
     {
       bgColor: "bg-bg1",
