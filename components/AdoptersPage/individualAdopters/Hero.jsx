@@ -12,10 +12,10 @@ const Hero = ({ data }) => {
           </a>
         </Link>
         <Paragraph>&#62; &nbsp;</Paragraph>
-        <Paragraph>{data.adopter}</Paragraph>
+        <Paragraph bold>{data.adopter}</Paragraph>
       </div>
-      <div className="flex flex-col space-y-8 mx-auto pt-20 text-center w-5/6">
-        <HeroHead>{data.subHeading}</HeroHead>
+      <div className="flex flex-col mx-auto mt-10 md:mt-16 text-center w-5/6">
+        <HeroHead className="mb-4">{data.subHeading}</HeroHead>
         <Paragraph hint>{data.paragraph}</Paragraph>
       </div>
     </Container>

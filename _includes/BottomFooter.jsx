@@ -65,7 +65,13 @@ const BottomFooter = props => {
               trademarks. For a list of trademarks of The Linux Foundation,
               please see our{" "}
               <Link href="https://www.linuxfoundation.org/trademark-usage/">
-                <a className="text-accent">Trademark Usage page</a>
+                <a
+                  className="text-accent"
+                  target="_blank"
+                  rel="noopener norefferer"
+                >
+                  Trademark Usage page
+                </a>
               </Link>
               .
             </Paragraph>
@@ -115,7 +121,7 @@ const BottomFooter = props => {
           </div>
         </Container>
         <Container className="pb-12 flex justify-center items-center">
-          <span className="flex gap-1 items-center flex-col md:flex-row">
+          <span className="flex gap-1 items-center md:items-baseline flex-col md:flex-row">
             <Paragraph dark className="font-medium">
               Originally created by
             </Paragraph>

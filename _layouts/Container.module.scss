@@ -41,8 +41,11 @@ div.skewedContainerFluid {
 }
 
 div.skewedGradient {
-  height: 100px;
+  height: 50px;
   @include mediumScreens {
+    height: 100px;
+  }
+  @include largeScreens {
     height: 150px;
   }
   div.skewedGradientCont {

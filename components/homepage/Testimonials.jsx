@@ -1,9 +1,9 @@
 import { testimonialUtils } from "@components/homepage/utils/testimonialUtils"
 import styles from "@includes/scss/Hero.module.scss"
-import { BodyHead } from "@includes/Texts"
+import { BodyHead, Paragraph } from "@includes/Texts"
 import { Container } from "@layouts/Container"
-import { useState, useEffect } from "react"
 import Link from "next/link"
+import { useState } from "react"
 
 const logos = ["orange", "red_hat", "kitopi", "container_solutions"]
 
@@ -38,11 +38,7 @@ const TestimonialCard = ({
 
       {testimonials.map((testimony, idx) => {
         return (
-          <Link
-            href={testimony.link}
-            scroll={testimony.link != "" ? true : false}
-            key={idx}
-          >
+          <Link href={testimony.link} scroll={testimony.link !== ""} key={idx}>
             <a
               className={`${
                 testimony.link === "" ? "cursor-default" : "cursor-pointer"
@@ -57,10 +53,10 @@ const TestimonialCard = ({
                   className={`${styles.cardLeft} w-full lg:w-3/5 rounded-bl-none`}
                   style={{ background: testimony.color }}
                 >
-                  <div className={"py-20 px-12"}>
-                    <p className={"text-white text-xl mb-24"}>
+                  <div className="px-6 py-10 lg:px-12 lg:py-20">
+                    <Paragraph dark className="mb-12 md:mb-24">
                       {testimony.content}
-                    </p>
+                    </Paragraph>
                     <div className={"text-white flex items-center"}>
                       <img
                         src={`/landing_images/testimonies/${testimony.img}`}
@@ -68,14 +64,16 @@ const TestimonialCard = ({
                         className={"mr-4"}
                       />
                       <div>
-                        <p className={"font-medium"}>{testimony.user}</p>
-                        <p>{testimony.desig}</p>
+                        <Paragraph bold dark>
+                          {testimony.user}
+                        </Paragraph>
+                        <Paragraph dark>{testimony.desig}</Paragraph>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  className={`pt-12 pb-20 lg:pb-12 pl-8 w-full lg:w-2/5 h-60`}
+                  className={`pt-12 pb-20 lg:pb-12 px-6 w-full lg:w-2/5 lg:h-60`}
                 >
                   <p
                     style={{
@@ -83,7 +81,9 @@ const TestimonialCard = ({
                         testimony.type === "none" ? "#EE0000" : testimony.color
                       }`
                     }}
-                    className={"text-md lg:text-2xl pr-12 lg:pr-40 font-medium"}
+                    className={
+                      "text-lg md:text-xl xl:text-2xl lg:pr-20 font-medium"
+                    }
                   >
                     {testimony.title}
                   </p>
@@ -94,15 +94,14 @@ const TestimonialCard = ({
                       className={
                         "absolute w-full lg:w-2/5 bottom-8 left-0 lg:left-auto lg:right-4 flex items-center justify-between"
                       }
-                      style={{}}
                     >
                       <hr
-                        className={"w-2/5 sm:w-1/2 ml-10 mr-10"}
+                        className={"hidden md:block w-1/2 ml-10 mr-10"}
                         style={{ backgroundColor: "#BBBBBB", height: "2px" }}
                       />
                       <div
                         className={
-                          "w-3/5 sm:w-1/2 font-medium pr-2 flex text-center"
+                          "font-medium md:w-1/2 pr-2 ml-6 lg:ml-12 flex text-center"
                         }
                       >
                         {testimony.type === "blog"
@@ -142,7 +141,7 @@ const Navigator = ({ handleChange, count }) => {
         >
           <img
             src={`/landing_images/testimonial_logos/${logo}.png`}
-            className={""}
+            className="max-h-10"
             alt="ChaosNative"
           />
         </div>

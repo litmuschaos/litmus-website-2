@@ -88,9 +88,12 @@
   -moz-animation: cardTransition 2s; /* Firefox < 16 */
   -ms-animation: cardTransition 2s; /* Internet Explorer */
   -o-animation: cardTransition 2s; /* Opera < 12.1 */
+  @include largeScreens {
+    min-height: 432px;
+  }
   .cardLeft {
     background: #2445dc;
-    border-radius: 10px 10px 100px 0;
+    border-radius: 10px 10px 50px 0;
     @include mediumScreens {
       border-radius: 10px 0 100px 10px;
     }
@@ -168,7 +171,7 @@
 }
 /* COMMUNITY */
 .slideNavigator {
-  height: 100px;
+  height: 110px;
   width: 1px;
 }
 .communitySlideShow {
@@ -183,10 +186,21 @@
   display: inline-block;
   width: 100%;
 }
+
+.slideArrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
 /* HERO */
 div.heroCont {
   display: flex;
-  gap: 2rem;
   justify-content: space-between;
   align-items: center;
   padding-top: 2rem;
@@ -206,9 +220,14 @@ div.heroCont {
     }
   }
   div.heroImg {
+    margin-top: 2rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    @include largeScreens {
+      margin-top: 0;
+      margin-left: 2rem;
+    }
     video {
       width: 100%;
       height: 100%;
@@ -218,23 +237,27 @@ div.heroCont {
     margin-top: 2rem;
     display: flex;
     justify-content: center;
-    gap: 0.3rem;
     @include largeScreens {
-      gap: 1rem;
       justify-content: flex-start;
     }
     div.gitPart {
+      margin-right: 0.3rem;
       border: 1px solid #cfd3e3;
       background: linear-gradient(133.06deg, #f9fafc 1.78%, #eef1f7 64.41%);
       display: flex;
       align-items: center;
       border-radius: 6px;
       box-shadow: 0px 1.6px 3.5px 0px #00000021, 0px 0.3px 0.9px 0px #0000001a;
+      @include mediumScreens {
+        margin-right: 1rem;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
       div.gitLink {
         padding: 0.1rem 0.3rem;
         display: flex;
         align-items: center;
-        gap: 0.2rem;
         overflow: hidden;
         @include smallScreens {
           padding: 0.2rem 0.5rem;
@@ -244,6 +267,8 @@ div.heroCont {
           width: auto;
         }
         span {
+          display: inline-block;
+          margin-left: 0.2rem;
           font-size: 0.9rem;
         }
       }

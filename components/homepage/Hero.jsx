@@ -65,7 +65,7 @@ const Hero = () => {
           it is easy to use, based on modern chaos engineering practices &
           community collaborated. Litmus is 100% open source & CNCF-hosted.
         </Paragraph>
-        <div className="mt-4 flex gap-4 justify-center md:justify-start">
+        <div className="mt-4 flex gap-4 justify-center lg:justify-start">
           <RegularButton href="https://github.com/litmuschaos/litmus" external>
             <span className="flex items-center">
               <GithubButton />
