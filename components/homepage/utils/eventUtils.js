@@ -1,7 +1,7 @@
 export const eventUtils = [
   {
     type: "Featured Event",
-    title: "Chaos Engeering Meetup August,2021",
+    title: "Chaos Engineering Meetup August, 2021",
     content:
       "Chaos Engineering Meetups are back for August and are bigger & better now with the amazing LitmusChaos project & community reaching the milestone of version 2.0 to redefine the Chaos Engineering ecosystem!",
     img_url: "meetup.png",

@@ -38,11 +38,7 @@ const TestimonialCard = ({
 
       {testimonials.map((testimony, idx) => {
         return (
-          <Link
-            href={testimony.link}
-            scroll={testimony.link != "" ? true : false}
-            key={idx}
-          >
+          <Link href={testimony.link} scroll={testimony.link !== ""} key={idx}>
             <a
               className={`${
                 testimony.link === "" ? "cursor-default" : "cursor-pointer"
@@ -58,7 +54,7 @@ const TestimonialCard = ({
                   style={{ background: testimony.color }}
                 >
                   <div className={"py-20 px-12"}>
-                    <p className={"text-white text-xl mb-24"}>
+                    <p className={"text-white text-md md:text-xl mb-24"}>
                       {testimony.content}
                     </p>
                     <div className={"text-white flex items-center"}>
@@ -75,7 +71,7 @@ const TestimonialCard = ({
                   </div>
                 </div>
                 <div
-                  className={`pt-12 pb-20 lg:pb-12 pl-8 w-full lg:w-2/5 h-60`}
+                  className={`pt-12 pb-20 lg:pb-12 pl-12 w-full lg:w-2/5 h-60`}
                 >
                   <p
                     style={{
@@ -83,7 +79,9 @@ const TestimonialCard = ({
                         testimony.type === "none" ? "#EE0000" : testimony.color
                       }`
                     }}
-                    className={"text-md lg:text-2xl pr-12 lg:pr-40 font-medium"}
+                    className={
+                      "text-lg md:text-xl xl:text-2xl pr-12 lg:pr-20 font-medium"
+                    }
                   >
                     {testimony.title}
                   </p>
@@ -97,12 +95,12 @@ const TestimonialCard = ({
                       style={{}}
                     >
                       <hr
-                        className={"w-2/5 sm:w-1/2 ml-10 mr-10"}
+                        className={"hidden md:block w-1/2 ml-10 mr-10"}
                         style={{ backgroundColor: "#BBBBBB", height: "2px" }}
                       />
                       <div
                         className={
-                          "w-3/5 sm:w-1/2 font-medium pr-2 flex text-center"
+                          "font-medium md:w-1/2 pr-2 ml-12 flex text-center"
                         }
                       >
                         {testimony.type === "blog"
@@ -132,7 +130,7 @@ const Navigator = ({ handleChange, count }) => {
         <div
           key={idx}
           onClick={() => handleChange(idx)}
-          className={`cursor-pointer h-16 lg:h-24 rounded-lg px-3 lg:px-12 flex items-center ${
+          className={`cursor-pointer h-16 lg:h-24 rounded-lg px-6 lg:px-12 flex items-center ${
             idx === count ? "bg-white py-4" : ""
           }`}
           style={{
@@ -142,7 +140,7 @@ const Navigator = ({ handleChange, count }) => {
         >
           <img
             src={`/landing_images/testimonial_logos/${logo}.png`}
-            className={""}
+            className={"h-12"}
             alt="ChaosNative"
           />
         </div>
