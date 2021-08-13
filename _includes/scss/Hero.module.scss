@@ -88,9 +88,12 @@
   -moz-animation: cardTransition 2s; /* Firefox < 16 */
   -ms-animation: cardTransition 2s; /* Internet Explorer */
   -o-animation: cardTransition 2s; /* Opera < 12.1 */
+  @include largeScreens {
+    min-height: 432px;
+  }
   .cardLeft {
     background: #2445dc;
-    border-radius: 10px 10px 100px 0;
+    border-radius: 10px 10px 50px 0;
     @include mediumScreens {
       border-radius: 10px 0 100px 10px;
     }
