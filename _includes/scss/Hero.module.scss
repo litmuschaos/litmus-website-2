@@ -168,7 +168,7 @@
 }
 /* COMMUNITY */
 .slideNavigator {
-  height: 100px;
+  height: 110px;
   width: 1px;
 }
 .communitySlideShow {
@@ -183,6 +183,18 @@
   display: inline-block;
   width: 100%;
 }
+
+.slideArrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
 /* HERO */
 div.heroCont {
   display: flex;
