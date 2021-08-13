@@ -1,4 +1,5 @@
-import { Container } from "@layouts/Container"
+import styles from "@includes/scss/Adopters.module.scss"
+import { Container, ContainerFluid } from "@layouts/Container"
 import { useState } from "react"
 import Modal from "./Modal"
 
@@ -14,39 +15,48 @@ const Video = ({ data }) => {
       }
     }
   }
+  const StripedBar = ({ data }) => {
+    return (
+      <div className={styles.adoperColorSkewedCont}>
+        <div style={{ backgroundColor: data.colors.col1 }}></div>
+        <div style={{ backgroundColor: data.colors.col2 }}></div>
+        <div style={{ backgroundColor: data.colors.col3 }}></div>
+        <div style={{ backgroundColor: data.colors.col4 }}></div>
+      </div>
+    )
+  }
 
   return (
     <>
-      <Container>
-        <div
-          className={`relative grid place-items-center z-0 w-5/6 ${data?.videobg?.toString()} bg-contain bg-no-repeat bg-center aspect-w-16 aspect-h-7 mx-auto mt-20 rounded-xl ${
-            data.other.modalUrl && `shadow-2xl`
-          }`}
-        >
-          {data.other.modalUrl && (
-            <img
-              className="w-2/3 mx-auto"
-              src={`/adoptersPage/${data.key}/logo.svg`}
-              alt={`${data.key} logo`}
-            />
-          )}
-          {data.other.modalUrl && (
-            <div
-              onClick={handleClick}
-              className="w-16 md:w-32 grid place-items-center mx-auto opacity-50 hover:opacity-100 cursor-pointer z-20"
-            >
-              <img
-                className="w-full"
-                src="/adoptersPage/playButton.svg"
-                alt="play button"
-              />
-            </div>
-          )}
-          {data.other.modalUrl && (
-            <div className="absolute top-0 left-0 w-full h-full bg-overlay grid place-items-center z-10 rounded-xl opacity-80"></div>
-          )}
-        </div>
-      </Container>
+      <ContainerFluid className={styles.adopterVideoStripeMainCont}>
+        <StripedBar data={data} />
+        <Container>
+          <div
+            className={`w-5/6 mx-auto flex justify-center items-center h-10 z-10 relative bg-no-repeat bg-cover ${data?.videobg?.toString()} ${
+              styles.videoCont
+            }`}
+            style={{ backgroundColor: data.colors.pri }}
+          >
+            {data.other.modalUrl && (
+              <>
+                <img
+                  className={styles.adopterLogo}
+                  src={`/adoptersPage/${data.key}/logo.svg`}
+                  alt={`${data.key} logo`}
+                  draggable={false}
+                />
+                <img
+                  src={`/adoptersPage/playButton.svg`}
+                  alt="Play video"
+                  draggable={false}
+                  className={styles.playBtn}
+                  onClick={handleClick}
+                />
+              </>
+            )}
+          </div>
+        </Container>
+      </ContainerFluid>
       {open && <Modal handleClick={handleClick} data={data} />}
     </>
   )

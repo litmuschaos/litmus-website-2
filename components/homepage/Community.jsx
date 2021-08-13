@@ -50,12 +50,14 @@ const Slide = ({ events, count, changeState }) => {
               >
                 <div className={"flex flex-col-reverse lg:flex-row w-full"}>
                   <div
-                    className={"w-full lg:w-2/5 lg:px-12"}
+                    className={"w-full lg:w-2/5 ml-1 lg:px-12"}
                     style={{ whiteSpace: "pre-line" }}
                   >
                     <p
                       style={{ color: "#5B44BA" }}
-                      className={"text-xl font-medium"}
+                      className={
+                        "text-sm sm:text-md lg:text-xl mt-10 lg:mt-0 font-medium"
+                      }
                     >
                       {event.type}
                     </p>
@@ -68,7 +70,6 @@ const Slide = ({ events, count, changeState }) => {
                   <div className={"w-full lg:w-3/5"}>
                     <Link href={event.link}>
                       <a target={"_blank"}>
-                        {" "}
                         <img
                           src={`/landing_images/community/${event.img_url}`}
                           className={"rounded-xl shadow-lg bg-blend-screen"}
@@ -193,6 +194,28 @@ const Community = () => {
               length={eventUtils.length}
             />
             <Slide events={eventUtils} count={curr} changeState={handleSwipe} />
+          </div>
+          <div className={"flex justify-between w-full lg:hidden"}>
+            <div
+              className={`${styles.slideArrow} shadow-lg`}
+              onClick={handlePrevState}
+            >
+              <img
+                src={"landing_images/testimonies/arrow_left.svg"}
+                className={""}
+                alt={"LitmusChaos"}
+              />
+            </div>
+            <div
+              className={`${styles.slideArrow} shadow-lg`}
+              onClick={handleNextState}
+            >
+              <img
+                src={"landing_images/testimonies/arrow_right.svg"}
+                className={""}
+                alt={"LitmusChaos"}
+              />
+            </div>
           </div>
         </Container>
       </div>
