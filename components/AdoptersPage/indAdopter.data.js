@@ -39,6 +39,13 @@ const Data = [
         "“Litmus is a great tool that offers out of the box generic chaos tests with different types of probes for performing validations at different time during the experiment which make automation easy”",
       author: "Samar",
       designation: "Lead Engineer at Orange"
+    },
+    colors: {
+      pri: "#181818",
+      col1: "#E5E7F1",
+      col2: "#FF8533",
+      col3: "#FF6600",
+      col4: "#000000"
     }
   },
   {
@@ -72,6 +79,13 @@ const Data = [
         "“Litmus let's us easily incorporate simple chaos experiments into already existing clusters. Since it provides native Kubernetes support, it's easy to understand and modify. Also, LitmusChaos community is nothing short of exceptional, so that's a bonus!”",
       author: "Adrian Gonciarz",
       designation: "Lead Q/A Engineer at Kitopi"
+    },
+    colors: {
+      pri: "#000000",
+      col1: "#E5E7F1",
+      col2: "#2F9DAA",
+      col3: "#19555C",
+      col4: "#000000"
     }
   },
   {
@@ -102,6 +116,13 @@ const Data = [
         "https://blog.lenskart.com/lenskarts-approach-to-chaos-engineering-part-2-6290e4f3a74e",
       videoUrl: "https://youtu.be/UOhjFbCrncw",
       modalUrl: "https://www.youtube.com/embed/-fDnaj0Vlas"
+    },
+    colors: {
+      pri: "#005797",
+      col1: "#DBE40D",
+      col2: "#57BA2D",
+      col3: "#005797",
+      col4: "#000000"
     }
   },
   {
@@ -141,6 +162,13 @@ const Data = [
     },
     other: {
       cta: "Leverage to test the resiliency of multi k8s cluster workloads in a private cloud."
+    },
+    colors: {
+      pri: "#C90A47",
+      col1: "#E5E7F1",
+      col2: "#F31159",
+      col3: "#C90A47",
+      col4: "#000000"
     }
   },
   {
@@ -178,6 +206,13 @@ const Data = [
         "“Litmus is a great tool that offers out of the box generic chaos tests with different types of probes for performing validations at different time during the experiment which make automation easy”",
       author: "Samar",
       designation: "Lead Engineer at Orange"
+    },
+    colors: {
+      pri: "#F12D49",
+      col1: "#E5E7F1",
+      col2: "#F78C9C",
+      col3: "#F12D49",
+      col4: "#000000"
     }
   },
   {
@@ -209,6 +244,13 @@ const Data = [
       blogUrl: "https://sumitnagal.medium.com/chaos-journey-279924051d57",
       videoUrl: "https://youtu.be/Ohj0VrwmQWs?t=567",
       modalUrl: "https://www.youtube.com/embed/Ohj0VrwmQWs"
+    },
+    colors: {
+      pri: "#202123",
+      col1: "#E5E7F1",
+      col2: "#0097FA",
+      col3: "#0077C5",
+      col4: "#000000"
     }
   }
 ]

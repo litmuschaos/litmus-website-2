@@ -40,7 +40,7 @@ const Adopters = [
   },
   {
     key: 5,
-    bgColor: "#03B5B0",
+    bgColor: "#F12D49",
     subHeading:
       "To test the resiliency of our platform and also verify the observability of the stack.",
     paragraph:
