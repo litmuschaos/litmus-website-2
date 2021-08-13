@@ -28,7 +28,7 @@ export const featureUtils = [
   {
     title: "Chaos Observability",
     content:
-      "Litmus includes Prometheus metrics that can help measure the impact of chaos on the applications real time. Impact of chaos and chaos experiment details can be super imposed on app dashboards.",
+      "Litmus exports Prometheus metrics transforming events and results that can help to highlight and quantify the impact of chaos on the applications or infrastructure in real time via in-house dashboards and external visualisation or APM tools.",
     svg: <ObservabilitySVG />
   },
   {
