@@ -30,8 +30,8 @@ const OtherSupport = () => {
 
         <div className={"flex flex-wrap items-start justify-between"}>
           {utils.map((item, idx) => (
-            <div className={"w-full lg:w-1/3 pr-4 my-6"}>
-              <Link href={item.link} key={idx}>
+            <div className={"w-full lg:w-1/3 pr-4 my-6"} key={idx}>
+              <Link href={item.link}>
                 <a target={"_blank"}>
                   <div className={"flex items-start"}>
                     <img src={`/support/${item.icon}.svg`} alt={item.icon} />
