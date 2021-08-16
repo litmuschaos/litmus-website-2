@@ -37,7 +37,7 @@ const SeoData = [
     // 0 - home
     title: "Litmus - Chaos Engineering for Kubernetes",
     description:
-      "Chaos Engineering redefined: LitmusChaos is an open source cloud-native Chaos Engineering framework which helps orchestrate chaos on Kubernetes platforms.",
+      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
     url: "https://litmuschaos.io",
     ogImgUrl: "https://litmuschaos.io/siteImage.png"
   },
@@ -45,7 +45,7 @@ const SeoData = [
     // 1 - adopters
     title: "Litmus - Chaos Engineering for Kubernetes",
     description:
-      "Chaos Engineering redefined: LitmusChaos is an open source cloud-native Chaos Engineering framework which helps orchestrate chaos on Kubernetes platforms.",
+      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
     url: "https://litmuschaos.io",
     ogImgUrl: "https://litmuschaos.io/siteImage.png"
   },
@@ -53,7 +53,7 @@ const SeoData = [
     // 2 - support
     title: "Litmus - Chaos Engineering for Kubernetes",
     description:
-      "Chaos Engineering redefined: LitmusChaos is an open source cloud-native Chaos Engineering framework which helps orchestrate chaos on Kubernetes platforms.",
+      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
     url: "https://litmuschaos.io",
     ogImgUrl: "https://litmuschaos.io/siteImage.png"
   },
@@ -61,7 +61,7 @@ const SeoData = [
     // 3 - community
     title: "Litmus - Chaos Engineering for Kubernetes",
     description:
-      "Chaos Engineering redefined: LitmusChaos is an open source cloud-native Chaos Engineering framework which helps orchestrate chaos on Kubernetes platforms.",
+      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
     url: "https://litmuschaos.io",
     ogImgUrl: "https://litmuschaos.io/siteImage.png"
   },
@@ -69,7 +69,7 @@ const SeoData = [
     // 4 - orange
     title: "Litmus - Chaos Engineering for Kubernetes",
     description:
-      "Chaos Engineering redefined: LitmusChaos is an open source cloud-native Chaos Engineering framework which helps orchestrate chaos on Kubernetes platforms.",
+      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
     url: "https://litmuschaos.io",
     ogImgUrl: "https://litmuschaos.io/siteImage.png"
   },
@@ -77,7 +77,7 @@ const SeoData = [
     // 5 - lenskart
     title: "Litmus - Chaos Engineering for Kubernetes",
     description:
-      "Chaos Engineering redefined: LitmusChaos is an open source cloud-native Chaos Engineering framework which helps orchestrate chaos on Kubernetes platforms.",
+      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
     url: "https://litmuschaos.io",
     ogImgUrl: "https://litmuschaos.io/siteImage.png"
   },
@@ -85,7 +85,7 @@ const SeoData = [
     // 6 - kitopi
     title: "Litmus - Chaos Engineering for Kubernetes",
     description:
-      "Chaos Engineering redefined: LitmusChaos is an open source cloud-native Chaos Engineering framework which helps orchestrate chaos on Kubernetes platforms.",
+      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
     url: "https://litmuschaos.io",
     ogImgUrl: "https://litmuschaos.io/siteImage.png"
   },
@@ -93,7 +93,7 @@ const SeoData = [
     // 7 - halodoc
     title: "Litmus - Chaos Engineering for Kubernetes",
     description:
-      "Chaos Engineering redefined: LitmusChaos is an open source cloud-native Chaos Engineering framework which helps orchestrate chaos on Kubernetes platforms.",
+      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
     url: "https://litmuschaos.io",
     ogImgUrl: "https://litmuschaos.io/siteImage.png"
   },
@@ -101,7 +101,7 @@ const SeoData = [
     // 8 - anutanetworks
     title: "Litmus - Chaos Engineering for Kubernetes",
     description:
-      "Chaos Engineering redefined: LitmusChaos is an open source cloud-native Chaos Engineering framework which helps orchestrate chaos on Kubernetes platforms.",
+      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
     url: "https://litmuschaos.io",
     ogImgUrl: "https://litmuschaos.io/siteImage.png"
   },
@@ -109,7 +109,7 @@ const SeoData = [
     // 9 - intuit
     title: "Litmus - Chaos Engineering for Kubernetes",
     description:
-      "Chaos Engineering redefined: LitmusChaos is an open source cloud-native Chaos Engineering framework which helps orchestrate chaos on Kubernetes platforms.",
+      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
     url: "https://litmuschaos.io",
     ogImgUrl: "https://litmuschaos.io/siteImage.png"
   }
