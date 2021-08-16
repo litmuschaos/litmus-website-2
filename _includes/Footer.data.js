@@ -39,13 +39,13 @@ export const FooterData = [
       {
         svg: <DocsSVG />,
         text: "Docs",
-        linkTo: "https://docs.litmuschaos.io/docs/getstarted/",
+        linkTo: "https://docs.litmuschaos.io/",
         external: true
       },
       {
         svg: <FaqSVG />,
         text: "FAQ",
-        linkTo: "https://docs.litmuschaos.io/docs/faq-general/",
+        linkTo: "https://docs.litmuschaos.io/docs/faq/",
         external: true
       },
       {
