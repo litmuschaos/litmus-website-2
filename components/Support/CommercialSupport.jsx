@@ -24,7 +24,7 @@ const CommercialSupport = () => {
             </Link>
           )
         })}
-        <Link href="https://github.com/litmuschaos/litmus/blob/master/Commercial%20Support.md">
+        <Link href="https://github.com/litmuschaos/litmus/blob/master/COMMERCIAL_SUPPORT.md">
           <a target="_blank" rel="noopener norefferer">
             <div className={styles.addCard}>
               <h2 className="text-lg md:text-xl font-normal">
