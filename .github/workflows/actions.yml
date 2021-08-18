@@ -1,9 +1,6 @@
-name: lint-check
+name: ci
 
 on:
-  push:
-    branches-ignore:
-      - main
   pull_request:
     branches:
       - main
@@ -15,14 +12,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm ci
+      - run: npm run build --if-present
       - uses: actions/cache@v2
         id: cache-build
         with:
           path: ./*
           key: ${{ github.sha }}
 
-  next-lint:
-    name: run eslint
+  lint:
+    name: linter
     runs-on: ubuntu-latest
     needs: build
 
@@ -37,7 +35,7 @@ jobs:
         run: npm run next-lint && npm run lint --silent
 
   prettier:
-    name: run prettier
+    name: prettier
     runs-on: ubuntu-latest
     needs: build
 
@@ -50,3 +48,18 @@ jobs:
 
       - name: prettier-check
         run: npm run prettier --silent
+
+  broken-links:
+    name: broken-link-check
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - uses: actions/cache@v2
+        id: restore-build
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+
+      - name: broken-link check
+        run: npm run test-blc
