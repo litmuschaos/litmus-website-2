@@ -24,7 +24,7 @@ const Adopters = () => {
     "pravega",
     "kubesphere",
     "klanik",
-    null
+    "neudesic"
   ]
 
   return (
@@ -35,28 +35,24 @@ const Adopters = () => {
       </BodyHead>
       <div className="mt-10 grid grid-cols-3 md:grid-cols-6 gap-x-4 gap-y-8">
         {AdopterList.map(adopter => {
-          return adopter != null ? (
+          return (
             <img
               key={adopter}
               src={`/landing_images/adopter_logos/${adopter}.png`}
               alt={adopter}
               draggable={false}
             />
-          ) : (
-            <Link
-              key={adopter}
-              href="https://github.com/litmuschaos/litmus/issues/2191"
-            >
-              <a target="_blank" rel="noopener noreferrer">
-                <img
-                  src={`/landing_images/adopter_logos/${adopter}.png`}
-                  alt="Add yourself"
-                  draggable={false}
-                />
-              </a>
-            </Link>
           )
         })}
+        <Link href="https://github.com/litmuschaos/litmus/issues/2191">
+          <a target="_blank" rel="noopener noreferrer">
+            <img
+              src={`/landing_images/adopter_logos/null.png`}
+              alt="Add yourself"
+              draggable={false}
+            />
+          </a>
+        </Link>
       </div>
     </SkewedContainerFluid>
   )
