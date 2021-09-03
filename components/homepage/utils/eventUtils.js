@@ -1,12 +1,12 @@
 export const eventUtils = [
   {
-    type: "Featured Event",
-    title: "Chaos Engineering Meetup August, 2021",
+    type: "Featured Video",
+    title: "What's New With LitmusChaos 2.0",
     content:
-      "Chaos Engineering Meetups are back for August and are bigger & better now with the amazing LitmusChaos project & community reaching the milestone of version 2.0 to redefine the Chaos Engineering ecosystem!",
-    img_url: "meetup.png",
-    link_text: "Register for the event",
-    link: "https://www.meetup.com/Chaos-Engineering-Meetup-Group/events/280029259/"
+      "LitmusChaos 2.0 version was released on the 15th of August 2021 and since then has been a center of attraction for Chaos Engineering enthusiasts, practitioners & developers.",
+    img_url: "video.png",
+    link_text: "Checkout Video",
+    link: "https://www.youtube.com/watch?v=nOTYIVP9lZY&ab_channel=LitmusChaos"
   },
   {
     type: "Featured News",
