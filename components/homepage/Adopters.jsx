@@ -24,7 +24,9 @@ const Adopters = () => {
     "pravega",
     "kubesphere",
     "klanik",
-    "neudesic"
+    "neudesic",
+    "iter8",
+    "pole_emploi"
   ]
 
   return (
