@@ -51,7 +51,7 @@ const Hero = () => {
     <Container className={styles.heroCont}>
       <div className={styles.textCont}>
         <HeroHead hero>
-          <span className="block">Open Source</span>
+          <span className="block">Cloud Native</span>
           <span className="block">Chaos Engineering</span>
           <span className="block">platform</span>
         </HeroHead>
