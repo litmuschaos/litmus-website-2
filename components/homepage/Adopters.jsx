@@ -26,7 +26,8 @@ const Adopters = () => {
     "klanik",
     "neudesic",
     "iter8",
-    "pole_emploi"
+    "pole_emploi",
+    "cnf_test_suite"
   ]
 
   return (
