@@ -10,7 +10,7 @@ on:
       - master
       - staging
     paths-ignore:
-      - '.github/workflows/*'       
+      - ".github/workflows/*"
 
 jobs:
   build:
