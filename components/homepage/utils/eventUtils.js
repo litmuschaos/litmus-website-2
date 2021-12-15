@@ -1,21 +1,21 @@
 export const eventUtils = [
   {
     type: "Featured Video",
-    title: "What's New With LitmusChaos 2.0",
+    title: "Cloud Native Chaos Engineering with LitmusChaos",
     content:
-      "LitmusChaos 2.0 version was released on the 15th of August 2021 and since then has been a center of attraction for Chaos Engineering enthusiasts, practitioners & developers.",
+      "Learn about Cloud Native Chaos Engineering with LitmusChaos with this online webinar.",
     img_url: "video.png",
     link_text: "Checkout Video",
-    link: "https://www.youtube.com/watch?v=nOTYIVP9lZY&ab_channel=LitmusChaos"
+    link: "https://youtu.be/sPzRQEpoD4A"
   },
   {
-    type: "Featured News",
-    title: "Releasing Litmus 2.0",
+    type: "Featured Blog",
+    title: "Step by step guide to chaos testing using Litmus Chaos toolkit",
     content:
-      "This is a sneak-peak blog for Litmus 2.0 GA which would be available in a few weeks from the publication date of this blog. ",
+      "In this article we will describe how to perform chaos testing using Litmus(a popular chaos testing tool).",
     img_url: "blog.png",
     link_text: "Read Blog",
-    link: "https://dev.to/litmus-chaos/litmus-2-0-simplifying-chaos-engineering-for-enterprises-4448"
+    link: "https://dev.to/sunitparekh/step-by-step-guide-to-chaos-testing-using-litmus-chaos-toolkit-77l"
   },
   {
     type: "KubeCon North America, 2021",
@@ -23,8 +23,8 @@ export const eventUtils = [
     content:
       "A session on how Orange, the telecommunications operator, uses Litmus, Kubernetes and other CNCF technologies to build and scale their application development process.",
     img_url: "kubecon.png",
-    link_text: "Register for the event",
-    link: "https://kccncna2021.sched.com/event/lV0e/case-study-improving-resilience-of-applications-in-telco-environments-uma-mukkara-chaosnative-samar-sidharth-orange"
+    link_text: "Checkout Video",
+    link: "https://youtu.be/fOgDZfZrFGg"
   },
   {
     type: "Get involved",
