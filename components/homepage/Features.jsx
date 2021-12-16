@@ -31,7 +31,7 @@ const Features = () => {
             And many more features
           </h3>
           <TextLink
-            href="https://docs.litmuschaos.io/docs/introduction/features"
+            href="https://docs.litmuschaos.io/docs/introduction/features/"
             external
             dark
           >
