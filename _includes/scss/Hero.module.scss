@@ -218,6 +218,69 @@ div.heroCont {
       width: 40%;
       min-width: 400px;
     }
+    div.incubationBar {
+      margin: 0 auto 2.5rem auto;
+      position: relative;
+      width: 100%;
+      @include mediumScreens {
+        width: 60%;
+        margin: 0 auto 2.5rem auto;
+      }
+      @include largeScreens {
+        margin: 0 0 2.5rem 0;
+        width: 100%;
+      }
+      div.gradBar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: conic-gradient(
+          from 0deg at 50% 50%,
+          rgba(36, 0, 255, 0.5216) 0deg,
+          #0087ff 56.25deg,
+          rgba(105, 30, 255, 0.686777) 131.25deg,
+          rgba(255, 83, 53, 0.75971) 196.87deg,
+          rgba(36, 0, 255, 0.519419) 213.75deg,
+          rgba(245, 56, 27, 0.736825) 223.13deg,
+          rgba(255, 29, 122, 0.776873) 264.38deg,
+          rgba(36, 0, 255, 0.5216) 360deg
+        );
+        filter: blur(12px);
+      }
+      div.itemCont {
+        position: relative;
+        z-index: 1;
+        background-color: #fff;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        justify-content: space-around;
+        gap: 0.5rem;
+        span.incubationText {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 0.8rem;
+          color: #1c0732;
+          font-weight: 500;
+          @include mediumScreens {
+            font-size: 0.9rem;
+          }
+        }
+        span.divider {
+          height: 100%;
+          width: 1px;
+          height: 20px;
+          display: inline-block;
+          background-color: #1c0732;
+        }
+        span.incubationLink {
+        }
+      }
+    }
   }
   div.heroImg {
     margin-top: 2rem;
