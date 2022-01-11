@@ -83,7 +83,7 @@ const Hero = () => {
             </span>
             <span className={styles.divider}></span>
             <span className={styles.incubationLink}>
-              <Link href="#">
+              <Link href="https://www.cncf.io/blog/2022/01/11/litmuschaos-becomes-a-cncf-incubating-project/">
                 <a
                   className="flex items-center text-xs md:text-sm font-medium text-litmus gap-1"
                   target="_blank"
