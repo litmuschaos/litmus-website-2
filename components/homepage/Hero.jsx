@@ -3,7 +3,6 @@ import { OutlinedButton, RegularButton } from "@includes/CTA"
 import styles from "@includes/scss/Hero.module.scss"
 import { HeroHead, Paragraph } from "@includes/Texts"
 import { Container } from "@layouts/Container"
-import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
@@ -164,8 +163,8 @@ const Hero = () => {
         </div>
       </div>
       <div className={styles.heroImg}>
-        <Image
-          src="/landing_images/hero/hero_img.png"
+        <img
+          src="/landing_images/hero/hero_img.svg"
           alt="LitmusChaos"
           height={646}
           width={599}
