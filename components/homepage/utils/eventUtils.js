@@ -10,12 +10,12 @@ export const eventUtils = [
   },
   {
     type: "Featured Blog",
-    title: "Step by step guide to chaos testing using Litmus Chaos toolkit",
+    title: "LitmusChaos in 2021: The Year In Review",
     content:
-      "In this article we will describe how to perform chaos testing using Litmus(a popular chaos testing tool).",
+      "Year-end retrospectives are an interesting topic. Much as it helps dwell on things accomplished, it also generates excitement about what is to come. Here’s to the progress made for LitmusChaos as a project in 2021",
     img_url: "blog.png",
     link_text: "Read Blog",
-    link: "https://dev.to/sunitparekh/step-by-step-guide-to-chaos-testing-using-litmus-chaos-toolkit-77l"
+    link: "https://dev.to/ksatchit/litmuschaos-in-2021-the-year-in-review-38cl"
   },
   {
     type: "KubeCon North America, 2021",
