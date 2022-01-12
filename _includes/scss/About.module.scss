@@ -1,0 +1,27 @@
+@import "@styles/scss/layoutMixins";
+@import "@styles/scss/Variables.scss";
+
+div.partDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  div.leftCont {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    @include mediumScreens {
+      width: 40%;
+    }
+    @include mediumScreensDesk {
+      align-items: center;
+    }
+  }
+  img.partImg {
+    width: 100%;
+    @include mediumScreens {
+      width: 50%;
+    }
+  }
+}
