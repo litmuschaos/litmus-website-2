@@ -501,17 +501,17 @@ const TopNavbar = () => {
                       <div>
                         <div className="relative mb-2">
                           <Image
-                            src="/navbar/community-cta.jpeg"
-                            alt="Chaos Engineering Meetup"
+                            src="/navbar/community-cta.png"
+                            alt="Litmus Incubation"
                             width={300}
                             height={190}
                           />
                         </div>
                         <TextLink
-                          href="https://www.meetup.com/Chaos-Engineering-Meetup-Group/events/280029259/"
+                          href="https://www.cncf.io/blog/2022/01/11/litmuschaos-becomes-a-cncf-incubating-project/"
                           external
                         >
-                          Register Now
+                          Read Announcement
                         </TextLink>
                       </div>
                     </div>
@@ -870,22 +870,22 @@ const TopNavbar = () => {
                     </Link>
                     <div className={styles.secondaryLinks}>
                       <span className="text-sm text-disabled font-medium block mb-4">
-                        UPCOMING EVENTS
+                        COMMUNITY UPDATES
                       </span>
                       <div className={styles.mobileSecondaryLinkCont}>
                         <Image
-                          src="/navbar/community-cta.jpeg"
-                          alt="Chaos Engineering Meetup"
+                          src="/navbar/community-cta.png"
+                          alt="Litmus Incubation"
                           width={300}
                           height={190}
                         />
                       </div>
                       <TextLink
-                        href="https://www.meetup.com/Chaos-Engineering-Meetup-Group/events/280029259/"
+                        href="https://www.cncf.io/blog/2022/01/11/litmuschaos-becomes-a-cncf-incubating-project/"
                         external
                         className="mt-3 block"
                       >
-                        Register
+                        Read Announcement
                       </TextLink>
                     </div>
                   </div>
