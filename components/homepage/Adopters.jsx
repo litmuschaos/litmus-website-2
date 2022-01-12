@@ -36,7 +36,7 @@ const Adopters = () => {
     <SkewedContainerFluid>
       <BodyHead className="max-w-4xl">
         <span className="text-hint">Trusted by</span> startups, leading open
-        source projects and the world`s largest companies
+        source projects and the world's largest companies
       </BodyHead>
       <div className="mt-10 grid grid-cols-3 md:grid-cols-6 gap-x-4 gap-y-8">
         {AdopterList.map(adopter => {

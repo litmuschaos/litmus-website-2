@@ -89,7 +89,7 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  See press release
+                  See Announcement
                   <svg
                     width={22}
                     height={21}
