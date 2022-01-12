@@ -19,9 +19,16 @@ const FeatureCard = ({ feature }) => {
 const Features = () => {
   return (
     <SkewedContainerFluid color="#1C0732">
-      <BodyHead dark>
-        <span className="accent">LitmusChaos</span> Features
+      <BodyHead dark className="text-center md:text-left">
+        Loaded with features to{" "}
+        <span className="text-accent md:block">achieve resilience</span>
       </BodyHead>
+      <Paragraph dark className="md:max-w-3xl mt-4 text-center md:text-left">
+        Over time, with the monthly cadence releases and community engagement,
+        we have added a lot of features and made LitmusChaos much easier for the
+        end-users. With the launch of Litmus 2.0, a new way of chaos engineering
+        can be performed by the users.
+      </Paragraph>
       <div className={styles.featureCardCont}>
         {featureUtils.map((feature, index) => {
           return <FeatureCard key={feature.title + index} feature={feature} />

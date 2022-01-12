@@ -34,9 +34,9 @@ const Adopters = () => {
 
   return (
     <SkewedContainerFluid>
-      <BodyHead>
-        Litmus <span className="text-hint">is</span> adopted{" "}
-        <span className="text-hint">by</span>
+      <BodyHead className="max-w-4xl">
+        <span className="text-hint">Trusted by</span> startups, leading open
+        source projects and the world&apos;s largest companies
       </BodyHead>
       <div className="mt-10 grid grid-cols-3 md:grid-cols-6 gap-x-4 gap-y-8">
         {AdopterList.map(adopter => {

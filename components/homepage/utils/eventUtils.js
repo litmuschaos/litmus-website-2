@@ -1,12 +1,12 @@
 export const eventUtils = [
   {
-    type: "Featured Video",
-    title: "Cloud Native Chaos Engineering with LitmusChaos",
+    type: "Featured Blog",
+    title: "LitmusChaos becomes a CNCF incubating project",
     content:
-      "Learn about Cloud Native Chaos Engineering with LitmusChaos with this online webinar.",
-    img_url: "video.png",
-    link_text: "Checkout Video",
-    link: "https://youtu.be/sPzRQEpoD4A"
+      "The CNCF Technical Oversight Committee (TOC) has voted to approve LitmusChaos' move from the CNCF Sandbox to Incubation level. ",
+    img_url: "cncf.png",
+    link_text: "Checkout Announcement",
+    link: "https://www.cncf.io/blog/2022/01/11/litmuschaos-becomes-a-cncf-incubating-project/"
   },
   {
     type: "Featured Blog",
