@@ -29,7 +29,8 @@ const Adopters = () => {
     "pole_emploi",
     "cnf_test_suite",
     "containersolutions",
-    "iFood"
+    "iFood",
+    "FIS"
   ]
 
   return (
