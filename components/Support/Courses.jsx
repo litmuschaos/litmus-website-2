@@ -3,21 +3,21 @@ import styles from "@includes/scss/Support.module.scss"
 import { BodyHead, Paragraph } from "@includes/Texts"
 import { Container } from "@layouts/Container"
 import Link from "next/link"
-import { Supporters } from "./utils"
+import { CourseData } from "./utils"
 
-const CommercialSupport = () => {
+const Courses = () => {
   return (
-    <Container className={styles.supportCont}>
-      <BodyHead>Commercial Support</BodyHead>
+    <Container className={styles.courseCont}>
+      <BodyHead>Courses</BodyHead>
       <div className={styles.gridCont}>
-        {Supporters.map(support => {
+        {CourseData.map(support => {
           return (
             <Link href={support.link} key={support.name}>
               <a target="_blank" rel="noopener norefferer">
                 <div className={styles.supportCard}>
                   <img
-                    height={31}
-                    width={144}
+                    height={32}
+                    width={255}
                     src={support.logo}
                     alt={support.name}
                   />
@@ -29,11 +29,11 @@ const CommercialSupport = () => {
             </Link>
           )
         })}
-        <Link href="https://github.com/litmuschaos/litmus/blob/master/COMMERCIAL_SUPPORT.md">
+        {/* <Link href="https://github.com/litmuschaos/litmus/blob/master/COMMERCIAL_SUPPORT.md">
           <a target="_blank" rel="noopener norefferer">
             <div className={styles.addCard}>
               <h2 className="text-lg md:text-xl font-normal">
-                Offering support for Litmus?
+                Offering training for Litmus?
               </h2>
               <span className="flex items-center gap-2 mt-4">
                 <MoreSVG />{" "}
@@ -43,10 +43,10 @@ const CommercialSupport = () => {
               </span>
             </div>
           </a>
-        </Link>
+        </Link> */}
       </div>
     </Container>
   )
 }
 
-export default CommercialSupport
+export default Courses

@@ -318,112 +318,7 @@ const TopNavbar = () => {
                   </div>
                 </div>
               </li>
-              {/* <li>
-                <span
-                  className={`text-hint transition-all text-sm lg:text-base cursor-pointer font-medium ${styles.navLink}`}
-                >
-                  Tutorials
-                </span>
-                <div className={styles.dropDownDesktop}>
-                  <div className={styles.overHead}></div>
-                  <div className={styles.dropDownBody}>
-                    <div className={`${styles.mainMenuItemCont}`}>
-                      <Link href="https://docs.litmuschaos.io/tutorials/">
-                        <a target="_blank" rel="noopener norefferer">
-                          <div className={styles.primaryLink}>
-                            <TouchSVG />
-                            <div>
-                              <p
-                                className={`text-primary text-base font-medium ${styles.tutorials}`}
-                              >
-                                All Tutorials
-                              </p>
-                              <p className="text-hint text-sm max-w-xs">
-                                Collection of guided, hands-on tutorials to
-                                learn how to use Litmus
-                              </p>
-                            </div>
-                          </div>
-                        </a>
-                      </Link>
-                      <div className="mt-6">
-                        <p className="text-sm text-disabled">
-                          FEATURED TUTORIALS
-                        </p>
-                        <div className="flex gap-4 mt-2">
-                          <Link href="#">
-                            <a>
-                              <div className="max-w-xs">
-                                <div className="relative max-w-sm">
-                                  <img
-                                    src="/navbar/getting_started.png"
-                                    height={120}
-                                    width={257}
-                                    alt="Getting Started"
-                                    className="w-full"
-                                  />
-                                </div>
-                                <p className="text-base font-medium text-primary mt-4">
-                                  LitmusChaos: Getting Started
-                                </p>
-                                <p className="text-sm text-hint max-w-xs mt-2">
-                                  Installation of Litmus, Portal Set Up, Chaos
-                                  Execution with Podtato Head Chaos
-                                </p>
-                              </div>
-                            </a>
-                          </Link>
-                          <Link href="#">
-                            <a>
-                              <div className="max-w-xs">
-                                <div className="relative max-w-sm">
-                                  <img
-                                    src="/navbar/workflow.png"
-                                    height={120}
-                                    width={257}
-                                    alt="Getting Started"
-                                    className="w-full"
-                                  />
-                                </div>
-                                <p className="text-base font-medium text-primary mt-4">
-                                  Creating Custom Chaos Workflows
-                                </p>
-                                <p className="text-sm text-hint max-w-xs mt-2">
-                                  Usage MyHub and Asset Discovery to create
-                                  Custom Workflows
-                                </p>
-                              </div>
-                            </a>
-                          </Link>
-                          <Link href="#">
-                            <a>
-                              <div className="max-w-xs">
-                                <div className="relative max-w-sm">
-                                  <img
-                                    src="/navbar/gitops.png"
-                                    height={120}
-                                    width={257}
-                                    alt="Getting Started"
-                                    className="w-full"
-                                  />
-                                </div>
-                                <p className="text-base font-medium text-primary mt-4">
-                                  Integrating with GitOps
-                                </p>
-                                <p className="text-sm text-hint max-w-xs mt-2">
-                                  Usage of Git as Golden Copy for Chaos
-                                  Workflows and Automated Trigger of Chaos
-                                </p>
-                              </div>
-                            </a>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li> */}
-              {/* Temporary Link */}
+
               <li>
                 <Link href="https://docs.litmuschaos.io/tutorials/">
                   <a
@@ -435,7 +330,6 @@ const TopNavbar = () => {
                   </a>
                 </Link>
               </li>
-              {/* Temporary Link */}
               <li>
                 <Link href="https://hub.litmuschaos.io/">
                   <a
@@ -518,6 +412,15 @@ const TopNavbar = () => {
                   </div>
                 </div>
               </li>
+              <li>
+                <Link href="/support_and_training">
+                  <a
+                    className={`text-hint hover:text-primary transition-all text-sm lg:text-base font-medium ${styles.navLink}`}
+                  >
+                    Support & Training
+                  </a>
+                </Link>
+              </li>
             </ul>
             <RegularButton
               external
@@ -552,12 +455,6 @@ const TopNavbar = () => {
                     <MobileArrows />
                   </span>
                 </li>
-                {/* <li onClick={SetTutorial}>
-                  <span>
-                    Tutorials
-                    <MobileArrows />
-                  </span>
-                </li> */}
                 <li>
                   <Link href="https://docs.litmuschaos.io/tutorials/">
                     <a target="_blank" rel="noopener norefferer">
@@ -573,6 +470,16 @@ const TopNavbar = () => {
                     <a target="_blank" rel="noopener norefferer">
                       <span>
                         Chaoshub
+                        <MobileArrows />
+                      </span>
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/support_and_training">
+                    <a>
+                      <span>
+                        Support & Training
                         <MobileArrows />
                       </span>
                     </a>
@@ -893,108 +800,6 @@ const TopNavbar = () => {
               ) : (
                 ""
               )}
-
-              {/* {tutorialOpen ? (
-                <div className={styles.openMobileMenuCont}>
-                  <span className={styles.backToggle} onClick={SetTutorial}>
-                    <MobileArrowBack />
-                    Tutorials
-                  </span>
-                  <div className={styles.dropDownContMobile}>
-                    <Link href="https://docs.litmuschaos.io/tutorials/">
-                      <a target="_blank" rel="noopener norefferer">
-                        <div className={`flex py-4 items-center`}>
-                          <TouchSVG />
-                          <div className="ml-2">
-                            <p
-                              className={`text-primary text-base font-medium ${styles.documentation}`}
-                            >
-                              Tutorials
-                            </p>
-                            <p className="text-hint text-sm max-w-xs">
-                              Collection of guided, hands-on tutorials to learn
-                              how to use Litmus
-                            </p>
-                          </div>
-                        </div>
-                      </a>
-                    </Link>
-                    <span className="text-sm text-disabled font-medium block my-4">
-                      FEATURED TUTORIALS
-                    </span>
-                    <div className="grid gap-8 mt-2">
-                      <Link href="#">
-                        <a>
-                          <div className="w-full">
-                            <div className="relative max-w-sm">
-                              <img
-                                src="/navbar/getting_started.png"
-                                height={120}
-                                width={257}
-                                alt="Getting Started"
-                                className="w-full"
-                              />
-                            </div>
-                            <p className="text-base font-medium text-primary mt-4">
-                              LitmusChaos: Getting Started
-                            </p>
-                            <p className="text-sm text-hint mt-2">
-                              Installation of Litmus, Portal Set Up, Chaos
-                              Execution with Podtato Head Chaos
-                            </p>
-                          </div>
-                        </a>
-                      </Link>
-                      <Link href="#">
-                        <a>
-                          <div className="w-full">
-                            <div className="relative max-w-sm">
-                              <img
-                                src="/navbar/workflow.png"
-                                height={120}
-                                width={257}
-                                alt="Getting Started"
-                                className="w-full"
-                              />
-                            </div>
-                            <p className="text-base font-medium text-primary mt-4">
-                              Creating Custom Chaos Workflows
-                            </p>
-                            <p className="text-sm text-hint mt-2">
-                              Usage MyHub and Asset Discovery to create Custom
-                              Workflows
-                            </p>
-                          </div>
-                        </a>
-                      </Link>
-                      <Link href="#">
-                        <a>
-                          <div className="w-full">
-                            <div className="relative max-w-sm">
-                              <img
-                                src="/navbar/gitops.png"
-                                height={120}
-                                width={257}
-                                alt="Getting Started"
-                                className="w-full"
-                              />
-                            </div>
-                            <p className="text-base font-medium text-primary mt-4">
-                              Integrating with GitOps
-                            </p>
-                            <p className="text-sm text-hint mt-2">
-                              Usage of Git as Golden Copy for Chaos Workflows
-                              and Automated Trigger of Chaos
-                            </p>
-                          </div>
-                        </a>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                ""
-              )} */}
             </div>
           </Container>
         </ContainerFluid>
