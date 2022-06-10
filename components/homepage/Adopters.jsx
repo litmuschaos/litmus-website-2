@@ -30,7 +30,8 @@ const Adopters = () => {
     "cnf_test_suite",
     "containersolutions",
     "iFood",
-    "FIS"
+    "FIS",
+    "adidas"
   ]
 
   return (
