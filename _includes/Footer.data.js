@@ -57,7 +57,7 @@ export const FooterData = [
       {
         svg: <SupportSVG />,
         text: "Support",
-        linkTo: "/support"
+        linkTo: "/support_and_training"
       }
     ]
   },
