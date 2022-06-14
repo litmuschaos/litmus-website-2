@@ -18,6 +18,6 @@ export const CourseData = [
     name: "Udemy",
     logo: "/support/udemy_logo.svg",
     desc: "Build Kubernetes-native Resilient Microservices and Reliability Pipelines with LitmusChaos",
-    link: "https://www.udemy.com/course/configuring-kubernetes-for-reliability-with-litmuschaos/"
+    link: "https://www.udemy.com/course/configuring-kubernetes-for-reliability-with-litmuschaos"
   }
 ]
