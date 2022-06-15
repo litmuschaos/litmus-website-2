@@ -16,10 +16,9 @@ const Courses = () => {
               <a target="_blank" rel="noopener norefferer">
                 <div className={styles.supportCard}>
                   <img
-                    height={32}
-                    width={255}
                     src={support.logo}
                     alt={support.name}
+                    className="h-8 w-auto"
                   />
                   <Paragraph hint className="mt-4">
                     {support.desc}
@@ -29,7 +28,7 @@ const Courses = () => {
             </Link>
           )
         })}
-        {/* <Link href="https://github.com/litmuschaos/litmus/blob/master/COMMERCIAL_SUPPORT.md">
+        <Link href="https://github.com/litmuschaos/litmus/blob/master/TRAINING_AND_COURSES.md">
           <a target="_blank" rel="noopener norefferer">
             <div className={styles.addCard}>
               <h2 className="text-lg md:text-xl font-normal">
@@ -43,7 +42,7 @@ const Courses = () => {
               </span>
             </div>
           </a>
-        </Link> */}
+        </Link>
       </div>
     </Container>
   )

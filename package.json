@@ -11,7 +11,7 @@
     "next-lint": "next lint",
     "prettier": "prettier --check .",
     "prettier-fix": "prettier --write .",
-    "blc": "blc http://localhost:3000 -ro --exclude 'linkedin' --exclude 'medium' --exclude 'lenskart'",
+    "blc": "blc http://localhost:3000 -ro --exclude 'linkedin' --exclude 'medium' --exclude 'lenskart' --exclude 'udemy'",
     "test-blc": "npm-run-all -p -r start blc"
   },
   "dependencies": {
