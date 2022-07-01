@@ -69,8 +69,11 @@ div.navbarContFluid {
             display: none;
             transition: all 100ms ease-in;
             @include largeScreens {
-              right: 0;
+              min-width: 800px;
               left: auto;
+            }
+            @include extraLargeScreens {
+              right: 0;
             }
             div.overHead {
               width: 100%;
@@ -98,9 +101,6 @@ div.navbarContFluid {
                     margin-bottom: 0;
                   }
                 }
-              }
-              @include largeScreens {
-                width: max-content;
               }
               div.mainMenuItemCont {
                 padding: 2rem;
