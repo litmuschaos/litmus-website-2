@@ -1,21 +1,21 @@
 ---
     blog_image: /blog/blog.png
     tag: Litmus Community
-    date: Aug 15, 2021
+    date: Aug 17, 2021
     author: Uma Mukkara
     author_image: /blog_images/blog_uma/uma_headshot.png
     author_role: CEO, ChaosNative
     author_email: uma@chaosnative.com
     author_twitter: https://twitter.com/elonmusk
     author_linkedIn: https://www.linkedin.com/in/reidhoffman/
-    title: Litmus 2.0
+    title: Litmus 3.0
     tagline: Another big milestone in our journey towards cloud native reliability
     content:
         Litmus 2.0 comes with many Chaos Engineering platform enhancements such as a Chaos Center for centralized chaos management, well-defined control plane and execution plane boundaries, Litmus Workflows, GitOps, declarative steady-state hypothesis using Litmus probes, well-defined APIs for automation, upgraded documentation, and many more.
     ttr: 6
 ---
 
-<div style="position: sticky; top:4rem; height:4.5rem; background-color: white; padding: 0.5rem 0; display: flex; align-items: center; z-index:10;" className="font-bold text-lg md:text-2xl mt-8">Another big milestone in our journey towards cloud native reliability</div>
+## Another big milestone in our journey towards cloud native reliability
 
 The LitmusChaos maintainers announced the general availability of their major
 release, Litmus 2.0, today. The team has been working along with the Litmus
@@ -25,7 +25,7 @@ test some features. If I look back at the early days of the project and
 recollect what our laid out vision for the future is, this release is a major
 milestone in many ways.
 
-<div style="position: sticky; top:4rem; height:4.5rem; background-color: white; padding: 0.5rem 0; display: flex; align-items: center; z-index:10;" className="font-bold text-lg md:text-2xl mt-8">1.0 - Easy start for cloud native chaos</div>
+### 1.0 - Easy start for cloud native chaos
 
 Three years ago Chaos Engineering was starting to become a good choice for SREs
 and DevOps. Many first timers take the route of introducing chaos as a method to
@@ -33,7 +33,7 @@ achieve reliability. LitmusChaos 1.0 made chaos easy for those who want to take
 the open source approach with a hub, operator, scheduler, SDK and the Litmus
 platform itself as a cloud native app.
 
-<div style="position: sticky; top:4rem; height:4.5rem; background-color: white; padding: 0.5rem 0; display: flex; align-items: center; z-index:10;" className="font-bold text-lg md:text-2xl mt-8">2.0 - Platform for scale and collaboration</div>
+### 2.0 - Platform for scale and collaboration
 
 Since 1.0, it was clear to us that there will be loads of users for Chaos
 Engineering and that the platform has to meet the expectations of scale and
@@ -49,21 +49,18 @@ There are lots of places where you can find the capabilities of the latest
 release. Of course, the most updated one is
 [https://docs.litmuschaos.io](https://docs.litmuschaos.io/).
 
-**Here is a list of resources to know more about LitmusChaos 2.0 :**
+**Here is a list of resources to know more about LitmusChaos 2.0:**
 
 - [Litmus Docs](https://docs.litmuschaos.io/)
-
 - [Rawkode](https://www.youtube.com/watch?v=D0t3emVLLko)
 
-**Learning resources**
+**Learning Resources:**
 
 - [Litmus Tutorials](https://docs.litmuschaos.io/tutorials/)
-
 - [KataKoda](https://www.katacoda.com/litmusbot/scenarios/deploying-litmus2-0)
-
 - [Udemy](https://www.udemy.com/course/configuring-kubernetes-for-reliability-with-litmuschaos/)
 
-<div style="position: sticky; top:4rem; height:4.5rem; background-color: white; padding: 0.5rem 0; display: flex; align-items: center; z-index:10;" className="font-bold text-lg md:text-2xl mt-8">The next steps:</div>
+### The next steps
 
 We are super excited about this release. It is beta tested in the field. We are
 looking forward to the larger community using it and starting the feedback loop

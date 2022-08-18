@@ -2,13 +2,19 @@ import { OutlinedButton } from "@includes/CTA"
 import { Container } from "@layouts/Container"
 import ReactMarkdown from "react-markdown"
 import rehypeRaw from "rehype-raw"
+import styled from "@components/BlogPost/Blog.module.scss"
 
 const PostContent = ({ links, body, data }) => {
   return (
     <Container>
       <div className="pb-12">
         <article className="relative prose max-w-none">
-          <ReactMarkdown rehypePlugins={[rehypeRaw]}>{body}</ReactMarkdown>
+          <ReactMarkdown
+            rehypePlugins={[rehypeRaw]}
+            className={styled.markdownCont}
+          >
+            {body}
+          </ReactMarkdown>
         </article>
       </div>
       <div className="flex flex-row justify-between mt-2 md:mt-10">
