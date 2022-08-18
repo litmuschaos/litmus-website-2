@@ -66,6 +66,14 @@ const SeoData = [
     ogImgUrl: "https://litmuschaos.io/siteImage.png"
   },
   {
+    //  4- blog
+    title: "LitmusChaos - Open Source Chaos Engineering Platform",
+    description:
+      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
+    url: "https://litmuschaos.io",
+    ogImgUrl: "https://litmuschaos.io/siteImage.png"
+  },
+  {
     // 4 - orange
     title: "LitmusChaos - Open Source Chaos Engineering Platform",
     description:
@@ -121,6 +129,7 @@ const SEO = ({ page }) => {
     "adopters",
     "support",
     "community",
+    "blog",
     "orange",
     "lenskart",
     "kitopi",

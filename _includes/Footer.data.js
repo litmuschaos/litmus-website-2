@@ -4,6 +4,7 @@ import {
   FaqSVG,
   GithubFooterSVG,
   IssuesSVG,
+  LinkedInSVG,
   SlackFooterSVG,
   SupportSVG,
   TwitterSVG,
@@ -56,7 +57,7 @@ export const FooterData = [
       },
       {
         svg: <SupportSVG />,
-        text: "Support",
+        text: "Support & Training",
         linkTo: "/support_and_training"
       }
     ]
@@ -92,6 +93,12 @@ export const FooterData = [
         svg: <YoutubeSVG />,
         text: "Youtube",
         linkTo: "https://www.youtube.com/channel/UCa57PMqmz_j0wnteRa9nCaw",
+        external: true
+      },
+      {
+        svg: <LinkedInSVG />,
+        text: "LinkedIn",
+        linkTo: "https://www.linkedin.com/company/litmuschaos/",
         external: true
       }
     ]
