@@ -1,6 +1,6 @@
+import { getAllArticles } from "@blog/devto"
 import BlogIndexHero from "@components/BlogIndex/BlogIndexHero"
 import BlogsContainer from "@components/BlogIndex/BlogsContainer"
-import { posts } from "@blog/BlogData"
 import SEO from "lib/SEO"
 
 const Index = ({ posts }) => {
@@ -12,12 +12,14 @@ const Index = ({ posts }) => {
     </>
   )
 }
+
 export async function getStaticProps() {
-  const postsData = posts()
+  const articles = await getAllArticles()
   return {
     props: {
-      posts: postsData
+      posts: articles
     }
   }
 }
+
 export default Index

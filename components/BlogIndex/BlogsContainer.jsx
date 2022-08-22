@@ -9,8 +9,22 @@ const BlogsContainer = ({ posts }) => {
         <SubHeading>Other Blogs</SubHeading>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 mt-12">
           {posts.map((post, idx) => {
-            const { frontmatter, slug } = post
-            return <BlogDeskCard data={frontmatter} slug={slug} key={idx} />
+            return (
+              <BlogDeskCard
+                data={{
+                  blog_image: post.cover_image,
+                  image_alt: post.title,
+                  tag: post.tag_list,
+                  date: post.published_at,
+                  author: post.user.name,
+                  title: post.title,
+                  content: post.description,
+                  ttr: post.reading_time_minutes
+                }}
+                slug={post.slug}
+                key={idx}
+              />
+            )
           })}
         </div>
       </Container>

@@ -33,15 +33,18 @@ const BlogIndexHero = () => {
                 Logging using EFK for LitmusChaos
               </h2>
               <div className="flex items-center gap-2 mt-3">
-                <Image
-                  src={"/adoptersPage/adopter-logo/lenskart.png"}
+                <img
+                  src={
+                    "https://res.cloudinary.com/practicaldev/image/fetch/s--xZ3dUX2P--/c_fill,f_auto,fl_progressive,h_640,q_auto,w_640/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/415007/19e1d8e6-508b-44e6-a39e-567381d047e9.jpg"
+                  }
+                  className="rounded-full"
                   alt="Alt Text"
                   height={44}
                   width={44}
                 />
                 <div>
                   <p className="text-primary text-sm font-medium">Vedant</p>
-                  <p className="text-hint text-xs">SSE at Harness.io</p>
+                  <p className="text-hint text-xs">Author</p>
                 </div>
               </div>
               <Paragraph className="mt-4">
@@ -49,13 +52,18 @@ const BlogIndexHero = () => {
                 logging using the EFK stack (Elastic-Search+FluentD+Kibana) for
                 LitmusChaos experiments.
               </Paragraph>
-              <TextLink href="#" className="mt-4 inline-block">
+              <TextLink
+                href="blog/logging-using-efk-for-chaoscenter-5gp6"
+                className="mt-4 inline-block"
+              >
                 Read More
               </TextLink>
             </div>
             <div className="md:w-1/2 relative">
-              <Image
-                src={"/adoptersPage/adopter-logo/lenskart.png"}
+              <img
+                src={
+                  "https://res.cloudinary.com/practicaldev/image/fetch/s--G8U1wZtR--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/c0ii6z3uu8d1hl01kwrc.png"
+                }
                 alt="Alt"
                 width={506}
                 height={325}

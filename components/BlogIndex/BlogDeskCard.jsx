@@ -1,4 +1,4 @@
-import Image from "next/image"
+import moment from "moment"
 import Link from "next/link"
 
 const BlogDeskCard = ({ data, slug }) => {
@@ -11,26 +11,25 @@ const BlogDeskCard = ({ data, slug }) => {
           <div className="bg-white h-full shadow-lg hover:shadow-xl rounded-md flex justify-between flex-col">
             <div>
               <div className="relative w-full">
-                <Image
+                <img
                   src={blog_image}
                   alt={image_alt}
                   height={192}
-                  width={352}
-                  loading="eager"
+                  width="auto"
                   layout="responsive"
                   className="object-cover rounded-t-md bg-black"
                 />
               </div>
               <div className="mx-3 py-2 px-2">
-                <div className="w-full inline-flex justify-between font-medium text-xss">
+                <div className="w-full flex flex-col justify-between font-medium text-xss">
                   <div>
-                    <span className="text-highlight align-baseline">{tag}</span>
                     <span className="font-normal text-xs opacity-60">
-                      {" "}
-                      | {date}
+                      <span className="align-baseline">[{tag.join(", ")}]</span>
                     </span>
                   </div>
-                  <div className="text-xs opacity-60">{author}</div>
+                  <div className="text-sm opacity-60 pt-2">
+                    {author} | {moment(date).format("Do MMMM YYYY")}
+                  </div>
                 </div>
                 <h2 className="flex-auto text-2xl font-medium mt-5 w-9/12 line-clamp-2">
                   {title}
