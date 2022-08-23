@@ -1,7 +1,7 @@
 import { NextSeo } from "next-seo"
 import Head from "next/head"
 
-const SeoKeywords = () => {
+const SeoKeywords = ({ blog }) => {
   const keywords = [
     "chaos engineering",
     "Litmus Chaos",
@@ -24,7 +24,7 @@ const SeoKeywords = () => {
     "DataAgility",
     "multicloud"
   ]
-
+  blog && keywords.push(blog.tag)
   return (
     <Head>
       <meta property="keywords" content={keywords} />
@@ -32,127 +32,41 @@ const SeoKeywords = () => {
   )
 }
 
-const SeoData = [
-  {
-    // 0 - home
-    title: "LitmusChaos - Open Source Chaos Engineering Platform",
-    description:
-      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
-    url: "https://litmuschaos.io",
-    ogImgUrl: "https://litmuschaos.io/siteImage.png"
-  },
-  {
-    // 1 - adopters
-    title: "LitmusChaos - Open Source Chaos Engineering Platform",
-    description:
-      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
-    url: "https://litmuschaos.io",
-    ogImgUrl: "https://litmuschaos.io/siteImage.png"
-  },
-  {
-    // 2 - support
-    title: "LitmusChaos - Open Source Chaos Engineering Platform",
-    description:
-      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
-    url: "https://litmuschaos.io",
-    ogImgUrl: "https://litmuschaos.io/siteImage.png"
-  },
-  {
-    // 3 - community
-    title: "LitmusChaos - Open Source Chaos Engineering Platform",
-    description:
-      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
-    url: "https://litmuschaos.io",
-    ogImgUrl: "https://litmuschaos.io/siteImage.png"
-  },
-  {
-    //  4- blog
-    title: "LitmusChaos - Open Source Chaos Engineering Platform",
-    description:
-      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
-    url: "https://litmuschaos.io",
-    ogImgUrl: "https://litmuschaos.io/siteImage.png"
-  },
-  {
-    // 4 - orange
-    title: "LitmusChaos - Open Source Chaos Engineering Platform",
-    description:
-      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
-    url: "https://litmuschaos.io",
-    ogImgUrl: "https://litmuschaos.io/siteImage.png"
-  },
-  {
-    // 5 - lenskart
-    title: "LitmusChaos - Open Source Chaos Engineering Platform",
-    description:
-      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
-    url: "https://litmuschaos.io",
-    ogImgUrl: "https://litmuschaos.io/siteImage.png"
-  },
-  {
-    // 6 - kitopi
-    title: "LitmusChaos - Open Source Chaos Engineering Platform",
-    description:
-      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
-    url: "https://litmuschaos.io",
-    ogImgUrl: "https://litmuschaos.io/siteImage.png"
-  },
-  {
-    // 7 - halodoc
-    title: "LitmusChaos - Open Source Chaos Engineering Platform",
-    description:
-      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
-    url: "https://litmuschaos.io",
-    ogImgUrl: "https://litmuschaos.io/siteImage.png"
-  },
-  {
-    // 8 - anutanetworks
-    title: "LitmusChaos - Open Source Chaos Engineering Platform",
-    description:
-      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
-    url: "https://litmuschaos.io",
-    ogImgUrl: "https://litmuschaos.io/siteImage.png"
-  },
-  {
-    // 9 - intuit
-    title: "LitmusChaos - Open Source Chaos Engineering Platform",
-    description:
-      "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast.",
-    url: "https://litmuschaos.io",
-    ogImgUrl: "https://litmuschaos.io/siteImage.png"
-  }
-]
-
-const SEO = ({ page }) => {
-  const list = [
-    "home",
-    "adopters",
-    "support",
-    "community",
-    "blog",
-    "orange",
-    "lenskart",
-    "kitopi",
-    "halodoc",
-    "anutanetworks",
-    "intuit"
-  ]
-  const { title, description, url, ogImgUrl } = SeoData[list.indexOf(page)]
-
+const SEO = ({ page, blog, adopter }) => {
   return (
     <>
-      <SeoKeywords />
+      <SeoKeywords blog={blog} />
       <NextSeo
-        title={title}
-        description={description}
-        canonical={url}
+        title={
+          blog ? page : "LitmusChaos - Open Source Chaos Engineering Platform"
+        }
+        description={
+          "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast."
+        }
+        canonical={
+          blog
+            ? `https://litmuschaos.io/blog/${blog.localSlug}`
+            : adopter
+            ? `https://litmuschaos.io/adopters/${adopter.name}`
+            : `https://litmuschaos.io/${page}`
+        }
         openGraph={{
-          url: [url],
-          title: [title],
-          description: [description],
+          url: blog
+            ? `https://litmuschaos.io/blog/${blog.localSlug}`
+            : adopter
+            ? `https://litmuschaos.io/adopters/${adopter.name}`
+            : `https://litmuschaos.io/${page}`,
+          title: blog
+            ? page
+            : "LitmusChaos - Open Source Chaos Engineering Platform",
+          description: [
+            "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast."
+          ],
           images: [
             {
-              url: [ogImgUrl],
+              url: [
+                blog ? blog.seoImage : "https://litmuschaos.io/siteImage.png"
+              ],
               width: "",
               height: "",
               alt: ""

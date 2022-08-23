@@ -6,7 +6,7 @@ import SEO from "@lib/SEO"
 const Support = () => {
   return (
     <>
-      <SEO page={"support"} />
+      <SEO page={"support_and_training"} />
       <Courses />
       <CommercialSupport />
       <OtherSupport />

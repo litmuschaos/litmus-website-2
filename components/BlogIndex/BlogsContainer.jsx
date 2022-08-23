@@ -19,7 +19,8 @@ const BlogsContainer = ({ posts }) => {
                   author: post.user.name,
                   title: post.title,
                   content: post.description,
-                  ttr: post.reading_time_minutes
+                  ttr: post.reading_time_minutes,
+                  profileImage: post.user.profile_image
                 }}
                 slug={post.slug}
                 key={idx}

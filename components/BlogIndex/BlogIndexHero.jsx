@@ -27,15 +27,15 @@ const BlogIndexHero = () => {
         className="mt-8"
       >
         <Container>
-          <div className="flex flex-col-reverse md:flex-row justify-between md:items-center gap-4 rounded-xl shadow-2xl p-12 bg-white">
+          <div className="flex flex-col-reverse md:flex-row justify-between md:items-center gap-4 rounded-xl shadow-2xl py-6 px-4 md:p-8 bg-white">
             <div className="md:w-1/2">
               <h2 className="text-xl md:text-2xl lg:text-3xl font-medium">
-                Logging using EFK for LitmusChaos
+                Introducing Litmus 2.0 - Simplify Chaos Engineering
               </h2>
               <div className="flex items-center gap-2 mt-3">
                 <img
                   src={
-                    "https://res.cloudinary.com/practicaldev/image/fetch/s--xZ3dUX2P--/c_fill,f_auto,fl_progressive,h_640,q_auto,w_640/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/415007/19e1d8e6-508b-44e6-a39e-567381d047e9.jpg"
+                    "https://res.cloudinary.com/practicaldev/image/fetch/s--IByWRkFd--/c_fill,f_auto,fl_progressive,h_640,q_auto,w_640/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/401544/4b0b2b9a-b9fb-4453-a49f-f3dde0628f9a.jpeg"
                   }
                   className="rounded-full"
                   alt="Alt Text"
@@ -43,17 +43,23 @@ const BlogIndexHero = () => {
                   width={44}
                 />
                 <div>
-                  <p className="text-primary text-sm font-medium">Vedant</p>
-                  <p className="text-hint text-xs">Author</p>
+                  <p className="text-primary text-sm font-medium">Ajesh Baby</p>
+                  <p className="text-hint text-xs">
+                    Engineering Manager at Harness.io
+                  </p>
                 </div>
               </div>
               <Paragraph className="mt-4">
-                In this article, we are going to discuss how we can set up
-                logging using the EFK stack (Elastic-Search+FluentD+Kibana) for
-                LitmusChaos experiments.
+                I am feeling delighted to write this blog on the eve of the
+                announcement of LitmusChaos 2.0. We had spent a bit more than a
+                year planning on adding additional features and making the user
+                journey better and simpler. While more requirements and
+                improvements are flowing in, we are encouraged by the
+                possibilities and feedback. The principles and features of 2.0
+                have been solidified over many months of beta.
               </Paragraph>
               <TextLink
-                href="blog/logging-using-efk-for-chaoscenter-5gp6"
+                href="blog/introducing-litmus-2-0-simplify-chaos-engineering-4g5e"
                 className="mt-4 inline-block"
               >
                 Read More
@@ -62,7 +68,7 @@ const BlogIndexHero = () => {
             <div className="md:w-1/2 relative">
               <img
                 src={
-                  "https://res.cloudinary.com/practicaldev/image/fetch/s--G8U1wZtR--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/c0ii6z3uu8d1hl01kwrc.png"
+                  "https://res.cloudinary.com/practicaldev/image/fetch/s--BBGOXwg_--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d32jkr4usdblv43zo0ys.png"
                 }
                 alt="Alt"
                 width={506}

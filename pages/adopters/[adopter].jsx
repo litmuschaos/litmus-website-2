@@ -8,7 +8,7 @@ import SEO from "@lib/SEO"
 const IndAdopter = ({ adopter }) => {
   return (
     <>
-      <SEO page={adopter.key} />
+      <SEO page={adopter.key} adopter={{ name: adopter.key }} />
       <Hero data={adopter} />
       <Video data={adopter} />
       <Comment data={adopter} />

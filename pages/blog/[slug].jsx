@@ -6,7 +6,6 @@ import path from "path"
 import dynamic from "next/dynamic"
 
 const cacheFile = ".dev-to-cache.json"
-
 const PostContent = dynamic(() => import("@components/BlogPost/PostContent"))
 
 const Post = ({ article }) => {
@@ -21,14 +20,23 @@ const Post = ({ article }) => {
     author: article.user.name,
     title: article.title,
     content: article.description,
-    ttr: article.reading_time_minutes
+    ttr: article.reading_time_minutes,
+    localSlug: article.localSlug,
+    seoImage: article.social_image
   }
   if (!frontmatter) return <></>
   return (
     <>
-      <SEO page={"blog"} />
+      <SEO
+        page={frontmatter.title}
+        blog={{
+          localSlug: frontmatter.localSlug,
+          seoImage: frontmatter.seoImage,
+          tag: frontmatter.tag
+        }}
+      />
       <PostHero data={frontmatter} />
-      <PostContent body={article.markdown} data={frontmatter} />
+      <PostContent body={article.markdown} />
     </>
   )
 }
@@ -39,20 +47,16 @@ export async function getStaticProps({ params }) {
     "utf-8"
   )
   const cache = JSON.parse(cacheContents)
-
   const article = await getArticleFromCache(cache, params.slug)
-
   return { props: { article } }
 }
 
 export async function getStaticPaths() {
   const articles = await getAllArticles()
-
   fs.writeFileSync(
     path.join(process.cwd(), cacheFile),
     JSON.stringify(articles)
   )
-
   const paths = articles.map(({ localSlug }) => {
     return {
       params: { slug: localSlug }
