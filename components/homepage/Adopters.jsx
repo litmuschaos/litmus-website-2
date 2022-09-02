@@ -34,7 +34,8 @@ const Adopters = () => {
     "adidas",
     "cyren",
     "ab-inbev",
-    "ci&t"
+    "ci&t",
+    "hcl"
   ]
 
   return (
