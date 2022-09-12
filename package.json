@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.2.1",
-    "gray-matter": "^4.0.3",
     "next": "^12.2.5",
     "next-seo": "^4.26.0",
     "next-sitemap": "^1.6.148",
