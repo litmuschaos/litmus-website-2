@@ -20,14 +20,25 @@ const BlogDeskCard = ({ data, slug }) => {
           <div className="bg-white h-full shadow-lg hover:shadow-xl rounded-md flex justify-between flex-col">
             <div>
               <div className="relative w-full">
-                <img
-                  src={blog_image}
-                  alt={image_alt}
-                  height={192}
-                  width="auto"
-                  layout="responsive"
-                  className="object-cover rounded-t-md bg-black"
-                />
+                {blog_image ? (
+                  <img
+                    src={blog_image}
+                    alt={image_alt}
+                    height={192}
+                    width="auto"
+                    layout="responsive"
+                    className="object-cover rounded-t-md bg-black"
+                  />
+                ) : (
+                  <img
+                    src="/blog/emptyBlogCover.png"
+                    alt={image_alt}
+                    height={212}
+                    width="auto"
+                    layout="responsive"
+                    className="object-cover rounded-t-md bg-black"
+                  />
+                )}
               </div>
               <div className="py-4 px-2 md:p-4">
                 <div className="w-full flex flex-col justify-between font-medium text-xss">

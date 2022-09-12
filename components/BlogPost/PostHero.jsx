@@ -60,11 +60,13 @@ const PostHero = ({ data }) => {
             )}
           </div>
         </div>
-        <img
-          src={data.blog_image}
-          alt={data.title}
-          className="w-full h-auto block mt-6"
-        />
+        {data.blog_image && (
+          <img
+            src={data.blog_image}
+            alt={data.title}
+            className="w-full h-auto block mt-6"
+          />
+        )}
       </Container>
     </ContainerFluid>
   )
