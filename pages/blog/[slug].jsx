@@ -48,7 +48,7 @@ export async function getStaticProps({ params }) {
   )
   const cache = JSON.parse(cacheContents)
   const article = await getArticleFromCache(cache, params.slug)
-  return { props: { article } }
+  return { props: { article }, revalidate: 43200 }
 }
 
 export async function getStaticPaths() {
