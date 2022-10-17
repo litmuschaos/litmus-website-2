@@ -2,11 +2,12 @@
 @import "@styles/scss/Variables.scss";
 
 div.featureCard {
-  border: 1px solid #a93ddb;
   padding: 2.5rem 1.5rem;
   border-radius: 9px;
   overflow: hidden;
   min-height: 260px;
+  box-shadow: 0px 0px 1px rgba(40, 41, 61, 0.04),
+    0px 2px 4px rgba(96, 97, 112, 0.16), 0 0 0 1px rgba(40, 41, 61, 0.04);
   @include mediumScreens {
     min-height: auto;
   }

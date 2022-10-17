@@ -1,15 +1,17 @@
-import CommercialSupport from "@components/Support/CommercialSupport"
 import Courses from "@components/Support/Courses"
-import OtherSupport from "@components/Support/OtherSupport"
+import HCE from "@components/Support/HCE"
+import Hero from "@components/Support/Hero"
+import { PreFooter } from "@includes/BottomFooter"
 import SEO from "@lib/SEO"
 
 const Support = () => {
   return (
     <>
       <SEO page={"support"} />
+      <Hero />
+      <HCE />
       <Courses />
-      <CommercialSupport />
-      <OtherSupport />
+      <PreFooter />
     </>
   )
 }

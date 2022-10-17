@@ -11,7 +11,7 @@ import { FooterData } from "./Footer.data"
 
 const PreFooter = props => {
   return (
-    <ContainerFluid className={`${props.attached ? "" : "bg-highlight"}`}>
+    <ContainerFluid className={`${props.attached ? "" : "bg-[#FAFBFC]"}`}>
       <Container className="flex flex-col gap-8 items-center md:flex-row py-6 md:py-12 lg:py-20">
         <div className="w-full md:w-1/2">
           <BodyHead>Chaos Engineering made easy</BodyHead>
@@ -68,7 +68,7 @@ const BottomFooter = props => {
                 <a
                   className="text-accent"
                   target="_blank"
-                  rel="noopener norefferer"
+                  rel="noopener noreferrer"
                 >
                   Trademark Usage page
                 </a>
