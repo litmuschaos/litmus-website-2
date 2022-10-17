@@ -194,7 +194,7 @@ const TopNavbar = () => {
                                   target="_blank"
                                   rel="noopener noreferrer"
                                 >
-                                  Create Workflows
+                                  Create Experiments
                                 </a>
                               </Link>
                             </td>
@@ -207,7 +207,7 @@ const TopNavbar = () => {
                                   target="_blank"
                                   rel="noopener noreferrer"
                                 >
-                                  Observe Workflows
+                                  Observe Experiments
                                 </a>
                               </Link>
                             </td>
@@ -560,7 +560,7 @@ const TopNavbar = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                Create Workflows
+                                Create Experiments
                               </a>
                             </Link>
                           </td>
@@ -573,7 +573,7 @@ const TopNavbar = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                Observe Workflows
+                                Observe Experiments
                               </a>
                             </Link>
                           </td>

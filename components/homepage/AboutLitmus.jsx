@@ -17,7 +17,7 @@ const AboutData = [
       </BodyHead>
     ),
     img: "p1",
-    desc: "Litmus is an end-to-end chaos engineering platform for cloud native infrastructure and applications. Litmus is designed to orchestrate and analyse chaos in their environments.",
+    desc: "Litmus is an end-to-end chaos engineering platform for cloud native infrastructure and applications. Litmus is designed to orchestrate and analyze chaos in their environments.",
     footerImg: null
   },
   {
@@ -28,7 +28,7 @@ const AboutData = [
       </BodyHead>
     ),
     img: "p2",
-    desc: "A chaos workflow can be scheduled within minutes from scratch with almost no learning curve. The initial start of your chaos engineering journey is straight forward.",
+    desc: "A chaos experiment can be scheduled within minutes from scratch with almost no learning curve. The initial start of your chaos engineering journey is straight forward.",
     footerImg: null
   }
 ]
