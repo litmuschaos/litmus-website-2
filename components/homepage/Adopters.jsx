@@ -1,5 +1,5 @@
 import { BodyHead } from "@includes/Texts"
-import { SkewedContainerFluid } from "@layouts/Container"
+import { Container, SkewedContainerFluid } from "@layouts/Container"
 import Link from "next/link"
 
 const Adopters = () => {
@@ -40,12 +40,12 @@ const Adopters = () => {
   ]
 
   return (
-    <SkewedContainerFluid>
-      <BodyHead className="max-w-4xl">
-        <span className="text-hint">Trusted by</span> startups, leading open
-        source projects and the world&apos;s largest companies
+    <Container className="py-14 md:py-28">
+      <BodyHead className="text-center max-w-5xl mx-auto">
+        <span className="text-hint">From</span> startups to the world&apos;s
+        largest companies, Litmus is used to increase reliability
       </BodyHead>
-      <div className="mt-10 grid grid-cols-3 md:grid-cols-6 gap-x-4 gap-y-8">
+      <div className="mt-8 md:mt-16 grid grid-cols-3 md:grid-cols-6 gap-x-4 gap-y-8">
         {AdopterList.map(adopter => {
           return (
             <img
@@ -66,7 +66,7 @@ const Adopters = () => {
           </a>
         </Link>
       </div>
-    </SkewedContainerFluid>
+    </Container>
   )
 }
 

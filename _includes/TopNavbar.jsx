@@ -1,18 +1,18 @@
-const { Container } = require("@layouts/Container")
+import React from "react"
+import { Container } from "@layouts/Container"
 import {
   AdoptersSVG,
   ApiSVG,
   ArchitectureSVg,
   DocumentationSVG,
-  GithubButton,
   GitOPS,
   InvolvedSVG,
+  GithubButton,
   MobileArrowBack,
   MobileArrows,
   ObservablitySVG,
   ResourcesSVG,
   SdkSVG,
-  TutorialsSVG,
   UserGuideSVG
 } from "@components/SVG/NavbarSVG"
 import styles from "@includes/scss/Navbar.module.scss"
@@ -23,11 +23,14 @@ import { useEffect, useState } from "react"
 import { RegularButton, TextLink } from "./CTA"
 
 const TopNavbar = () => {
+  const url = "https://api.github.com/repos/litmuschaos/litmus"
   const [isNavbarOpened, openNavbar] = useState(false)
   const [isNavbarScrolled, setNavbar] = useState(false)
   const [docsOpen, setDocs] = useState(false)
-  const [tutorialOpen, setTutorial] = useState(false)
   const [communityOpen, setCommunity] = useState(false)
+  const [gitHub, setGitHub] = useState({
+    stars: ""
+  })
   const changeBackground = () => {
     if (window.scrollY >= 64) {
       setNavbar(true)
@@ -39,10 +42,8 @@ const TopNavbar = () => {
     openNavbar(!isNavbarOpened)
     setDocs(false)
     setCommunity(false)
-    setTutorial(false)
   }
   const SetDocs = () => setDocs(!docsOpen)
-  const SetTutorial = () => setTutorial(!tutorialOpen)
   const SetCommunity = () => setCommunity(!communityOpen)
   useEffect(() => {
     window.addEventListener("scroll", changeBackground)
@@ -50,6 +51,34 @@ const TopNavbar = () => {
       ? (document.body.style.overflowY = "hidden")
       : (document.body.style.overflowY = "auto")
   })
+  useEffect(() => {
+    ;(async () => {
+      await fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          setGitHub({
+            stars: data.stargazers_count
+          })
+        })
+    })()
+  }, [])
+  const GitHubStars = ({ icon, name, count, href }) => {
+    return (
+      <div className={styles.gitPart}>
+        <Link href={href}>
+          <a target="_blank" rel="noopener noreferrer">
+            <div className={styles.gitLink}>
+              <img src={`/landing_images/hero/${icon}.svg`} alt="LitmusChaos" />
+              <span>{name}</span>
+            </div>
+          </a>
+        </Link>
+        <div className={styles.gitCount}>
+          <span>{count > 999 ? (count / 1000).toFixed(1) + "k" : count}</span>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div
@@ -74,14 +103,29 @@ const TopNavbar = () => {
                 />
               </a>
             </Link>
+            <GitHubStars
+              icon={"github_star"}
+              name={"Star"}
+              count={gitHub.stars}
+              href={"https://github.com/litmuschaos/litmus"}
+            />
           </div>
           <div className="items-center hidden md:flex">
             <ul className={styles.navLinks}>
               <li>
+                <Link href="/enterprise">
+                  <a
+                    className={`text-hint hover:text-primary transition-all text-xs lg:text-sm font-medium ${styles.navLink}`}
+                  >
+                    Enterprise
+                  </a>
+                </Link>
+              </li>
+              <li>
                 <span
-                  className={`text-hint transition-all text-sm lg:text-base font-medium cursor-pointer ${styles.navLink}`}
+                  className={`text-hint transition-all text-xs lg:text-sm font-medium cursor-pointer ${styles.navLink}`}
                 >
-                  Docs
+                  Documentation
                 </span>
                 <div className={styles.dropDownDesktop}>
                   <div className={styles.overHead}></div>
@@ -122,7 +166,7 @@ const TopNavbar = () => {
                                 <a
                                   className="text-hint text-sm hover:text-primary transition-all"
                                   target="_blank"
-                                  rel="noopener norefferer"
+                                  rel="noopener noreferrer"
                                 >
                                   Pre-requisites
                                 </a>
@@ -135,7 +179,7 @@ const TopNavbar = () => {
                                 <a
                                   className="text-hint text-sm hover:text-primary transition-all"
                                   target="_blank"
-                                  rel="noopener norefferer"
+                                  rel="noopener noreferrer"
                                 >
                                   Installation
                                 </a>
@@ -148,9 +192,9 @@ const TopNavbar = () => {
                                 <a
                                   className="text-hint text-sm hover:text-primary transition-all"
                                   target="_blank"
-                                  rel="noopener norefferer"
+                                  rel="noopener noreferrer"
                                 >
-                                  Create Workflows
+                                  Create Experiments
                                 </a>
                               </Link>
                             </td>
@@ -161,9 +205,9 @@ const TopNavbar = () => {
                                 <a
                                   className="text-hint text-sm hover:text-primary transition-all"
                                   target="_blank"
-                                  rel="noopener norefferer"
+                                  rel="noopener noreferrer"
                                 >
-                                  Observe Workflows
+                                  Observe Experiments
                                 </a>
                               </Link>
                             </td>
@@ -181,7 +225,7 @@ const TopNavbar = () => {
                                 <a
                                   className="text-hint text-sm flex items-center hover:text-primary transition-all"
                                   target="_blank"
-                                  rel="noopener norefferer"
+                                  rel="noopener noreferrer"
                                 >
                                   <GitOPS />
                                   GitOps
@@ -195,7 +239,7 @@ const TopNavbar = () => {
                                 <a
                                   className="text-hint text-sm flex items-center hover:text-primary transition-all"
                                   target="_blank"
-                                  rel="noopener norefferer"
+                                  rel="noopener noreferrer"
                                 >
                                   <UserGuideSVG />
                                   Advanced User Guides
@@ -210,7 +254,7 @@ const TopNavbar = () => {
                                 <a
                                   className="text-hint text-sm flex items-center hover:text-primary transition-all"
                                   target="_blank"
-                                  rel="noopener norefferer"
+                                  rel="noopener noreferrer"
                                 >
                                   <ArchitectureSVg />
                                   Design & Architecture
@@ -224,7 +268,7 @@ const TopNavbar = () => {
                                 <a
                                   className="text-hint text-sm flex items-center hover:text-primary transition-all"
                                   target="_blank"
-                                  rel="noopener norefferer"
+                                  rel="noopener noreferrer"
                                 >
                                   <ObservablitySVG />
                                   Observability
@@ -249,25 +293,11 @@ const TopNavbar = () => {
                         </tr>
                         <tr>
                           <td>
-                            <Link href="https://docs.litmuschaos.io/tutorials/">
-                              <a
-                                className="text-hint text-sm flex items-center hover:text-primary transition-all"
-                                target="_blank"
-                                rel="noopener norefferer"
-                              >
-                                <TutorialsSVG />
-                                Tutorials
-                              </a>
-                            </Link>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
                             <Link href="https://docs.litmuschaos.io/docs/introduction/other-links/">
                               <a
                                 className="text-hint text-sm flex items-center hover:text-primary transition-all"
                                 target="_blank"
-                                rel="noopener norefferer"
+                                rel="noopener noreferrer"
                               >
                                 <ResourcesSVG />
                                 Resources
@@ -291,7 +321,7 @@ const TopNavbar = () => {
                               <a
                                 className="text-hint text-sm flex items-center hover:text-primary transition-all"
                                 target="_blank"
-                                rel="noopener norefferer"
+                                rel="noopener noreferrer"
                               >
                                 <ApiSVG />
                                 Full API reference
@@ -305,7 +335,7 @@ const TopNavbar = () => {
                               <a
                                 className="text-hint text-sm flex items-center hover:text-primary transition-all"
                                 target="_blank"
-                                rel="noopener norefferer"
+                                rel="noopener noreferrer"
                               >
                                 <SdkSVG />
                                 SDK
@@ -318,24 +348,12 @@ const TopNavbar = () => {
                   </div>
                 </div>
               </li>
-
-              <li>
-                <Link href="https://docs.litmuschaos.io/tutorials/">
-                  <a
-                    className={`text-hint hover:text-primary transition-all text-sm lg:text-base font-medium ${styles.navLink}`}
-                    target="_blank"
-                    rel="noopener norefferer"
-                  >
-                    Tutorials
-                  </a>
-                </Link>
-              </li>
               <li>
                 <Link href="https://hub.litmuschaos.io/">
                   <a
-                    className={`text-hint hover:text-primary transition-all text-sm lg:text-base font-medium ${styles.navLink}`}
+                    className={`text-hint hover:text-primary transition-all text-xs lg:text-sm font-medium ${styles.navLink}`}
                     target="_blank"
-                    rel="noopener norefferer"
+                    rel="noopener noreferrer"
                   >
                     ChaosHub
                   </a>
@@ -343,7 +361,7 @@ const TopNavbar = () => {
               </li>
               <li>
                 <span
-                  className={`text-hint transition-all text-sm lg:text-base font-medium cursor-pointer ${styles.navLink}`}
+                  className={`text-hint transition-all text-xs lg:text-sm font-medium cursor-pointer ${styles.navLink}`}
                 >
                   Community
                 </span>
@@ -412,22 +430,13 @@ const TopNavbar = () => {
                   </div>
                 </div>
               </li>
-              <li>
-                <Link href="/support_and_training">
-                  <a
-                    className={`text-hint hover:text-primary transition-all text-sm lg:text-base font-medium ${styles.navLink}`}
-                  >
-                    Support & Training
-                  </a>
-                </Link>
-              </li>
             </ul>
             <RegularButton
               external
               href="https://github.com/litmuschaos/litmus"
-              className="z-10 ml-6 lg:ml-8"
+              className="z-10 ml-4 lg:ml-6"
             >
-              <span className="flex items-center">
+              <span className="flex items-center text-xs lg:text-sm">
                 <GithubButton />
                 Get Started
               </span>
@@ -449,37 +458,27 @@ const TopNavbar = () => {
           <Container className={styles.navbarMobileCont}>
             <div className={styles.linkMainCont}>
               <ul className={styles.mobileNavbarUL}>
+                <li>
+                  <Link href="/enterprise">
+                    <a>
+                      <span>
+                        Enterprise
+                        <MobileArrows />
+                      </span>
+                    </a>
+                  </Link>
+                </li>
                 <li onClick={SetDocs}>
                   <span>
-                    Docs
+                    Documentation
                     <MobileArrows />
                   </span>
                 </li>
                 <li>
-                  <Link href="https://docs.litmuschaos.io/tutorials/">
-                    <a target="_blank" rel="noopener norefferer">
-                      <span>
-                        Tutorials
-                        <MobileArrows />
-                      </span>
-                    </a>
-                  </Link>
-                </li>
-                <li>
                   <Link href="https://hub.litmuschaos.io/">
-                    <a target="_blank" rel="noopener norefferer">
+                    <a target="_blank" rel="noopener noreferrer">
                       <span>
-                        Chaoshub
-                        <MobileArrows />
-                      </span>
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/support_and_training">
-                    <a>
-                      <span>
-                        Support & Training
+                        ChaosHub
                         <MobileArrows />
                       </span>
                     </a>
@@ -496,7 +495,7 @@ const TopNavbar = () => {
                 <div className={styles.openMobileMenuCont}>
                   <span className={styles.backToggle} onClick={SetDocs}>
                     <MobileArrowBack />
-                    Docs
+                    Documentation
                   </span>
                   <div className={styles.dropDownContMobile}>
                     <Link href="https://docs.litmuschaos.io/">
@@ -533,7 +532,7 @@ const TopNavbar = () => {
                               <a
                                 className="w-full block py-1 text-sm text-hint"
                                 target="_blank"
-                                rel="noopener norefferer"
+                                rel="noopener noreferrer"
                               >
                                 Pre-requisites
                               </a>
@@ -546,7 +545,7 @@ const TopNavbar = () => {
                               <a
                                 className="w-full block py-1 text-sm text-hint"
                                 target="_blank"
-                                rel="noopener norefferer"
+                                rel="noopener noreferrer"
                               >
                                 Installation
                               </a>
@@ -559,9 +558,9 @@ const TopNavbar = () => {
                               <a
                                 className="w-full block py-1 text-sm text-hint"
                                 target="_blank"
-                                rel="noopener norefferer"
+                                rel="noopener noreferrer"
                               >
-                                Create Workflows
+                                Create Experiments
                               </a>
                             </Link>
                           </td>
@@ -572,9 +571,9 @@ const TopNavbar = () => {
                               <a
                                 className="w-full block py-1 text-sm text-hint"
                                 target="_blank"
-                                rel="noopener norefferer"
+                                rel="noopener noreferrer"
                               >
-                                Observe Workflows
+                                Observe Experiments
                               </a>
                             </Link>
                           </td>
@@ -598,7 +597,7 @@ const TopNavbar = () => {
                               <a
                                 className="w-full flex py-1 text-sm text-hint"
                                 target="_blank"
-                                rel="noopener norefferer"
+                                rel="noopener noreferrer"
                               >
                                 <GitOPS /> GitOps
                               </a>
@@ -611,7 +610,7 @@ const TopNavbar = () => {
                               <a
                                 className="w-full flex py-1 text-sm text-hint"
                                 target="_blank"
-                                rel="noopener norefferer"
+                                rel="noopener noreferrer"
                               >
                                 <UserGuideSVG /> Advanced User Guides
                               </a>
@@ -625,7 +624,7 @@ const TopNavbar = () => {
                               <a
                                 className="w-full flex py-1 text-sm text-hint"
                                 target="_blank"
-                                rel="noopener norefferer"
+                                rel="noopener noreferrer"
                               >
                                 <ArchitectureSVg /> Design & Architecture
                               </a>
@@ -638,7 +637,7 @@ const TopNavbar = () => {
                               <a
                                 className="w-full flex py-1 text-sm text-hint"
                                 target="_blank"
-                                rel="noopener norefferer"
+                                rel="noopener noreferrer"
                               >
                                 <ObservablitySVG /> Observability
                               </a>
@@ -661,24 +660,11 @@ const TopNavbar = () => {
                         <tbody>
                           <tr>
                             <td>
-                              <Link href="https://docs.litmuschaos.io/tutorials/">
-                                <a
-                                  className="w-full flex py-1 text-sm text-hint"
-                                  target="_blank"
-                                  rel="noopener norefferer"
-                                >
-                                  <TutorialsSVG /> Tutorials
-                                </a>
-                              </Link>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
                               <Link href="https://docs.litmuschaos.io/docs/introduction/other-links/">
                                 <a
                                   className="w-full flex py-1 text-sm text-hint"
                                   target="_blank"
-                                  rel="noopener norefferer"
+                                  rel="noopener noreferrer"
                                 >
                                   <ResourcesSVG /> Resources
                                 </a>
@@ -704,7 +690,7 @@ const TopNavbar = () => {
                                 <a
                                   className="w-full flex py-1 text-sm text-hint"
                                   target="_blank"
-                                  rel="noopener norefferer"
+                                  rel="noopener noreferrer"
                                 >
                                   <ApiSVG /> Full API reference
                                 </a>
@@ -717,7 +703,7 @@ const TopNavbar = () => {
                                 <a
                                   className="w-full flex py-1 text-sm text-hint"
                                   target="_blank"
-                                  rel="noopener norefferer"
+                                  rel="noopener noreferrer"
                                 >
                                   <SdkSVG /> SDK
                                 </a>
