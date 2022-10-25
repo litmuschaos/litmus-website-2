@@ -24,7 +24,7 @@ const utils = [
 
 const OtherSupport = () => {
   return (
-    <div className={"py-16"} style={{ backgroundColor: "#F7F8FA" }}>
+    <div className="py-16 bg-[#fafbfc]">
       <Container>
         <p className={"text-2xl font-semibold mb-6"}>Other Support</p>
 

@@ -1,6 +1,6 @@
 import { MoreSVG } from "@components/SVG/FeatureSVG"
 import styles from "@includes/scss/Support.module.scss"
-import { BodyHead, Paragraph } from "@includes/Texts"
+import { Paragraph, SubHeading } from "@includes/Texts"
 import { Container } from "@layouts/Container"
 import Link from "next/link"
 import { CourseData } from "./utils"
@@ -8,12 +8,12 @@ import { CourseData } from "./utils"
 const Courses = () => {
   return (
     <Container className={styles.courseCont}>
-      <BodyHead>Courses</BodyHead>
+      <SubHeading>Trainings & Certifications</SubHeading>
       <div className={styles.gridCont}>
         {CourseData.map(support => {
           return (
             <Link href={support.link} key={support.name}>
-              <a target="_blank" rel="noopener norefferer">
+              <a target="_blank" rel="noopener noreferrer">
                 <div className={styles.supportCard}>
                   <img
                     src={support.logo}
@@ -29,7 +29,7 @@ const Courses = () => {
           )
         })}
         <Link href="https://github.com/litmuschaos/litmus/blob/master/TRAINING_AND_COURSES.md">
-          <a target="_blank" rel="noopener norefferer">
+          <a target="_blank" rel="noopener noreferrer">
             <div className={styles.addCard}>
               <h2 className="text-lg md:text-xl font-normal">
                 Offering training for Litmus?

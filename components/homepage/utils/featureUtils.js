@@ -14,9 +14,9 @@ export const featureUtils = [
     svg: <ChaosSVG />
   },
   {
-    title: "Litmus Workflows",
+    title: "Litmus Experiments",
     content:
-      "Chaos experiments are chained either in sequence or in parallel to build a chaos scenario. The workflows are declarative, schedulable and browsable. Workflow analytics are also available.",
+      "Chaos experiments are chained either in sequence or in parallel to build a chaos scenario. Chaos Experiments are declarative, schedulable and browsable. Chaos Experiments analytics are also available.",
     svg: <WorkflowSVG />
   },
   {
