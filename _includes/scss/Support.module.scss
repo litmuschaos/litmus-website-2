@@ -32,9 +32,13 @@ div.supportCont {
 }
 
 div.courseCont {
-  padding-top: 6rem;
-  padding-bottom: 3rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
   height: fit-content;
+  @include mediumScreens {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
   div.gridCont {
     margin-top: 2rem;
     display: grid;
@@ -57,6 +61,48 @@ div.courseCont {
       height: 100%;
       background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='silver' stroke-width='4' stroke-dasharray='6%2c 17' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
       border-radius: 10px;
+    }
+  }
+}
+
+.hceContainer {
+  box-shadow: 0px 1.2px 3.6px rgba(0, 0, 0, 0.1),
+    0px 6.4px 14.4px rgba(0, 0, 0, 0.13);
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-direction: column;
+  @include mediumScreens {
+    flex-direction: row;
+  }
+  .leftCont {
+    width: 100%;
+    @include mediumScreens {
+      width: 40%;
+    }
+  }
+  .rightCont {
+    width: 100%;
+    @include mediumScreens {
+      width: 60%;
+    }
+    .featuresCont {
+      margin-top: 1rem;
+      display: grid;
+      gap: 1.5rem 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      div {
+        background: #f8fafc;
+        border: 1px solid #f0f1f4;
+        box-shadow: inset 0px 0.5px 4px rgba(96, 97, 112, 0.32);
+        border-radius: 10px;
+        padding: 1rem;
+        min-height: 275px;
+      }
     }
   }
 }
