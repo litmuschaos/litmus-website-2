@@ -30,12 +30,12 @@
     }
     .imageContainer {
       width: 100%;
-      min-height: 300px;
       background: #333333;
       border-radius: 10px;
       overflow: hidden;
       @include mediumScreens {
         width: 50%;
+        min-height: 300px;
       }
     }
     .textContainer {
@@ -52,7 +52,7 @@
       }
       .topText {
         .gradText {
-          font-size: 0.8rem;
+          font-size: 0.7rem;
           letter-spacing: 0.1rem;
           font-weight: 500;
           color: #8a36ff;
@@ -63,6 +63,9 @@
           );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          @include mediumScreens {
+            font-size: 0.8rem;
+          }
         }
       }
     }

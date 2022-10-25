@@ -61,7 +61,11 @@ const HCE = () => {
             of Litmus.
           </Paragraph>
           <div className="mt-8 flex justify-center items-center md:justify-start">
-            <RegularButton href="#" className="inline-block">
+            <RegularButton
+              external
+              href="https://harness.io/products/chaos-engineering"
+              className="inline-block"
+            >
               Get Started
             </RegularButton>
           </div>
