@@ -14,7 +14,7 @@ const Hero = () => {
             <span className="block">& Trainings</span>
           </HeroHead>
           <Paragraph hint className="mt-6 text-center lg:text-left">
-            LitmusChaos was originally created by ChaosNative(Acquired by
+            LitmusChaos was originally created by ChaosNative (Acquired by
             Harness) and is a CNCF incubated project from 2022 January onwards.
           </Paragraph>
           <Paragraph hint className="mt-4 text-center lg:text-left">
