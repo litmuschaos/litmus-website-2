@@ -9,27 +9,28 @@ const HCE = () => {
     {
       title: "CI/CD Pipeline Integrated",
       description:
-        "Systems’ reliability, and protecting your business from the costs of downtime, is a team sport. Chaos isn’t only for SRE, Harness engages all teams spanning dev, DevOps, SRE, and any one else involved in your SDLC to create reliable systems. ",
+        "Systems' reliability, and protecting your business from the costs of downtime, is a team sport. Chaos isn’t only for SRE… Harness engages all teams spanning developers, DevOps, SRE, and any one else involved in your SDLC to create reliable systems. Leverage the chaos integration with Harness CD and CV or the robust API for your own pipeline tooling.",
       image1: "f1",
       image2: null
     },
     {
-      title: "Integrations with Monitoring systems",
-      description: null,
+      title: "Integrations with Observability Systems",
+      description:
+        "With included integrations to leading observability systems such as Dynatrace and Prometheus, Harness CE ensures that all involved in your SDLC can see results of your chaos experiments and make reliability improvements accordingly. Harness CE builds in steady statement measurement to enable users to validate the impact to the targeted system.",
       image1: "f2",
       image2: "f2b"
     },
     {
-      title: "Game Days",
+      title: "GameDay Experience",
       description:
-        "Support for on-premises, air-gapped installations, means businesses can use Harness CE without any risk of exposing where your vulnerabilities may be to any 3rd parties.",
+        "Harness CE enables you to run a GameDay with your team to proactively address points of failure.  Validate post-mortem actions from an outage, test your incident management process to train new team members, and run a repeatable IT disaster recovery exercise. Prepare, execute, observe and learn!",
       image1: "f3",
       image2: null
     },
     {
-      title: "Wide variety of chaos experiments",
+      title: "Largest Chaos Experiment Library",
       description:
-        "Experiments to to orchestrate and analyze chaos in their environments.",
+        "The largest and most diverse set of chaos experiments available today, spanning pod, node, network, stress, cloud services, and application chaos testing. Users can also create their own experiments and can contribute them back to the public ChaosHub catalog.",
       image1: "f4",
       image2: "f4b"
     }
