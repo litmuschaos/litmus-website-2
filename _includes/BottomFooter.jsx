@@ -37,7 +37,7 @@ const PreFooter = props => {
             <CNCFLogo />
           </div>
           <Paragraph hint>
-            We are a Cloud Native Computing Foundation sandbox project.
+            We are a CNCF Incubating Project.
           </Paragraph>
         </div>
       </Container>
