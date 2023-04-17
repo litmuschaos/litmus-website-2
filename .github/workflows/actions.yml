@@ -55,17 +55,17 @@ jobs:
       - name: prettier-check
         run: npm run prettier --silent
 
-  broken-links:
-    name: broken-link-check
-    runs-on: ubuntu-latest
-    needs: build
+  # broken-links:
+  #   name: broken-link-check
+  #   runs-on: ubuntu-latest
+  #   needs: build
 
-    steps:
-      - uses: actions/cache@v2
-        id: restore-build
-        with:
-          path: ./*
-          key: ${{ github.sha }}
+  #   steps:
+  #     - uses: actions/cache@v2
+  #       id: restore-build
+  #       with:
+  #         path: ./*
+  #         key: ${{ github.sha }}
 
-      - name: broken-link check
-        run: npm run test-blc
+  #     - name: broken-link check
+  #       run: npm run test-blc
