@@ -13,26 +13,28 @@ const UpcomingEvent = () => {
         <div className={styles.upcomingEventContainer}>
           <div className={styles.imageContainer}>
             <img
-              src="/landing_images/nextEvent.jpeg"
+              src="/landing_images/nextEvent.png"
               alt="LitmusChaos"
-              className="w-full h-full object-cover object-center"
+              className="w-full h-72 object-cover object-center"
             />
           </div>
           <div className={styles.textContainer}>
             <div className={styles.topText}>
               <p className={styles.gradText}>UPCOMING COMMUNITY EVENT</p>
               <h3 className="text-xl sm:text-2xl md:text-3xl font-medium mt-2 text-primary">
-                Chaos Engineering Meetup
+                KubeCon EU
               </h3>
+              {/* <h4 className="text-base sm:text-lg md:text-xl font-medium text-primary mt-1 md:mt-4">
+                {GetLocalTime("18 Apr 2023 :30:00 +0530").dateString} @{" "}
+                {GetLocalTime("18 Apr 2023 16:30:00 +0530").time}
+              </h4> */}
               <h4 className="text-base sm:text-lg md:text-xl font-medium text-primary mt-1 md:mt-4">
-                {GetLocalTime("26 Nov 2022 09:30:00 +0530").dateString} @{" "}
-                {GetLocalTime("26 Nov 2022 09:30:00 +0530").time}
+                Apr 18<sup>th</sup> - Apr 21<sup>st</sup>, 2023
               </h4>
-              <Paragraph>Speakers from Harness.io</Paragraph>
             </div>
             <TextLink
               external
-              href="https://www.meetup.com/chaos-engineering-meetup-group/events/289083048/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link"
+              href="https://kccnceu2023.sched.com/event/1JWQB/litmuschaos-project-meeting?iframe=no&w=&sidebar=yes&bg=no"
             >
               See Event Details
             </TextLink>
