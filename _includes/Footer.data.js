@@ -24,8 +24,7 @@ export const FooterData = [
       {
         svg: null,
         text: "Blog",
-        linkTo: "https://dev.to/t/litmuschaos",
-        external: true
+        linkTo: "/blog"
       },
       {
         svg: null,
@@ -57,8 +56,8 @@ export const FooterData = [
       },
       {
         svg: <SupportSVG />,
-        text: "Support & Training",
-        linkTo: "/support_and_training"
+        text: "Enterprise",
+        linkTo: "/enterprise"
       }
     ]
   },

@@ -13,7 +13,7 @@ const CommercialSupport = () => {
         {Supporters.map(support => {
           return (
             <Link href={support.link} key={support.name}>
-              <a target="_blank" rel="noopener norefferer">
+              <a target="_blank" rel="noopener noreferrer">
                 <div className={styles.supportCard}>
                   <img
                     height={31}
@@ -30,7 +30,7 @@ const CommercialSupport = () => {
           )
         })}
         <Link href="https://github.com/litmuschaos/litmus/blob/master/COMMERCIAL_SUPPORT.md">
-          <a target="_blank" rel="noopener norefferer">
+          <a target="_blank" rel="noopener noreferrer">
             <div className={styles.addCard}>
               <h2 className="text-lg md:text-xl font-normal">
                 Offering support for Litmus?
