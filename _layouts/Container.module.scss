@@ -10,7 +10,8 @@ div.boundedContainer {
   z-index: 25;
   position: relative;
   max-width: $container-size;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: $container-padding;
   padding-right: $container-padding;
   @include extraLargeScreens {

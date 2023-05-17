@@ -152,66 +152,68 @@ const TopNavbar = () => {
                         className={`${styles.secondaryLinks} grid grid-cols-2 gap-4`}
                       >
                         <table className={styles.docsDropDown}>
-                          <tr>
-                            <th
-                              className="text-disabled text-sm
+                          <tbody>
+                            <tr>
+                              <th
+                                className="text-disabled text-sm
                                  font-normal"
-                            >
-                              GET STARTED
-                            </th>
-                          </tr>
-                          <tr>
-                            <td>
-                              <Link href="https://docs.litmuschaos.io/docs/getting-started/installation/#prerequisites">
-                                <a
-                                  className="text-hint text-sm hover:text-primary transition-all"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  Pre-requisites
-                                </a>
-                              </Link>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <Link href="https://docs.litmuschaos.io/docs/getting-started/installation/">
-                                <a
-                                  className="text-hint text-sm hover:text-primary transition-all"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  Installation
-                                </a>
-                              </Link>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <Link href="https://docs.litmuschaos.io/docs/getting-started/run-your-first-workflow/">
-                                <a
-                                  className="text-hint text-sm hover:text-primary transition-all"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  Create Experiments
-                                </a>
-                              </Link>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <Link href="https://docs.litmuschaos.io/docs/user-guides/observability-set-up/">
-                                <a
-                                  className="text-hint text-sm hover:text-primary transition-all"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  Observe Experiments
-                                </a>
-                              </Link>
-                            </td>
-                          </tr>
+                              >
+                                GET STARTED
+                              </th>
+                            </tr>
+                            <tr>
+                              <td>
+                                <Link href="https://docs.litmuschaos.io/docs/getting-started/installation/#prerequisites">
+                                  <a
+                                    className="text-hint text-sm hover:text-primary transition-all"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    Pre-requisites
+                                  </a>
+                                </Link>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <Link href="https://docs.litmuschaos.io/docs/getting-started/installation/">
+                                  <a
+                                    className="text-hint text-sm hover:text-primary transition-all"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    Installation
+                                  </a>
+                                </Link>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <Link href="https://docs.litmuschaos.io/docs/getting-started/run-your-first-workflow/">
+                                  <a
+                                    className="text-hint text-sm hover:text-primary transition-all"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    Create Experiments
+                                  </a>
+                                </Link>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <Link href="https://docs.litmuschaos.io/docs/user-guides/observability-set-up/">
+                                  <a
+                                    className="text-hint text-sm hover:text-primary transition-all"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    Observe Experiments
+                                  </a>
+                                </Link>
+                              </td>
+                            </tr>
+                          </tbody>
                         </table>
                         <table className={styles.docsDropDown}>
                           <tr>
@@ -283,66 +285,70 @@ const TopNavbar = () => {
                       className={`${styles.subMenuItemCont} flex-col justify-between`}
                     >
                       <table className={styles.docsDropDown}>
-                        <tr>
-                          <th
-                            className="text-disabled text-sm
+                        <tbody>
+                          <tr>
+                            <th
+                              className="text-disabled text-sm
                                  font-normal"
-                          >
-                            LEARN
-                          </th>
-                        </tr>
-                        <tr>
-                          <td>
-                            <Link href="https://docs.litmuschaos.io/docs/introduction/other-links/">
-                              <a
-                                className="text-hint text-sm flex items-center hover:text-primary transition-all"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                <ResourcesSVG />
-                                Resources
-                              </a>
-                            </Link>
-                          </td>
-                        </tr>
+                            >
+                              LEARN
+                            </th>
+                          </tr>
+                          <tr>
+                            <td>
+                              <Link href="https://docs.litmuschaos.io/docs/introduction/other-links/">
+                                <a
+                                  className="text-hint text-sm flex items-center hover:text-primary transition-all"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <ResourcesSVG />
+                                  Resources
+                                </a>
+                              </Link>
+                            </td>
+                          </tr>
+                        </tbody>
                       </table>
                       <table className={styles.docsDropDown}>
-                        <tr>
-                          <th
-                            className="text-disabled text-sm
+                        <tbody>
+                          <tr>
+                            <th
+                              className="text-disabled text-sm
                                  font-normal"
-                          >
-                            API
-                          </th>
-                        </tr>
-                        <tr>
-                          <td>
-                            <Link href="https://litmuschaos.github.io/litmus/graphql/v2.0.0/api.html">
-                              <a
-                                className="text-hint text-sm flex items-center hover:text-primary transition-all"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                <ApiSVG />
-                                Full API reference
-                              </a>
-                            </Link>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <Link href="https://github.com/litmuschaos/litmus-go">
-                              <a
-                                className="text-hint text-sm flex items-center hover:text-primary transition-all"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                <SdkSVG />
-                                SDK
-                              </a>
-                            </Link>
-                          </td>
-                        </tr>
+                            >
+                              API
+                            </th>
+                          </tr>
+                          <tr>
+                            <td>
+                              <Link href="https://litmuschaos.github.io/litmus/graphql/v2.0.0/api.html">
+                                <a
+                                  className="text-hint text-sm flex items-center hover:text-primary transition-all"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <ApiSVG />
+                                  Full API reference
+                                </a>
+                              </Link>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <Link href="https://github.com/litmuschaos/litmus-go">
+                                <a
+                                  className="text-hint text-sm flex items-center hover:text-primary transition-all"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <SdkSVG />
+                                  SDK
+                                </a>
+                              </Link>
+                            </td>
+                          </tr>
+                        </tbody>
                       </table>
                     </div>
                   </div>
@@ -359,6 +365,7 @@ const TopNavbar = () => {
                   </a>
                 </Link>
               </li>
+
               <li>
                 <span
                   className={`text-hint transition-all text-xs lg:text-sm font-medium cursor-pointer ${styles.navLink}`}
@@ -430,6 +437,15 @@ const TopNavbar = () => {
                   </div>
                 </div>
               </li>
+              <li>
+                <Link href="/blog">
+                  <a
+                    className={`text-hint hover:text-primary transition-all text-xs lg:text-sm font-medium ${styles.navLink}`}
+                  >
+                    Blog
+                  </a>
+                </Link>
+              </li>
             </ul>
             <RegularButton
               external
@@ -489,6 +505,16 @@ const TopNavbar = () => {
                     Community
                     <MobileArrows />
                   </span>
+                </li>
+                <li onClick={() => openNavbar(false)}>
+                  <Link href="/blog">
+                    <a>
+                      <span>
+                        Blog
+                        <MobileArrows />
+                      </span>
+                    </a>
+                  </Link>
                 </li>
               </ul>
               {docsOpen ? (
