@@ -4,15 +4,21 @@ const websiteURL = "https://dev.to/litmus-chaos/"
 
 const sanitizeDevToMarkdown = markdown => {
   let correctedMarkdown = ""
-  const replaceSpaceCharRegex = new RegExp(String.fromCharCode(160), "g")
-  correctedMarkdown = markdown.replace(replaceSpaceCharRegex, " ")
-  const addSpaceAfterHeaderHashtagRegex = /##(?=[a-z|A-Z])/g
-  return correctedMarkdown.replace(addSpaceAfterHeaderHashtagRegex, "$& ")
+  if (markdown) {
+    const replaceSpaceCharRegex = new RegExp(String.fromCharCode(160), "g")
+    correctedMarkdown = markdown.replace(replaceSpaceCharRegex, " ")
+    const addSpaceAfterHeaderHashtagRegex = /##(?=[a-z|A-Z])/g
+    return correctedMarkdown.replace(addSpaceAfterHeaderHashtagRegex, "$& ")
+  } else return correctedMarkdown
 }
 
 const getMarkdownForArticle = async articleID => {
-  const { data } = await axios.get(`https://dev.to/api/articles/${articleID}`)
-  return data.body_markdown
+  try {
+    const { data } = await axios.get(`https://dev.to/api/articles/${articleID}`)
+    return data.body_markdown
+  } catch (error) {
+    console.error(error)
+  }
 }
 
 const convertDevtoResponseToArticle = async article => {
@@ -23,7 +29,7 @@ const convertDevtoResponseToArticle = async article => {
 }
 
 export const getAllArticles = async () => {
-  const params = { per_page: 1000 }
+  const params = { per_page: 100 }
   const { data } = await axios.get(
     `https://dev.to/api/organizations/litmus-chaos/articles`,
     { params }

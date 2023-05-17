@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.2.1",
+    "moment": "^2.29.1",
     "next": "^12.2.5",
     "next-seo": "^4.26.0",
     "next-sitemap": "^1.6.148",
@@ -27,16 +28,16 @@
     "rehype-raw": "^6.1.1",
     "sass": "^1.35.1",
     "sharp": "^0.30.7",
-    "slick-carousel": "^1.8.1",
-    "moment": "^2.29.1"
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@babel/preset-env": "^7.18.10",
     "@next/bundle-analyzer": "^12.2.5",
     "autoprefixer": "^10.2.6",
+    "axios": "^0.21.1",
     "babel-loader": "^8.2.5",
-    "broken-link-checker": "^0.7.8",
+    "broken-link-checker": "^0.6.7",
     "eslint": "7.30.0",
     "eslint-config-next": "11.0.1",
     "eslint-config-prettier": "^8.3.0",
@@ -45,8 +46,7 @@
     "postcss": "^8.3.5",
     "prettier": "2.3.2",
     "tailwindcss": "^2.2.4",
-    "webpack": "^5.74.0",
-    "axios": "^0.21.1"
+    "webpack": "^5.74.0"
   },
   "lint-staged": {
     "*": "prettier --write",
