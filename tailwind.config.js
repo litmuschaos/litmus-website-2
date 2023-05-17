@@ -4,7 +4,8 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./_includes/**/*.{js,ts,jsx,tsx}",
-    "./_layouts/**/*.{js,ts,jsx,tsx}"
+    "./_layouts/**/*.{js,ts,jsx,tsx}",
+    "./_blog/**/*.{js,ts,jsx,tsx}"
   ],
   darkMode: false,
   theme: {
@@ -33,7 +34,7 @@ module.exports = {
 
       height: {
         200: "200px",
-        300: "200px"
+        300: "300px"
       }
     }
   },

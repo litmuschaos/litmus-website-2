@@ -11,7 +11,7 @@ import SEO from "@lib/SEO"
 const Home = () => {
   return (
     <>
-      <SEO page={"home"} />
+      <SEO page={""} />
       <Hero />
       <UpcomingEvent />
       <Adopters />

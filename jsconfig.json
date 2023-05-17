@@ -4,6 +4,7 @@
     "paths": {
       "@includes/*": ["_includes/*"],
       "@layouts/*": ["_layouts/*"],
+      "@blog/*": ["_blog/*"],
       "@components/*": ["components/*"],
       "@lib/*": ["lib/*"],
       "@public/*": ["public/*"],

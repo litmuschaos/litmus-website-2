@@ -6,7 +6,7 @@ import "../styles/globals.css"
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
-  const noPreFooterPages = ["/", "/#", "/enterprise", "/enterprise#"]
+  const noPreFooterPages = ["/", "/#", "/enterprise", "/enterprise#", "/blog"]
 
   return (
     <>
