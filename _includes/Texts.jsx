@@ -46,6 +46,8 @@ const BodyHead = props => {
           ? "text-white"
           : props.accent
           ? "text-accent"
+          : props.hint
+          ? "text-hint"
           : "text-primary"
       }`}
     >
@@ -62,6 +64,8 @@ const SubHeading = props => {
           ? "text-white"
           : props.accent
           ? "text-accent"
+          : props.hint
+          ? "text-hint"
           : "text-primary"
       }`}
     >

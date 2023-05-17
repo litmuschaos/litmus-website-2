@@ -24,3 +24,6 @@ components/Animations/
 
 #package-lock
 packagae-lock.json
+
+#cache
+.dev-to-cache.json

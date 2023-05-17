@@ -84,16 +84,14 @@ div.footerFluidCont {
         h2 {
           color: $litmus-blue-light;
           font-weight: 500;
-          font-size: 1rem;
+          font-size: 0.9rem;
         }
         ul {
           li {
             margin: 0.5rem 0;
-            span {
-              a {
-                font-size: 0.9rem;
-                font-weight: 400;
-              }
+            a {
+              font-size: 0.8rem;
+              font-weight: 400;
             }
           }
         }

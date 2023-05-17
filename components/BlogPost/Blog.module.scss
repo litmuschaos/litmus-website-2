@@ -1,0 +1,251 @@
+@import "/styles/scss/layoutMixins";
+
+// Hero Section Begins
+
+div.postHeroContFluid {
+  div.postHeroCont {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+// Hero Section Ends
+
+// Summary Begins
+
+div.summaryCont {
+  padding: 6rem 0;
+  div.summary {
+    box-shadow: 0px 30px 60px -12px #32325d40, 0px 18px 36px -18px #00000040;
+    padding: 2rem;
+    border-radius: 25px;
+    div.summaryFooter {
+      margin-top: 2rem;
+      border-top: 1px solid #16212023;
+      padding: 1rem 0;
+      display: flex;
+      div.profile {
+        display: flex;
+        align-items: center;
+        div.authorDet {
+          margin-left: 0.8rem;
+        }
+      }
+    }
+  }
+  @include mediumScreensDesk {
+    padding: 2rem 0;
+  }
+}
+
+// Summary Ends
+
+.markdownCont {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #0b0b0d;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    margin-top: 8px;
+  }
+  h1 + hr,
+  h2 + hr,
+  h3 + hr,
+  h4 + hr,
+  h5 + hr,
+  h6 + hr {
+    margin-top: -8px;
+  }
+  h1 {
+    font-size: 1.4rem;
+    @include mediumScreens {
+      font-size: 1.8rem;
+    }
+  }
+  h2 {
+    font-size: 1.2rem;
+    @include mediumScreens {
+      font-size: 1.5rem;
+    }
+  }
+  h3 {
+    font-size: 22px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+  p {
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    margin: 0 0 32px;
+    color: #4f5162;
+    font-size: 0.9rem;
+    @include mediumScreens {
+      font-size: 1rem;
+    }
+  }
+  a {
+    color: #5b44ba;
+    text-decoration: none;
+    font-size: 0.9rem;
+    @include mediumScreens {
+      font-size: 1rem;
+    }
+  }
+  a:focus,
+  a:hover,
+  a:active {
+    text-decoration: underline;
+  }
+  a,
+  ins,
+  u {
+    -webkit-text-decoration-skip: ink edges;
+    text-decoration-skip: ink edges;
+  }
+  del + del,
+  del + s,
+  ins + ins,
+  ins + u,
+  s + del,
+  s + s,
+  u + ins,
+  u + u {
+    margin-left: 0.125em;
+  }
+  hr {
+    background: #ededed;
+    border: none;
+    display: block;
+    height: 1px;
+    margin: 8px 0 24px;
+    overflow: hidden;
+  }
+  hr::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  ul,
+  ol {
+    margin: 32px 0 32px 32px;
+    padding: 0;
+  }
+  ul ul,
+  ol ul,
+  ul ol,
+  ol ol {
+    margin: 16px 0 16px 32px;
+  }
+  ul li,
+  ol li {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    @include mediumScreens {
+      font-size: 1rem;
+    }
+  }
+  ul {
+    list-style: disc;
+  }
+  ul ul {
+    list-style-type: circle;
+  }
+  ol {
+    list-style: decimal;
+  }
+  ol ol {
+    list-style-type: lower-alpha;
+  }
+  img {
+    border: 0;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  img + em {
+    color: #dbdbdb;
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+  }
+  blockquote {
+    background: #fafafa;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    @include mediumScreens {
+      margin: 2rem 0;
+      padding: 1.5rem;
+    }
+  }
+  blockquote::before {
+    color: #d5d5d5;
+    content: open-quote;
+    font-family: arial;
+    font-size: 6em;
+    line-height: 0.1em;
+    vertical-align: -0.5em;
+  }
+  blockquote p:last-child {
+    margin-bottom: 0;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 32px 0;
+    text-align: left;
+    width: 100%;
+  }
+  table tbody tr:nth-of-type(odd) {
+    background: #fafafa;
+  }
+  table td,
+  table th {
+    border-bottom: 1px solid #ededed;
+    padding: 8px 4px;
+  }
+  table th {
+    border-bottom-width: 2px;
+  }
+  code {
+    background: #231a47;
+    color: #fff;
+    font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier,
+      monospace;
+    padding: 0.05em;
+    font-size: 0.75em;
+    @include mediumScreens {
+      font-variation-settings: 0.8rem;
+    }
+  }
+  pre {
+    background: #231a47;
+    color: #fff;
+    overflow-x: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    @include mediumScreens {
+      margin: 2rem 0;
+    }
+  }
+  pre code {
+    color: inherit;
+    display: block;
+    line-height: inherit;
+    padding: 16px;
+  }
+}
