@@ -1,6 +1,6 @@
 import Script from "next/script"
 const UA_ID = "UA-92076314-26"
-const GA4_ID = "G-3ZTFJCYCX9"
+const GA4_ID = "G-LX7FRJK6CX"
 
 const GTagScripts = () => {
   return (
