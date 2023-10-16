@@ -22,7 +22,7 @@ const CommunityList = () => {
         "Community members can contribute chaos experiments, file issues, raise pull requests, and provide feedback to help enhance the user experience and bring in new enhancements to developLitmusChaos.",
       paragraph2:
         "Check out the CONTRIBUTING.md page on Litmus repository for instructions on how to contribute.",
-      linkText: "About Contriuting on Github",
+      linkText: "About Contributing on Github",
       imgUrl: "/communityPage/githubCard.png",
       width: "w-1/3",
       link: "https://github.com/litmuschaos/litmus/blob/master/CONTRIBUTING.md"
