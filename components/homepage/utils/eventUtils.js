@@ -1,30 +1,30 @@
 export const eventUtils = [
   {
     type: "Featured Blog",
-    title: "LitmusChaos becomes a CNCF incubating project",
+    title: "Unveiling LitmusChaos 3.0",
     content:
-      "The CNCF Technical Oversight Committee (TOC) has voted to approve LitmusChaos' move from the CNCF Sandbox to Incubation level. ",
-    img_url: "cncf.png",
-    link_text: "Checkout Announcement",
-    link: "https://www.cncf.io/blog/2022/01/11/litmuschaos-becomes-a-cncf-incubating-project/"
+      "We are thrilled to announce the release of LitmusChaos 3.0, signifying a remarkable advancement in the field of Chaos Engineering.",
+    img_url: "litmus.png",
+    link_text: "Read Blog",
+    link: "https://www.cncf.io/blog/2023/10/05/unveiling-litmuschaos-3-0-embracing-evolution-in-chaos-engineering/"
   },
   {
     type: "Featured Blog",
-    title: "LitmusChaos in 2021: The Year In Review",
+    title: "Building resilience with Chaos Engineering and Litmus",
     content:
-      "Year-end retrospectives are an interesting topic. Much as it helps dwell on things accomplished, it also generates excitement about what is to come. Here’s to the progress made for LitmusChaos as a project in 2021",
+      "Chaos engineering is a method for testing the resiliency and reliability of complex systems by intentionally introducing controlled failures into them.",
     img_url: "blog.png",
     link_text: "Read Blog",
-    link: "https://dev.to/ksatchit/litmuschaos-in-2021-the-year-in-review-38cl"
+    link: "https://www.cncf.io/blog/2023/07/19/building-resilience-with-chaos-engineering-and-litmus/"
   },
   {
-    type: "KubeCon North America, 2021",
-    title: "Improving Resilience of Applications in Telco Environment",
+    type: "KubeCon Europe, 2023",
+    title: "Security Controls for Safe Chaos Experimentation",
     content:
-      "A session on how Orange, the telecommunications operator, uses Litmus, Kubernetes and other CNCF technologies to build and scale their application development process.",
-    img_url: "kubecon.png",
+      "An increasingly popular discipline that has added newer personas to its practitioner base in recent times, chaos engineering comes with its own security challenges.",
+    img_url: "video.png",
     link_text: "Checkout Video",
-    link: "https://youtu.be/fOgDZfZrFGg"
+    link: "https://www.youtube.com/watch?v=whCkvLKAw74"
   },
   {
     type: "Get involved",
