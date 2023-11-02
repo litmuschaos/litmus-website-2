@@ -43,7 +43,10 @@ const UpcomingEvent = () => {
                 Connected to McCormick Place by skybridge. The skybridge at
                 McCormick Place is on level 3.
                 <br />
-                <span className="font-medium">Project Booth Number:</span> F20
+                <span className="block mt-2">
+                  <span className="font-bold mt-2">Project Booth Number:</span>{" "}
+                  F20
+                </span>
               </Paragraph>
             </div>
             <TextLink
