@@ -39,8 +39,8 @@ const Adopters = () => {
     "infracloud",
     "apisix",
     "baobab",
-    "flipkart",
-    "ifs"
+    "Flipkart",
+    "IFS"
   ]
 
   return (
