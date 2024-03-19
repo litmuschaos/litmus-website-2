@@ -264,20 +264,6 @@ const TopNavbar = () => {
                               </Link>
                             </td>
                           </tr>
-                          <tr>
-                            <td>
-                              <Link href="https://docs.litmuschaos.io/docs/concepts/workflow-statistics/">
-                                <a
-                                  className="text-hint text-sm flex items-center hover:text-primary transition-all"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  <ObservablitySVG />
-                                  Observability
-                                </a>
-                              </Link>
-                            </td>
-                          </tr>
                         </table>
                       </div>
                     </div>

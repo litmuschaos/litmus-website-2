@@ -30,12 +30,12 @@ const BlogIndexHero = () => {
           <div className="flex flex-col-reverse md:flex-row justify-between md:items-center gap-4 rounded-xl shadow-2xl py-6 px-4 md:p-8 bg-white">
             <div className="md:w-1/2">
               <h2 className="text-xl md:text-2xl lg:text-3xl font-medium">
-                Introducing Litmus 2.0 - Simplify Chaos Engineering
+                Exploring litmusctl: A Comprehensive Guide
               </h2>
               <div className="flex items-center gap-2 mt-3">
                 <img
                   src={
-                    "https://res.cloudinary.com/practicaldev/image/fetch/s--IByWRkFd--/c_fill,f_auto,fl_progressive,h_640,q_auto,w_640/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/401544/4b0b2b9a-b9fb-4453-a49f-f3dde0628f9a.jpeg"
+                    "https://media.dev.to/cdn-cgi/image/width=50,height=50,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F719060%2F98312c30-e184-453d-8d53-bdb55c9a84c3.jpeg"
                   }
                   className="rounded-full"
                   alt="Alt Text"
@@ -43,24 +43,30 @@ const BlogIndexHero = () => {
                   width={44}
                 />
                 <div>
-                  <p className="text-primary text-sm font-medium">Ajesh Baby</p>
-                  <p className="text-hint text-xs">
-                    Engineering Manager at Harness.io
+                  <p className="text-primary text-sm font-medium">
+                    Nagesh Bansal
                   </p>
+                  {/* <p className="text-hint text-xs">
+                    Engineering Manager at Harness.io
+                  </p> */}
                 </div>
               </div>
               <Paragraph className="mt-4">
-                I am feeling delighted to write this blog on the eve of the
-                announcement of LitmusChaos 2.0. We had spent a bit more than a
-                year planning on adding additional features and making the user
-                journey better and simpler. While more requirements and
-                improvements are flowing in, we are encouraged by the
-                possibilities and feedback. The principles and features of 2.0
-                have been solidified over many months of beta.
+                This blog is a guide that explains how to run LitmusChaos on a
+                remote cluster using Litmusctl. It&apos;s not just about
+                scheduling Chaos Scenarios on your main cluster – Litmus also
+                lets you set up Chaos on a remote cluster. Litmusctl, a
+                command-line utility developed by the LitmusChaos community,
+                offers a powerful set of commands to manage, configure, and
+                control various aspects of chaos engineering experiments. In
+                this guide, we will dive into the syntax, usage, and
+                capabilities of litmusctl, making it easier for you to leverage
+                this tool effectively.
               </Paragraph>
               <TextLink
-                href="blog/introducing-litmus-2-0-simplify-chaos-engineering-4g5e"
+                href="https://dev.to/nageshbansal/exploring-litmusctl-a-comprehensive-guide-170k"
                 className="mt-4 inline-block"
+                external
               >
                 Read More
               </TextLink>
@@ -68,7 +74,7 @@ const BlogIndexHero = () => {
             <div className="md:w-1/2 relative">
               <img
                 src={
-                  "https://res.cloudinary.com/practicaldev/image/fetch/s--BBGOXwg_--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d32jkr4usdblv43zo0ys.png"
+                  "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ft9p6v7hw2ry49bgko60k.png"
                 }
                 alt="Alt"
                 width={506}
