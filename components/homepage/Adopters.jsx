@@ -40,7 +40,10 @@ const Adopters = () => {
     "apisix",
     "baobab",
     "flipkart",
-    "IFS"
+    "IFS",
+    "delivery_hero",
+    "talend",
+    "ericsson"
   ]
 
   return (
