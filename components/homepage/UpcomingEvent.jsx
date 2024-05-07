@@ -22,17 +22,22 @@ const UpcomingEvent = () => {
             <div className={styles.topText}>
               <p className={styles.gradText}>UPCOMING COMMUNITY EVENT</p>
               <h3 className="text-xl sm:text-2xl md:text-3xl font-medium mt-2 text-primary">
-                KubeCon EU
+                LitmusChaosCon
               </h3>
               <h4 className="text-base sm:text-lg md:text-xl font-medium text-primary mt-1 md:mt-4">
-                {GetLocalTime("19 Mar 2024 00:00:00 +0530").dateString} -{" "}
-                {GetLocalTime("22 Mar 2024 00:00:00 +0530").dateString}
+                {GetLocalTime("12 Sep 2024 00:00:00 +0530").dateString}
               </h4>
-              <Paragraph>Project Booth No. PP2-A</Paragraph>
+              <Paragraph>
+                LitmusChaos Con is an event surrounding all things LitmusChaos
+                and Chaos Engineering. It is a platform for SREs, QA Engineers,
+                Developers, Performance Engineers and Students to exchange their
+                ideas, experience, contribution stories and usage of
+                LitmusChaos.
+              </Paragraph>
             </div>
             <TextLink
               external
-              href="https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/"
+              href="https://community.cncf.io/events/details/cncf-virtual-project-events-2024-hosted-by-cncf-presents-litmuschaoscon-virtual/"
             >
               See Event Details
             </TextLink>
