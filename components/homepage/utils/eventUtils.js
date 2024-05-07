@@ -1,12 +1,11 @@
 export const eventUtils = [
   {
-    type: "Featured Blog",
-    title: "Unveiling LitmusChaos 3.0",
-    content:
-      "We are thrilled to announce the release of LitmusChaos 3.0, signifying a remarkable advancement in the field of Chaos Engineering.",
+    type: "Featured Video",
+    title: "Getting Started With LitmusChaos 3.x",
+    content: "This video will help you get started with LitmusChaos 3.x.",
     img_url: "litmus.png",
-    link_text: "Read Blog",
-    link: "https://www.cncf.io/blog/2023/10/05/unveiling-litmuschaos-3-0-embracing-evolution-in-chaos-engineering/"
+    link_text: "Checkout Video",
+    link: "https://www.youtube.com/watch?v=wnEYugH7kW0"
   },
   {
     type: "Featured Blog",
@@ -18,13 +17,13 @@ export const eventUtils = [
     link: "https://www.cncf.io/blog/2023/07/19/building-resilience-with-chaos-engineering-and-litmus/"
   },
   {
-    type: "KubeCon Europe, 2023",
-    title: "Security Controls for Safe Chaos Experimentation",
+    type: "Featured Video",
+    title: "Fostering a Chaos First Mindset in Platform Engineering",
     content:
-      "An increasingly popular discipline that has added newer personas to its practitioner base in recent times, chaos engineering comes with its own security challenges.",
+      "Don't miss out! Join us at our next Flagship Conference: KubeCon + CloudNativeCon North America in Salt Lake City",
     img_url: "video.png",
     link_text: "Checkout Video",
-    link: "https://www.youtube.com/watch?v=whCkvLKAw74"
+    link: "https://youtu.be/WUXFKxgZRsk?si=lDao5xmJapERyjKz"
   },
   {
     type: "Get involved",
