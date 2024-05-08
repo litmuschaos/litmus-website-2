@@ -1,3 +1,4 @@
+import React from "react"
 import { eventUtils } from "@components/homepage/utils/eventUtils"
 import { TextLink } from "@includes/CTA"
 import styles from "@includes/scss/Hero.module.scss"
@@ -132,7 +133,7 @@ const Community = () => {
   const [curr, setCurr] = useState(0)
   const delay = 4500
 
-  // useEffect(() => {
+  // React.useEffect(() => {
   //   setTimeout(
   //     () =>
   //       setCurr(prevIndex =>
