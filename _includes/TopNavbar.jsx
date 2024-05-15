@@ -807,7 +807,7 @@ const TopNavbar = () => {
           ""
         )}
       </div>
-      <div className="sticky top-[70px] z-40 py-4 px-2 bg-[#979cd9]">
+      <div className="sticky top-[70px] z-30 py-4 px-2 bg-[#979cd9]">
         <Container className="flex items-center justify-center">
           <p className="text-white font-semibold text-xs md:text-sm text-center">
             LitmusChaosCon 2024 on September 12th!{" "}
