@@ -43,7 +43,11 @@ const Adopters = () => {
     "IFS",
     "delivery_hero",
     "talend",
-    "ericsson"
+    "ericsson",
+    "infor",
+    "navwar",
+    "nuBank",
+    "outsystems"
   ]
 
   return (
