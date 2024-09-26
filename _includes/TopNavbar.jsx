@@ -807,33 +807,6 @@ const TopNavbar = () => {
           ""
         )}
       </div>
-      <div className="sticky top-[70px] z-30 py-4 px-2 bg-[#979cd9]">
-        <Container className="flex items-center justify-center">
-          <p className="text-white font-semibold text-xs md:text-sm text-center">
-            LitmusChaosCon 2024 on September 12th!{" "}
-            <Link href="https://community.cncf.io/events/details/cncf-virtual-project-events-2024-hosted-by-cncf-presents-litmuschaoscon-virtual/">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline"
-              >
-                Register now(Free)
-              </a>
-            </Link>{" "}
-            or{" "}
-            <Link href="https://sessionize.com/litmuschaoscon/">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline"
-              >
-                submit a talk proposal
-              </a>
-            </Link>{" "}
-            submit a talk proposal(last date: June 24th)
-          </p>
-        </Container>
-      </div>
     </>
   )
 }
