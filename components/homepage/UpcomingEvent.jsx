@@ -15,24 +15,33 @@ const UpcomingEvent = () => {
             <img
               src="/landing_images/nextEvent.png"
               alt="LitmusChaos"
-              className="w-full h-72 object-cover object-center"
+              className="w-full h-auto object-cover object-center"
             />
           </div>
           <div className={styles.textContainer}>
             <div className={styles.topText}>
               <p className={styles.gradText}>UPCOMING COMMUNITY EVENT</p>
               <h3 className="text-xl sm:text-2xl md:text-3xl font-medium mt-2 text-primary">
-                LitmusChaosCon
+                KubeCon NA 2024
               </h3>
-              <h4 className="text-base sm:text-lg md:text-xl font-medium text-primary mt-1 md:mt-4">
-                {GetLocalTime("12 Sep 2024 00:00:00 +0530").dateString}
+              <h4 className="text-base sm:text-lg md:text-xl font-medium text-primary mt-1 md:mt-4 mb-2">
+                {GetLocalTime("13 Nov 2024 00:00:00 +0530").dateString}
+                {" - "}
+                {GetLocalTime("15 Nov 2024 00:00:00 +0530").dateString}
               </h4>
               <Paragraph>
-                LitmusChaos Con is an event surrounding all things LitmusChaos
-                and Chaos Engineering. It is a platform for SREs, QA Engineers,
-                Developers, Performance Engineers and Students to exchange their
-                ideas, experience, contribution stories and usage of
-                LitmusChaos.
+                Meet LitmusChaos at KubeCon North America 2024.
+                <div className="text-sm my-1">
+                  <span className="font-semibold">Location:</span> Level 1 |
+                  Halls A-C + 1-5 | Project Pavilion (Hall 1)
+                </div>
+                <div className="text-sm mb-1">
+                  <span className="font-semibold">Kiosk:</span> #16A
+                </div>
+                <div className="text-sm">
+                  <span className="font-semibold">Shift:</span> Half-shift AM
+                  schedule
+                </div>
               </Paragraph>
             </div>
             <TextLink

@@ -9,7 +9,7 @@ const NavbarBanner = () => {
     <ContainerFluid className={styles.bannerBackground}>
       <Container className="h-8 w-full flex items-center justify-center gap-1">
         <Paragraph dark bold secondary>
-          Meet us at Kubecon NA 2024, Kiosk #16A
+          Meet us at Kubecon NA 2024, Kiosk: #16A
         </Paragraph>
         <Link href="https://litmuschaos.io/blog/litmuschaos-is-joining-kubecon-cloudnativecon-north-america-2024-3blg">
           <a
