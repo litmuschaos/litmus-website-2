@@ -4,6 +4,7 @@ import Community from "@components/homepage/Community"
 import Features from "@components/homepage/Features"
 import Hero from "@components/homepage/Hero"
 import Testimonials from "@components/homepage/Testimonials"
+import UpcomingEvent from "@components/homepage/UpcomingEvent"
 import { PreFooter } from "@includes/BottomFooter"
 import SEO from "@lib/SEO"
 
@@ -12,6 +13,7 @@ const Home = () => {
     <>
       <SEO page={""} />
       <Hero />
+      <UpcomingEvent />
       <Adopters />
       <AboutLitmus />
       <Features />
