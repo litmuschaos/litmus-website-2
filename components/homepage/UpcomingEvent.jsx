@@ -46,7 +46,7 @@ const UpcomingEvent = () => {
             </div>
             <TextLink
               external
-              href="https://community.cncf.io/events/details/cncf-virtual-project-events-2024-hosted-by-cncf-presents-litmuschaoscon-virtual/"
+              href="https://litmuschaos.io/blog/litmuschaos-is-joining-kubecon-cloudnativecon-north-america-2024-3blg"
             >
               See Event Details
             </TextLink>
