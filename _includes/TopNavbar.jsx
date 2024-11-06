@@ -21,7 +21,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { RegularButton, TextLink } from "./CTA"
-import { Paragraph } from "./Texts"
+import NavbarBanner from "./NavbarBanner"
 
 const TopNavbar = () => {
   const url = "https://api.github.com/repos/litmuschaos/litmus"
@@ -92,6 +92,7 @@ const TopNavbar = () => {
             : ""
         }`}
       >
+        <NavbarBanner />
         <Container className={styles.navbarCont}>
           <nav className={styles.navbar}>
             <div className={styles.logoCont}>
