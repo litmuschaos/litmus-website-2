@@ -48,7 +48,8 @@ const Adopters = () => {
     "navwar",
     "nuBank",
     "outsystems",
-    "wingie"
+    "wingie",
+    "emirates-nbd"
   ]
 
   return (
