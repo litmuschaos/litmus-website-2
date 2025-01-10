@@ -26,12 +26,11 @@ const Hero = () => {
           </Paragraph>
           <div className="mt-4 flex gap-4 justify-center lg:justify-start">
             <RegularButton
-              href="https://github.com/litmuschaos/litmus"
+              href="https://docs.litmuschaos.io/"
               external
             >
               <span className="flex items-center">
-                <GithubButton />
-                Get Started
+                Learn more
               </span>
             </RegularButton>
             <OutlinedButton
