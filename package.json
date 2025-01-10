@@ -18,7 +18,7 @@
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.38",
-    "next": "^12.2.5",
+    "next": "^14.2.15",
     "next-seo": "^4.26.0",
     "next-sitemap": "^1.6.148",
     "raw-loader": "^4.0.2",
