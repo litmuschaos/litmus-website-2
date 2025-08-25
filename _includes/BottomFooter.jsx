@@ -3,7 +3,7 @@ const { ContainerFluid } = require("@layouts/Container")
 const { RegularButton } = require("./CTA")
 const { Paragraph } = require("./Texts")
 const { BodyHead } = require("./Texts")
-import { CNCFLogo, CnSVG, LitmusLogoDark } from "@components/SVG/FooterSVG"
+import { CNCFLogo, CnSVG, LitmusLogo } from "@components/SVG/FooterSVG"
 import { GithubButton } from "@components/SVG/NavbarSVG"
 import styles from "@includes/scss/Footer.module.scss"
 import Link from "next/link"
@@ -52,13 +52,13 @@ const BottomFooter = props => {
           <div className={styles.companyDetCont}>
             <Link href="/">
               <a>
-                <LitmusLogoDark />
+                <LitmusLogo />
               </a>
             </Link>
-            <Paragraph dark secondary className="mb-4">
-              Copyright © 2020 LitmusChaos Authors. All rights reserved.
+            <Paragraph secondary className="mb-4 text-[#573e69cc]">
+              Copyright © {new Date().getFullYear()} LitmusChaos Authors. All rights reserved.
             </Paragraph>
-            <Paragraph dark secondary>
+            <Paragraph dark secondary className="text-[#808080]">
               The Linux Foundation has registered trademarks and uses
               trademarks. For a list of trademarks of The Linux Foundation,
               please see our{" "}
@@ -120,7 +120,7 @@ const BottomFooter = props => {
         </Container>
         <Container className="pb-12 flex justify-center items-center">
           <span className="flex gap-1 items-center md:items-baseline flex-col md:flex-row">
-            <Paragraph dark className="font-medium">
+            <Paragraph dark className="font-medium text-[#808080]">
               Originally created by
             </Paragraph>
             <Link href="https://www.chaosnative.com/">
