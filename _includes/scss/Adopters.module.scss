@@ -1,6 +1,38 @@
 @import "@styles/scss/layoutMixins";
 @import "@styles/scss/Variables.scss";
 
+// Floating logo animations
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.scrollLeft {
+  animation: scrollLeft 150s linear infinite;
+}
+
+.scrollRight {
+  animation: scrollRight 150s linear infinite;
+}
+
+.logoContainer {
+  mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+}
+
 div.adopterListCardCont {
   display: flex;
   flex-direction: column;
