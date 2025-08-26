@@ -6,32 +6,30 @@ import { Container, ContainerFluid } from "@layouts/Container"
 
 const Hero = () => {
   return (
-    <ContainerFluid className="bg-[#FAFBFC]">
-      <Container className={styles.heroCont}>
-        <div className={styles.textCont}>
+    <ContainerFluid className="bg-[#ffffff] relative">
+      {/* Sticky Content Container */}
+      <div className="sticky top-[64px] z-20 bg-white">
+        <Container className="flex flex-col items-center justify-center text-center pt-16 pb-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="content-container">
           <HeroHead hero>
+
+
             <span className="block">Open Source</span>
-            <span className="block">Chaos Engineering</span>
-            <span className="block">platform</span>
+            <span className="block">Chaos Engineering platform</span>
+
           </HeroHead>
-          <Paragraph hint className="mt-6 text-center lg:text-left">
-            Litmus is an open source Chaos Engineering platform that enables
-            teams to identify weaknesses & potential outages in infrastructures
-            by inducing chaos tests in a controlled way.
+          <Paragraph hint className="mt-6 text-center">
+          Litmus is a CNCF-hosted, open-source Chaos Engineering platform that helps teams indentify infrastructure weaknesses through safe, controlled chaos tests, simple for developers and SREs, built on modern practices, and powered by the community.
           </Paragraph>
-          <Paragraph hint className="mt-4 text-center lg:text-left">
-            Developers & SREs can simply execute Chaos Engineering with Litmus
-            as it is easy to use, based on modern chaos engineering practices &
-            community collaborated. Litmus is 100% open source & CNCF-hosted.
-          </Paragraph>
-          <div className="mt-4 flex gap-4 justify-center lg:justify-start">
+      
+          <div className="mt-8 flex gap-4 justify-center">
             <RegularButton
               href="https://github.com/litmuschaos/litmus"
               external
             >
               <span className="flex items-center">
-                <GithubButton />
-                Get Started
+             Try Litmus
               </span>
             </RegularButton>
             <OutlinedButton
@@ -44,16 +42,28 @@ const Hero = () => {
               </span>
             </OutlinedButton>
           </div>
-        </div>
-        <div className={styles.heroImg}>
-          <img
-            src="/landing_images/hero/hero_img.svg"
-            alt="LitmusChaos"
-            height={587}
-            width={596}
-          />
+            </div>
+          </div>
+        </Container>
+      </div>
+      
+      {/* Hero Image Container - will scroll under the sticky content */}
+      <Container className="relative -mt-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="mt-12 flex justify-center image-container">
+            <div className={styles.heroImageContainer}>
+              <img
+                src="/landing_images/hero/hero_litmus_ui.avif"
+                alt="Litmus Chaos Engineering Platform Interface"
+                className="w-full h-auto object-cover"
+              />
+              {/* White fading overlay */}
+              <div className={styles.whiteFadeOverlay}></div>
+            </div>
+          </div>
         </div>
       </Container>
+      
     </ContainerFluid>
   )
 }
