@@ -69,7 +69,7 @@ const Adopters = () => {
     const animationClass = direction === 'left' ? styles.scrollLeft : styles.scrollRight
     
     return (
-      <div className="overflow-hidden mb-6 w-full" style={{ height: '60px' }}>
+      <div className="overflow-hidden mb-2 md:mb-4 w-full h-[60px]">
         <div 
           className={`flex items-center space-x-8 whitespace-nowrap ${animationClass}`}
           style={{
@@ -93,7 +93,7 @@ const Adopters = () => {
   }
 
   return (
-    <Container className="py-14 md:py-28">
+    <Container className="py-14 md:pt-36 md:pb-28">
         <BodyHead className="text-center max-w-5xl mx-auto">
           Trusted by startups and enterprises to improve reliability
         </BodyHead>

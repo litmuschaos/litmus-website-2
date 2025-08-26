@@ -53,8 +53,11 @@ div.partDiv {
               rgba(50, 87, 120, 0.16) 0px 20px 20px -1.75px;
   padding: 0;
   width: 100%;
-  min-height: 300px;
   border: 1px solid rgb(228, 223, 220);
+  
+  @include mediumScreens {
+    min-height: 300px;
+  }
 }
 
 .iconContainer {

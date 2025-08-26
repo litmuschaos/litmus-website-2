@@ -7,18 +7,18 @@ import { featureUtils } from "./utils/featureUtils"
 const FeatureCard = ({ feature }) => {
   return (
     <div className={styles.featureCard}>
-      <div className={styles.featureContent}>
-        <h3 className="text-xl md:text-2xl font-medium mt-4 mb-2">
-          {feature.title}
-        </h3>
-        <Paragraph hint>{feature.content}</Paragraph>
-      </div>
       <div className={styles.featureMascot}>
         <img 
           src={feature.mascot} 
           alt={`${feature.title} mascot`}
           className="w-full h-full object-contain"
         />
+      </div>
+      <div className={styles.featureContent}>
+        <h3 className="text-xl md:text-2xl font-medium mt-4 mb-2">
+          {feature.title}
+        </h3>
+        <Paragraph hint>{feature.content}</Paragraph>
       </div>
     </div>
   )

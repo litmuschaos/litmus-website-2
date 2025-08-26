@@ -118,7 +118,7 @@ const GetStartedSection = () => {
           {activeTab === 'saas' && (
             <div className="relative">
               {/* Vertical connecting line */}
-              <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-gradient-to-b from-[#5a44ba] to-[#8b7bc7] z-0"></div>
+              <div className="absolute left-6 top-10 md:top-6 bottom-10 md:bottom-6 w-0.5 bg-gradient-to-b from-[#5a44ba] to-[#8b7bc7] z-0"></div>
               
               <div className="space-y-8">
                 {/* Step 1: Sign up for Harness */}
