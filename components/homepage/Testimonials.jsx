@@ -172,11 +172,8 @@ const Testimonials = () => {
 
   return (
     <Container className="pt-20 md:pt-28 lg:pt-32 lg:pb-24 md:pb-20 pb-16">
-      <BodyHead>
-        <span style={{ color: "#696f8c" }}>See what our </span>users&nbsp;
-        <span style={{ color: "#696f8c" }}>are </span>saying
-        <br />
-        <span style={{ color: "#696f8c" }}> about us</span>
+      <BodyHead className="text-center">
+        What users are saying
       </BodyHead>
       <TestimonialCard
         testimonials={testimonialUtils}
@@ -185,6 +182,15 @@ const Testimonials = () => {
         count={curr}
       />
       <Navigator handleChange={state => setCurr(state)} count={curr} />
+      
+      <div className="flex justify-center mt-12">
+        <Link href="/adopters">
+          <a className={styles.viewMoreStoriesBtn}>
+            View more stories
+            <span className="chevron">&gt;</span>
+          </a>
+        </Link>
+      </div>
     </Container>
   )
 }

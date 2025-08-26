@@ -349,3 +349,37 @@ div.heroCont {
   pointer-events: none;
   z-index: 1;
 }
+
+/* VIEW MORE STORIES BUTTON */
+.viewMoreStoriesBtn {
+  --border-bottom-width: 2px;
+  --border-color: #ffffff;
+  --border-left-width: 2px;
+  --border-right-width: 2px;
+  --border-style: solid;
+  --border-top-width: 2px;
+  align-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 11px;
+  box-shadow: 0 0 16px 4px rgba(180, 156, 197, 0.08);
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 8px;
+  height: 48px;
+  justify-content: center;
+  overflow: visible;
+  padding: 12px 18px;
+  position: relative;
+  border: 2px solid #ffffff;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: translateY(-1px);
+  }
+}
