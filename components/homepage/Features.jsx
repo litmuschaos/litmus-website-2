@@ -26,7 +26,7 @@ const FeatureCard = ({ feature }) => {
 
 const Features = () => {
   return (
-    <ContainerFluid className="bg-[#FAFBFC]">
+    <ContainerFluid className="bg-white">
       <Container className="md:pt-36 md:pb-28 pt-16 pb-14">
         <div className="text-center">
           <BodyHead className="text-center">
