@@ -1,14 +1,25 @@
 import React from "react"
 import { eventUtils } from "@components/homepage/utils/eventUtils"
-import { TextLink } from "@includes/CTA"
+import { TextLink, RegularButton } from "@includes/CTA"
 import styles from "@includes/scss/Hero.module.scss"
 import { BodyHead, Paragraph } from "@includes/Texts"
 import { Container } from "@layouts/Container"
 import { useState } from "react"
 import Link from "next/link"
 
-const Slide = ({ events, count, changeState }) => {
+const CommunityCard = ({ events, changePrevState, changeNextState, count }) => {
   const [touchStart, setTouchStart] = useState({})
+  const [isMobile, setIsMobile] = useState(false)
+  
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+  
   const handleTouchStart = e => {
     const firstTouchEvent = e.touches[0]
     const location = {
@@ -28,101 +39,91 @@ const Slide = ({ events, count, changeState }) => {
       x: touchStart.x - location.x,
       y: touchStart.y - location.y
     }
-    if (differences.x >= 0.5) {
-      changeState("prev")
-    } else if (differences.x <= -0.5) {
-      changeState("next")
+    if (differences.x >= 50) {
+      changeNextState()
+    } else if (differences.x <= -50) {
+      changePrevState()
     }
   }
+
   return (
-    <div className={"flex items-center w-full"} style={{ width: "96%" }}>
-      <div className={`${styles.communitySlideShow} py-8 z-0`}>
-        <div
-          className={`items-center ${styles.communitySlider}`}
-          style={{ transform: `translate3d(${-count * 100}%, 0, 0)` }}
-        >
-          {events.map((event, idx) => {
-            return (
-              <div
-                className={`${styles.communitySlide} px-2`}
-                key={idx}
-                onTouchStart={handleTouchStart}
-                onTouchEnd={handleTouchEnd}
-              >
-                <div className={"flex flex-col-reverse lg:flex-row w-full"}>
-                  <div
-                    className={"w-full lg:w-2/5 ml-1 lg:px-12"}
-                    style={{ whiteSpace: "pre-line" }}
-                  >
-                    <p
-                      style={{ color: "#5B44BA" }}
-                      className={
-                        "text-sm sm:text-md lg:text-xl mt-10 lg:mt-0 font-medium"
-                      }
-                    >
-                      {event.type}
-                    </p>
-                    <BodyHead className={"my-8"}>{event.title}</BodyHead>
-                    <Paragraph className={"mb-4"}>{event.content}</Paragraph>
-                    <TextLink href={event.link} external>
+    <div className="relative overflow-hidden">
+      {/* Arrow Navigation */}
+      <div
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer bg-white rounded-full p-3 shadow-lg flex items-center justify-center"
+        onClick={changePrevState}
+      >
+        <img
+          src="/landing_images/testimonies/arrow_left.svg"
+          alt="Previous"
+          className="h-4 w-4 lg:h-5 lg:w-5"
+        />
+      </div>
+      <div
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer bg-white rounded-full p-3 shadow-lg flex items-center justify-center"
+        onClick={changeNextState}
+      >
+        <img
+          src="/landing_images/testimonies/arrow_right.svg"
+          alt="Next"
+          className="h-4 w-4 lg:h-5 lg:w-5"
+        />
+      </div>
+
+      {/* Carousel Container */}
+      <div className="flex transition-transform duration-300 ease-in-out" 
+           style={{ transform: `translateX(-${count * (isMobile ? 100 : 66.67)}%)` }}
+           onTouchStart={handleTouchStart}
+           onTouchEnd={handleTouchEnd}>
+        {events.map((event, idx) => (
+          <div key={idx} className="flex-shrink-0 w-full lg:w-2/3 px-4">
+            <div className="relative rounded-xl shadow-lg h-[450px] mb-2 overflow-hidden">
+              <Link href={event.link}>
+                <a target="_blank">
+                  <img
+                    src={`/landing_images/community/${event.img_url}`}
+                    className="w-full h-full object-cover"
+                    alt="LitmusChaos"
+                  />
+                </a>
+              </Link>
+              
+              {/* Content Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                  <p className="text-sm font-medium mb-2 text-purple-300">
+                    {event.type}
+                  </p>
+                  <h3 className="text-xl font-bold mb-2 line-clamp-2">{event.title}</h3>
+                  <p className="text-gray-200 mb-4 text-sm line-clamp-2">{event.content}</p>
+                  <div className="inline-block">
+                    <TextLink href={event.link} external className="text-white hover:text-purple-300">
                       {event.link_text}
                     </TextLink>
                   </div>
-                  <div className={"w-full lg:w-3/5"}>
-                    <Link href={event.link}>
-                      <a target={"_blank"}>
-                        <img
-                          src={`/landing_images/community/${event.img_url}`}
-                          className={"rounded-xl shadow-lg bg-blend-screen"}
-                          alt="LitmusChaos"
-                        />
-                      </a>
-                    </Link>
-                  </div>
                 </div>
               </div>
-            )
-          })}
-        </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   )
 }
 
-const Navigator = ({ changePrevState, changeNextState, count, length }) => {
+const DotNavigator = ({ handleChange, count, length }) => {
   return (
-    <div className={"relative w-12 z-10 hidden lg:block"}>
-      <img
-        src={"/landing_images/community/navArrowLeft.svg"}
-        className={`absolute left-0 cursor-pointer`}
-        onClick={changePrevState}
-        alt="ChaosNative"
-      />
-      <img
-        src={"/landing_images/community/navArrowRight.svg"}
-        className={`absolute right-0 cursor-pointer`}
-        onClick={changeNextState}
-        alt="ChaosNative"
-      />
-      <div className={"mx-6"}>
-        {[...Array(length)].map((e, i) => (
-          <div
-            className={`${styles.slideNavigator}`}
-            key={i}
-            style={{
-              backgroundColor: `${count === i ? "#5B44BA" : "#BBBBBB"}`
-            }}
-          >
-            {""}
-          </div>
-        ))}
-      </div>
-      <span className={"absolute bottom-0 left-2 text-sm text-black"}>
-        {count + 1}
-      </span>
-      <span className={"absolute bottom-0 right-2 text-sm opacity-60"}>
-        {length}
-      </span>
+    <div className="flex justify-center items-center space-x-2 mt-8">
+      {[...Array(length)].map((_, idx) => (
+        <button
+          key={idx}
+          onClick={() => handleChange(idx)}
+          className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+            idx === count ? "bg-purple-600" : "bg-gray-300"
+          }`}
+          aria-label={`Go to slide ${idx + 1}`}
+        />
+      ))}
     </div>
   )
 }
@@ -160,67 +161,53 @@ const Community = () => {
     }
   }
 
-  const handleSwipe = action => {
-    if (action === "prev") {
-      if (curr === eventUtils.length - 1) {
-        setCurr(0)
-      } else {
-        setCurr(curr + 1)
-      }
-    } else if (action === "next") {
-      if (curr === 0) {
-        setCurr(eventUtils.length - 1)
-      } else {
-        setCurr(curr - 1)
-      }
-    }
-  }
 
   return (
-    <>
-      <div className={"my-24"}>
-        <Container>
-          <BodyHead>
-            <span style={{ color: "#696f8c" }}>Inside</span> Litmus Community
-          </BodyHead>
-          <Paragraph className={"my-4"}>
-            Sneak peek into activities going inside ever growing Litmus
-            community
-          </Paragraph>
-          <div className={"flex items-center justify-between"}>
-            <Navigator
-              changePrevState={handlePrevState}
-              changeNextState={handleNextState}
-              count={curr}
-              length={eventUtils.length}
-            />
-            <Slide events={eventUtils} count={curr} changeState={handleSwipe} />
-          </div>
-          <div className={"flex justify-between w-full lg:hidden"}>
-            <div
-              className={`${styles.slideArrow} shadow-lg`}
-              onClick={handlePrevState}
+    <Container className="py-20 md:py-28 lg:pt-20 lg:pb-28">
+      <BodyHead className="text-center mb-4">
+        Inside our growing community
+      </BodyHead>
+      <Paragraph className="text-center mb-12">
+        Discover the events, projects and energy behind our Litmus community
+      </Paragraph>
+      
+      <CommunityCard
+        events={eventUtils}
+        changePrevState={handlePrevState}
+        changeNextState={handleNextState}
+        count={curr}
+      />
+      
+      <DotNavigator
+        handleChange={state => setCurr(state)}
+        count={curr}
+        length={eventUtils.length}
+      />
+
+      {/* Join Our Community Button */}
+      <div className="flex justify-center mt-12">
+        <RegularButton href="https://kubernetes.slack.com/?redir=%2Farchives%2FCNXNB0ZTN" external>
+          <span className="flex items-center gap-2">
+            Join our community
+            <svg
+              width="7"
+              height="13"
+              viewBox="0 0 7 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <img
-                src={"landing_images/testimonies/arrow_left.svg"}
-                className={""}
-                alt={"LitmusChaos"}
+              <path
+                d="M1 1.1626L6 6.1626L1 11.1626"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
-            </div>
-            <div
-              className={`${styles.slideArrow} shadow-lg`}
-              onClick={handleNextState}
-            >
-              <img
-                src={"landing_images/testimonies/arrow_right.svg"}
-                className={""}
-                alt={"LitmusChaos"}
-              />
-            </div>
-          </div>
-        </Container>
+            </svg>
+          </span>
+        </RegularButton>
       </div>
-    </>
+    </Container>
   )
 }
 
