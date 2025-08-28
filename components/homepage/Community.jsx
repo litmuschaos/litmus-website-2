@@ -76,7 +76,7 @@ const CommunityCard = ({ events, changePrevState, changeNextState, count }) => {
            onTouchStart={handleTouchStart}
            onTouchEnd={handleTouchEnd}>
         {events.map((event, idx) => (
-          <div key={idx} className="flex-shrink-0 w-full lg:w-2/3 px-4">
+          <div key={idx} className="flex-shrink-0 w-full lg:w-2/3 pr-4">
             <div className="relative rounded-xl shadow-lg h-[450px] mb-2 overflow-hidden">
               <Link href={event.link}>
                 <a target="_blank">

@@ -3,6 +3,7 @@ const { ContainerFluid } = require("@layouts/Container")
 const { RegularButton } = require("./CTA")
 const { Paragraph } = require("./Texts")
 const { BodyHead } = require("./Texts")
+import Image from "next/image"
 import { CNCFLogo, CnSVG, LitmusLogo } from "@components/SVG/FooterSVG"
 import { GithubButton } from "@components/SVG/NavbarSVG"
 import styles from "@includes/scss/Footer.module.scss"
@@ -50,11 +51,16 @@ const BottomFooter = props => {
       <ContainerFluid className={styles.footerFluidCont}>
         <Container className={styles.footerCont}>
           <div className={styles.companyDetCont}>
-            <Link href="/">
-              <a>
-                <LitmusLogo />
-              </a>
-            </Link>
+          <Link href="/">
+                <a>
+                  <Image
+                    src="/logos/dark-logo.svg"
+                    alt="Litmus"
+                    height={51.26}
+                    width={134}
+                  />
+                </a>
+              </Link>
             <Paragraph secondary className="mb-4 text-[#573e69cc]">
               Copyright © {new Date().getFullYear()} LitmusChaos Authors. All rights reserved.
             </Paragraph>
