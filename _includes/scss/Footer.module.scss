@@ -1,40 +1,17 @@
 @import "@styles/scss/layoutMixins";
 @import "@styles/scss/Variables.scss";
 
-@keyframes rotateBackground {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 div.cncfLogoCont {
+  background-image: url("/footer/footer-back.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 300px;
-  position: relative;
   
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("/footer/footer-back.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: -1;
-    
-    @include mediumScreens {
-      animation: rotateBackground 5s linear infinite;
-    }
-  }
   @include mediumScreens {
     padding: 2rem;
     min-height: 400px;
