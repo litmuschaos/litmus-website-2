@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.2.1",
+    "aos": "^2.3.4",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.38",
     "next": "^12.2.5",

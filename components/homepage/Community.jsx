@@ -76,7 +76,7 @@ const CommunityCard = ({ events, changePrevState, changeNextState, count }) => {
            onTouchStart={handleTouchStart}
            onTouchEnd={handleTouchEnd}>
         {events.map((event, idx) => (
-          <div key={idx} className="flex-shrink-0 w-full lg:w-2/3 pr-4">
+          <div key={idx} className="flex-shrink-0 w-full lg:w-2/3 px-4 md:pl-0 md:pr-4">
             <div className="relative rounded-xl shadow-lg h-[450px] mb-2 overflow-hidden">
               <Link href={event.link}>
                 <a target="_blank">
@@ -132,18 +132,18 @@ const Community = () => {
   const skewBg =
     " radial-gradient(127.02% 246.32% at 62.75% 46.03%, #EB8172 16.67%, #858CDD 61.41%), radial-gradient(34.96% 33.39% at 56.66% 50%, #F19389 44.79%, rgba(133, 140, 221, 0) 83.19%), radial-gradient(13.35% 17.52% at 6.58% 67.25%, #AFE9FF 0%, #90E0FF 41.45%, rgba(144, 224, 255, 0) 100%), radial-gradient(19.75% 48.55% at 19.59% 56.88%, #B8EBFF 0%, #90E0FF 60.58%, rgba(169, 96, 238, 0) 83.24%), radial-gradient(10.9% 23.5% at 7.65% 84.98%, #A960EE 25.96%, rgba(255, 51, 61, 0) 100%), radial-gradient(42.62% 1747.98% at 47.67% 46.48%, rgba(144, 224, 255, 0.1) 50.74%, rgba(169, 96, 238, 0) 100%), radial-gradient(49.11% 87.02% at 45.83% 17.78%, #6772E5 31.7%, #55ACEE 100%), radial-gradient(35.02% 79.77% at 50.04% 16.69%, #ECB22E 19.21%, #FB9C40 54.54%), radial-gradient(18.22% 46.29% at 5.34% 39.33%, #FFCB57 41.18%, rgba(183, 120, 225, 0) 71.99%), conic-gradient(from 3.28deg at 22.11% 40.38%, rgba(169, 96, 238, 0) 0deg, #5469D4 178.27deg, rgba(136, 99, 228, 0.383199) 290.36deg, rgba(169, 96, 238, 0) 360deg), radial-gradient(34.48% 62.34% at 21.35% 32.43%, #FC9987 0%, #AFE9FF 100%)"
   const [curr, setCurr] = useState(0)
-  const delay = 4500
+  const delay = 2000
 
-  // React.useEffect(() => {
-  //   setTimeout(
-  //     () =>
-  //       setCurr(prevIndex =>
-  //         prevIndex === eventUtils.length - 1 ? 0 : prevIndex + 1
-  //       ),
-  //     delay
-  //   )
-  //   return () => {}
-  // }, [curr])
+  React.useEffect(() => {
+    const timer = setTimeout(
+      () =>
+        setCurr(prevIndex =>
+          prevIndex === eventUtils.length - 1 ? 0 : prevIndex + 1
+        ),
+      delay
+    )
+    return () => clearTimeout(timer)
+  }, [curr])
 
   const handlePrevState = () => {
     if (curr === 0) {

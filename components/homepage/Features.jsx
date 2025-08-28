@@ -4,9 +4,14 @@ import { BodyHead, Paragraph } from "@includes/Texts"
 import { Container, ContainerFluid } from "@layouts/Container"
 import { featureUtils } from "./utils/featureUtils"
 
-const FeatureCard = ({ feature }) => {
+const FeatureCard = ({ feature, index }) => {
   return (
-    <div className={styles.featureCard}>
+    <div 
+      className={styles.featureCard}
+      data-aos="fade-up"
+      data-aos-delay={index * 100}
+      data-aos-duration="600"
+    >
       <div className={styles.featureMascot}>
         <img 
           src={feature.mascot} 
@@ -29,11 +34,20 @@ const Features = () => {
     <ContainerFluid className="bg-white">
       <Container className="md:pt-36 md:pb-28 pt-16 pb-14">
         <div className="text-center">
-          <BodyHead className="text-center">
+          <BodyHead 
+            className="text-center"
+            data-aos="fade-down"
+            data-aos-duration="800"
+          >
           Packed with features to{" "}
             <span className="text-[#5b44ba] md:block">achieve resilience</span>
           </BodyHead>
-          <Paragraph className="md:max-w-2xl mt-4 text-center mx-auto">
+          <Paragraph 
+            className="md:max-w-2xl mt-4 text-center mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="800"
+          >
             Over time, with the monthly cadence releases and community engagement,
             we have added a lot of features and made LitmusChaos much easier for
             the end-users. With the launch of Litmus 2.0, a new way of chaos
@@ -42,11 +56,16 @@ const Features = () => {
         </div>
         <div className={styles.featureCardCont}>
           {featureUtils.map((feature, index) => {
-            return <FeatureCard key={feature.title + index} feature={feature} />
+            return <FeatureCard key={feature.title + index} feature={feature} index={index} />
           })}
         </div>
         
-        <div className={styles.moreFeatureCard}>
+        <div 
+          className={styles.moreFeatureCard}
+          data-aos="fade-up"
+          data-aos-delay="400"
+          data-aos-duration="800"
+        >
           <div className={styles.content}>
             <h3 className="text-xl md:text-2xl text-success font-medium mb-2">
               And many more features

@@ -3,7 +3,7 @@ import styles from "@includes/scss/Hero.module.scss"
 import { BodyHead, Paragraph } from "@includes/Texts"
 import { Container } from "@layouts/Container"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const logos = ["orange", "red_hat", "kitopi", "container_solutions"]
 
@@ -169,6 +169,21 @@ const Testimonials = () => {
       setCurr(curr + 1)
     }
   }
+
+  // Auto-scroll functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurr(prevCurr => {
+        if (prevCurr === testimonialUtils.length - 1) {
+          return 0
+        } else {
+          return prevCurr + 1
+        }
+      })
+    }, 2000) // Auto-scroll every 2 seconds
+
+    return () => clearInterval(interval) // Cleanup interval on component unmount
+  }, [])
 
   return (
     <Container className="pt-20 md:pt-28 lg:pt-32 lg:pb-24 md:pb-20 pb-16">
