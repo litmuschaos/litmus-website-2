@@ -55,7 +55,7 @@ const HCE = () => {
         <Paragraph className="max-w-4xl mt-6 mx-auto text-lg leading-relaxed">
           Improve application resiliency and reduce costly downtime with enterprise-grade chaos engineering. 
           Harness enables organizations to securely scale chaos engineering across their entire infrastructure 
-          with expert support from the creators of Litmus, whether you're exploring advanced chaos testing 
+          with expert support from the creators of Litmus, whether you are exploring advanced chaos testing 
           or need a partner to build custom reliability solutions.
         </Paragraph>
         <div className="mt-8 text-center">

@@ -135,7 +135,7 @@ const GetStartedSection = () => {
                         Sign up for a free plan on Harness.io
                       </h3>
                       <p className="text-gray-600 text-sm">
-                        Get started with Harness's free tier to access chaos engineering capabilities
+                        Get started with Harness&apos;s free tier to access chaos engineering capabilities
                       </p>
                     </div>
                   </div>
