@@ -1,15 +1,14 @@
 import { HeroHead, Paragraph, BodyHead } from "@includes/Texts"
 import { Container } from "@layouts/Container"
-import styles from "@includes/scss/Hero.module.scss"
 
 const AdoptersHero = () => {
   return (
     <>
-      <Container className="py-20 md:py-28 lg:pt-20 lg:pb-28">
+      <Container className="py-10 md:py-28 lg:pt-20 lg:pb-28">
         <div className="text-center">
-          <BodyHead className="mb-4">
+          <HeroHead className="mb-4 !font-bold">
           Adopted by Industry Leaders
-          </BodyHead>
+          </HeroHead>
           <Paragraph className="mb-8 max-w-3xl mx-auto">
             Hundreds of the most innovative companies choose LitmusChaos to
             increase resiliency and ensure smooth functioning of their systems.

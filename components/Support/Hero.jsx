@@ -1,5 +1,3 @@
-import { GithubButton, SlackSVG } from "@components/SVG/NavbarSVG"
-import { OutlinedButton, RegularButton } from "@includes/CTA"
 import styles from "@includes/scss/Hero.module.scss"
 import { HeroHead, Paragraph } from "@includes/Texts"
 import { Container, ContainerFluid } from "@layouts/Container"
@@ -9,7 +7,7 @@ const Hero = () => {
     <ContainerFluid className="bg-[#FAFBFC]">
       <Container className={styles.heroCont}>
         <div className={styles.textCont}>
-          <HeroHead hero>
+          <HeroHead className="text-center md:text-left !font-bold">
             <span className="block">Enterprise Editions</span>
             <span className="block">& Trainings</span>
           </HeroHead>

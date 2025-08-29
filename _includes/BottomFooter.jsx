@@ -15,8 +15,8 @@ const PreFooter = props => {
     <ContainerFluid className={`${props.attached ? "" : "bg-white"}`}>
       <Container className="flex flex-col gap-8 items-center md:flex-row py-6 md:py-12 lg:py-20">
         <div className="w-full md:w-1/2">
-          <BodyHead>Chaos Engineering made easy</BodyHead>
-          <Paragraph hint className="mt-4">
+          <BodyHead className="text-center md:text-left">Chaos Engineering made easy</BodyHead>
+          <Paragraph hint className="mt-4 text-center md:text-left">
             Litmus is highly extensible and integrates with other tools to
             enable the creation of custom experiments. Kubernetes developers &
             SREs use Litmus to manage chaos in a declarative manner and find

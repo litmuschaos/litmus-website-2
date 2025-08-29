@@ -1,5 +1,4 @@
-import { TextLink } from "@includes/CTA"
-import styles from "@includes/scss/Adopters.module.scss"
+import {  RegularButton } from "@includes/CTA"
 import { Paragraph } from "@includes/Texts"
 import { Container } from "@layouts/Container"
 import { Adopters } from "./adopter.data"
@@ -45,37 +44,37 @@ const AdoptersList = () => {
 
                   {/* Content */}
                   <div className="flex-1 text-center lg:text-left">
-                    <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                    <h2 className="text-2xl lg:text-3xl font-medium text-gray-900 mb-4 leading-tight">
                       {adopter.subHeading}
                     </h2>
                     <Paragraph className="text-gray-600 mb-6 text-lg leading-relaxed">
                       {adopter.paragraph}
                     </Paragraph>
                     
-                    <div className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors duration-200 shadow-lg hover:shadow-xl">
-                      <TextLink
-                        href={`/adopters/${adopter.link}`}
-                        className="text-white hover:text-white no-underline font-medium"
-                      >
+                    <RegularButton
+                      href={`/adopters/${adopter.link}`}
+                      className="mt-4 w-full text-center sm:w-auto"
+                    >
+                      <span className="flex items-center">
                         Read the case study
-                      </TextLink>
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="ml-1"
-                      >
-                        <path
-                          d="M6 12L10 8L6 4"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="ml-2"
+                        >
+                          <path
+                            d="M6 12L10 8L6 4"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </span>
+                    </RegularButton>
                   </div>
                 </div>
               )

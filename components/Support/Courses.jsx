@@ -1,6 +1,6 @@
 import { MoreSVG } from "@components/SVG/FeatureSVG"
 import styles from "@includes/scss/Support.module.scss"
-import { Paragraph, SubHeading } from "@includes/Texts"
+import { Paragraph, BodyHead } from "@includes/Texts"
 import { Container } from "@layouts/Container"
 import Link from "next/link"
 import { CourseData } from "./utils"
@@ -8,7 +8,10 @@ import { CourseData } from "./utils"
 const Courses = () => {
   return (
     <Container className={styles.courseCont}>
-      <SubHeading>Trainings & Certifications</SubHeading>
+      <BodyHead className="text-center">Trainings & Certifications</BodyHead>
+      <Paragraph hint className="text-center mt-4 mb-8 max-w-3xl mx-auto">
+        Enhance your chaos engineering skills with comprehensive training programs and certifications from our trusted partners.
+      </Paragraph>
       <div className={styles.gridCont}>
         {CourseData.map(support => {
           return (
