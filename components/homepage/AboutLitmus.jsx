@@ -47,7 +47,7 @@ const GetStartedSection = () => {
           </div>
           <span className={styles.quickStartText}>Quick Start</span>
         </div>
-        <BodyHead dark className="text-center md:text-left text-[#483953] !text-[2rem]">
+        <BodyHead className="text-center md:text-left text-[#483953] !text-[2rem]">
           Get Started<br />
           <span className="text-[#5a44ba]">in minutes,</span><br />
           not days
