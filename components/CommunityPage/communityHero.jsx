@@ -1,12 +1,11 @@
-import styles from "@includes/scss/Community.module.scss"
-import { HeroHead, Paragraph, BodyHead } from "@includes/Texts"
+import { HeroHead, Paragraph } from "@includes/Texts"
 import { Container } from "@layouts/Container"
-import Image from "next/image"
+
 
 const CommunityHero = () => {
   return (
     <>
-      <Container className="py-10 md:py-28 lg:pt-20 lg:pb-28">
+      <Container className="py-8 md:py-16">
         <div className="text-center">
           <HeroHead className="mb-4 !font-bold">
             Get Involved with Community!
@@ -20,18 +19,18 @@ const CommunityHero = () => {
           </Paragraph>
           
           {/* Stats section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-3 gap-4 sm:gap-8 mt-12 sm:mt-16">
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">2.5K+</div>
-              <div className="text-gray-600">Community Members</div>
+              <div className="text-2xl sm:text-4xl font-bold text-purple-600 mb-2">2.5K+</div>
+              <div className="text-gray-600 text-sm sm:text-base">Community Members</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">4.8K+</div>
-              <div className="text-gray-600">GitHub Stars</div>
+              <div className="text-2xl sm:text-4xl font-bold text-purple-600 mb-2">4.8K+</div>
+              <div className="text-gray-600 text-sm sm:text-base">GitHub Stars</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">250+</div>
-              <div className="text-gray-600">Contributors</div>
+              <div className="text-2xl sm:text-4xl font-bold text-purple-600 mb-2">250+</div>
+              <div className="text-gray-600 text-sm sm:text-base">Contributors</div>
             </div>
           </div>
         </div>

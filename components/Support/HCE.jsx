@@ -35,11 +35,11 @@ const HCE = () => {
     }
   ]
   return (
-    <Container className="pb-12 md:pb-20 md:pt-0">
+    <Container className="py-8 md:py-16">
       {/* HCE Hero Section */}
       <div className="text-center">
         <div className="relative mx-auto mb-8 md:mb-12 w-fit">
-          <div className="relative  backdrop-blur-sm rounded-2xl p-8 pt-16 md:p-28 border border-white/30">
+          <div className="relative  backdrop-blur-sm rounded-2xl py-8 md:py-16 border border-white/30">
             <img
               src="/hce_logo.svg"
               alt="Harness Chaos Engineering"
@@ -70,7 +70,7 @@ const HCE = () => {
       </div>
 
       {/* Features Section */}
-      <div className="mt-16 md:mt-20">
+      <div className="my-8 md:my-16">
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
           {HCEData.map(feature => (
             <div 

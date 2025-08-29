@@ -32,7 +32,7 @@ const FeatureCard = ({ feature, index }) => {
 const Features = () => {
   return (
     <ContainerFluid className="bg-white">
-      <Container className="md:pt-36 md:pb-28 pt-16 pb-14">
+      <Container className="md:py-16 py-8">
         <div className="text-center">
           <BodyHead 
             className="text-center"

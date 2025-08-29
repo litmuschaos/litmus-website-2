@@ -165,7 +165,7 @@ const Community = () => {
 
 
   return (
-    <Container className="py-20 md:py-28 lg:pt-20 lg:pb-28">
+    <Container className="py-8 md:py-16">
       <BodyHead className="text-center mb-4">
         Inside our growing community
       </BodyHead>
@@ -187,7 +187,7 @@ const Community = () => {
       />
 
       {/* Join Our Community Button */}
-      <div className="flex justify-center mt-12">
+      <div className="flex justify-center md:mt-12 mt-8">
         <RegularButton href="https://kubernetes.slack.com/?redir=%2Farchives%2FCNXNB0ZTN" external>
           <span className="flex items-center gap-2">
             Join our community

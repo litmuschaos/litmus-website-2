@@ -1,5 +1,4 @@
-import { TextLink, RegularButton } from "@includes/CTA"
-import styles from "@includes/scss/Community.module.scss"
+import { RegularButton } from "@includes/CTA"
 import { Paragraph } from "@includes/Texts"
 import { Container } from "@layouts/Container"
 
@@ -46,7 +45,7 @@ const CommunityList = () => {
   ]
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white py-20">
+    <div className="bg-gradient-to-b from-gray-50 to-white md:pt-16 py-8">
       <Container>
         <div className="grid gap-12 lg:gap-16">
           {List.map((item, index) => {
@@ -98,7 +97,7 @@ const CommunityList = () => {
                   <RegularButton
                     href={item.link}
                     external
-                    className="mt-4 w-full text-center sm:w-auto"
+                    className="w-full text-center sm:w-auto"
                   >
                     <span className="flex items-center">
                       {item.linkText}

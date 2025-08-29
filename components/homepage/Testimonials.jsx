@@ -2,6 +2,7 @@ import { testimonialUtils } from "@components/homepage/utils/testimonialUtils"
 import styles from "@includes/scss/Hero.module.scss"
 import { BodyHead, Paragraph } from "@includes/Texts"
 import { Container } from "@layouts/Container"
+import { OutlinedButton } from "@includes/CTA"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
@@ -186,10 +187,13 @@ const Testimonials = () => {
   }, [])
 
   return (
-    <Container className="pt-20 md:pt-28 lg:pt-32 lg:pb-24 md:pb-20 pb-16">
+    <Container className="py-8 md:py-16">
       <BodyHead className="text-center">
         What users are saying
       </BodyHead>
+      <Paragraph className="text-center text-gray-600 mt-4 mb-4 max-w-2xl mx-auto">
+        Discover how organizations worldwide are using LitmusChaos to build resilient systems and improve their chaos engineering practices
+      </Paragraph>
       <TestimonialCard
         testimonials={testimonialUtils}
         changePrevState={handlePrevState}
@@ -198,13 +202,25 @@ const Testimonials = () => {
       />
       <Navigator handleChange={state => setCurr(state)} count={curr} />
       
-      <div className="flex justify-center mt-12">
-        <Link href="/adopters">
-          <a className={styles.viewMoreStoriesBtn}>
-            View more stories
-            <span className="chevron">&gt;</span>
-          </a>
-        </Link>
+      <div className="flex justify-center mt-8 md:mt-12">
+        <OutlinedButton href="/adopters">
+        <span className="flex items-center gap-2"> View more stories  <svg
+              width="7"
+              height="13"
+              viewBox="0 0 7 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1.1626L6 6.1626L1 11.1626"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+        </span>
+        </OutlinedButton>
       </div>
     </Container>
   )

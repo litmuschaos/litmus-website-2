@@ -77,8 +77,16 @@ div.partDiv {
 
 .quickStartText {
   color: rgb(90, 68, 185);
-  font-size: 1.5rem;
+  font-size: 1.125rem; /* 18px - mobile base */
   font-weight: 600;
+  
+  @include mediumScreens {
+    font-size: 1.25rem; /* 20px - tablet */
+  }
+  
+  @include mediumScreensDesk {
+    font-size: 1.5rem; /* 24px - desktop */
+  }
 }
 
 .tabButton {

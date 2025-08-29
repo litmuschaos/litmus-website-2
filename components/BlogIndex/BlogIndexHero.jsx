@@ -8,7 +8,7 @@ import { useState } from "react"
 const BlogIndexHero = () => {
   return (
     <>
-      <Container className="pt-10 md:py-28 lg:pt-20 lg:pb-28">
+      <Container className="pt-8 md:py-16">
         <div className="text-center">
           <HeroHead className="mb-4 !font-bold">
             Insights & Knowledge Hub
@@ -23,7 +23,7 @@ const BlogIndexHero = () => {
       </Container>
 
       {/* Featured Blog Section */}
-      <div className="bg-gradient-to-b from-gray-50 to-white pt-10 pb-20 md:py-20">
+      <div className="bg-gradient-to-b from-gray-50 to-white py-8 md:py-16">
         <Container>
           <div className="text-center mb-12">
             <SubHeading className="mb-4">Featured Article</SubHeading>

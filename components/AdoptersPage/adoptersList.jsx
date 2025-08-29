@@ -6,7 +6,7 @@ import { Adopters } from "./adopter.data"
 const AdoptersList = () => {
   return (
     <>
-      <div className="bg-gradient-to-b from-gray-50 to-white py-20">
+      <div className="bg-gradient-to-b from-gray-50 to-white md:pt-16 py-8">
         <Container>
           <div className="grid gap-12 lg:gap-16">
             {Adopters.map((adopter, index) => {
@@ -53,7 +53,7 @@ const AdoptersList = () => {
                     
                     <RegularButton
                       href={`/adopters/${adopter.link}`}
-                      className="mt-4 w-full text-center sm:w-auto"
+                      className=" w-full text-center sm:w-auto"
                     >
                       <span className="flex items-center">
                         Read the case study

@@ -13,7 +13,7 @@ import { FooterData } from "./Footer.data"
 const PreFooter = props => {
   return (
     <ContainerFluid className={`${props.attached ? "" : "bg-white"}`}>
-      <Container className="flex flex-col gap-8 items-center md:flex-row py-6 md:py-12 lg:py-20">
+      <Container className="flex flex-col gap-8 items-center md:flex-row py-8 md:py-16">
         <div className="w-full md:w-1/2">
           <BodyHead className="text-center md:text-left">Chaos Engineering made easy</BodyHead>
           <Paragraph hint className="mt-4 text-center md:text-left">

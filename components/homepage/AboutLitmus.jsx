@@ -3,16 +3,14 @@ import styles from "@includes/scss/About.module.scss"
 import { BodyHead, Paragraph } from "@includes/Texts"
 import {
   Container,
-  ContainerFluid,
-  SkewedContainerFluid,
-  SkewedGradient
+  ContainerFluid
 } from "@layouts/Container"
 6
 const OverviewSection = () => {
   return (
-    <div className={`${styles.partDiv} flex-col md:flex-row pb-16`}>
+    <div className={`${styles.partDiv} flex-col md:flex-row `}>
       <div className={styles.leftCont}>
-        <BodyHead dark className="text-center md:text-left text-[#483953]">
+        <BodyHead className="text-center md:text-left text-[#483953]">
           An end to end{" "}
           <span className="block text-[#5a44ba]">Chaos Engineering</span> platform
         </BodyHead>
@@ -37,7 +35,7 @@ const GetStartedSection = () => {
     <div className={`${styles.partDiv} flex-col md:flex-row`}>
       <div className={`${styles.leftCont} ${styles.getStartedLeftContainer}`}>
         <div className="mb-4 flex items-center gap-3">
-          <div className={styles.iconContainer}>
+          <div className={`${styles.iconContainer} !w-12 !h-12 md:!w-12 md:!h-12`}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="rgb(90, 68, 185)" className={styles.iconSvg}>
               <g color="rgb(90, 68, 185)" weight="duotone">
                 <path d="M184,120v61.65a8,8,0,0,1-2.34,5.65l-34.35,34.35a8,8,0,0,1-13.57-4.53L128,176ZM136,72H74.35a8,8,0,0,0-5.65,2.34L34.35,108.69a8,8,0,0,0,4.53,13.57L80,128ZM40,216c37.65,0,50.69-19.69,54.56-28.18L68.18,161.44C59.69,165.31,40,178.35,40,216Z" opacity="0.2"></path>
@@ -45,9 +43,9 @@ const GetStartedSection = () => {
               </g>
             </svg>
           </div>
-          <span className={styles.quickStartText}>Quick Start</span>
+          <span className={`${styles.quickStartText} !text-3xl`}>Quick Start</span>
         </div>
-        <BodyHead className="text-center md:text-left text-[#483953] !text-[2rem]">
+        <BodyHead className="text-center md:text-left text-[#483953] !text-3xl">
           Get Started<br />
           <span className="text-[#5a44ba]">in minutes,</span><br />
           not days
@@ -58,7 +56,7 @@ const GetStartedSection = () => {
       {/* White tabbed container - twice the width of leftCont */}
       <div className={`${styles.getStartedRightContainer} w-full md:w-[80%]`}>
         {/* Tab Headers */}
-        <div className="flex p-4 gap-4">
+        <div className="flex flex-col md:flex-row p-4 gap-4">
           <button
             onClick={() => setActiveTab('cluster')}
             className={`flex-1 px-6 py-4 text-l font-medium transition-colors duration-200 ${
@@ -194,7 +192,7 @@ const GetStartedSection = () => {
 const AboutLitmus = () => {
   return (
     <ContainerFluid className="bg-white">
-      <Container className="grid gap-16 md:pt-16 md:pb-16 pt-16 pb-14">
+      <Container className="grid gap-8 md:gap-16 md:py-16 py-8">
         <OverviewSection />
         <GetStartedSection />
       </Container>

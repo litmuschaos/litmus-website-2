@@ -28,7 +28,7 @@ const BlogsContainer = ({ posts }) => {
   }
   
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50 py-10 md:py-20 blog-container">
+    <div className="bg-gradient-to-b from-white to-gray-50 py-8 md:py-16 blog-container">
       <Container>
         <div className="text-center mb-16">
           <BodyHead className="mb-4">Latest Articles</BodyHead>

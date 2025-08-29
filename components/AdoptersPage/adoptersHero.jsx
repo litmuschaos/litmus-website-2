@@ -4,7 +4,7 @@ import { Container } from "@layouts/Container"
 const AdoptersHero = () => {
   return (
     <>
-      <Container className="py-10 md:py-28 lg:pt-20 lg:pb-28">
+      <Container className="py-8 md:py-16">
         <div className="text-center">
           <HeroHead className="mb-4 !font-bold">
           Adopted by Industry Leaders
@@ -16,18 +16,18 @@ const AdoptersHero = () => {
           
           
           {/* Stats section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-3 gap-4 sm:gap-8 mt-12 sm:mt-16">
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">140+</div>
-              <div className="text-gray-600">Organizations</div>
+              <div className="text-2xl sm:text-4xl font-bold text-purple-600 mb-2">140+</div>
+              <div className="text-gray-600 text-sm sm:text-base">Organizations</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">50+</div>
-              <div className="text-gray-600">Countries</div>
+              <div className="text-2xl sm:text-4xl font-bold text-purple-600 mb-2">50+</div>
+              <div className="text-gray-600 text-sm sm:text-base">Countries</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">2M+</div>
-              <div className="text-gray-600">Chaos Experiments</div>
+              <div className="text-2xl sm:text-4xl font-bold text-purple-600 mb-2">2M+</div>
+              <div className="text-gray-600 text-sm sm:text-base">Chaos Experiments</div>
             </div>
           </div>
         </div>

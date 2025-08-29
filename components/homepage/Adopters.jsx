@@ -93,7 +93,7 @@ const Adopters = () => {
   }
 
   return (
-    <Container className="py-14 md:pt-36 md:pb-28">
+    <Container className="py-8 md:pt-32 md:pb-16">
         <BodyHead className="text-center max-w-5xl mx-auto">
           Trusted by startups and enterprises to improve reliability
         </BodyHead>
@@ -106,7 +106,7 @@ const Adopters = () => {
         </div>
         
         {/* Add yourself button */}
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-8 md:mt-12">
           <RegularButton
             external
             href="https://github.com/litmuschaos/litmus/issues/2191"
