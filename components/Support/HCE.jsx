@@ -1,7 +1,6 @@
 import React from "react"
 import { Container } from "@layouts/Container"
-import styles from "@includes/scss/Support.module.scss"
-import { Paragraph, SubHeading } from "@includes/Texts"
+import { Paragraph, BodyHead } from "@includes/Texts"
 import { RegularButton } from "@includes/CTA"
 
 const HCE = () => {
@@ -36,72 +35,77 @@ const HCE = () => {
     }
   ]
   return (
-    <Container className="py-12 md:py-20">
-      <SubHeading className="text-center md:text-left">
-        Harness Chaos Engineering
-      </SubHeading>
-      <Paragraph className="md:max-w-3xl mt-4 text-center md:text-left text-hint">
-        Whether you want to explore advanced chaos engineering for your target
-        system or find a partner to help you build a custom solution, we can
-        help.
-      </Paragraph>
-      <div className={styles.hceContainer}>
-        <div className={styles.leftCont}>
-          <img
-            src="/hce_logo.svg"
-            alt="Harness Chaos Engineering"
-            width={322}
-            height={59}
-          />
-          <Paragraph className="mt-6 text-center md:text-left">
-            Improve application resiliency and reduce costly downtime.
-          </Paragraph>
-          <Paragraph className="mt-2 text-center md:text-left">
-            Harness enables enterprises to securely scale chaos engineering
-            across their entire organization with the support from the creators
-            of Litmus.
-          </Paragraph>
-          <div className="mt-8 flex justify-center items-center md:justify-start">
-            <RegularButton
-              external
-              href="https://harness.io/products/chaos-engineering"
-              className="inline-block"
-            >
-              Get Started
-            </RegularButton>
+    <Container className="py-8 md:py-16">
+      {/* HCE Hero Section */}
+      <div className="text-center">
+        <div className="relative mx-auto mb-8 md:mb-12 w-fit">
+          <div className="relative  backdrop-blur-sm rounded-2xl py-8 md:py-16 border border-white/30">
+            <img
+              src="/hce_logo.svg"
+              alt="Harness Chaos Engineering"
+              width={700}
+              height={140}
+              className="mx-auto"
+            />
           </div>
         </div>
-        <div className={styles.rightCont}>
-          <Paragraph hint>Features</Paragraph>
-          <div className={styles.featuresCont}>
-            {HCEData.map(feature => (
-              <div key={feature.title}>
+        <BodyHead className="mb-4">
+          Harness Chaos Engineering
+        </BodyHead>
+        <Paragraph className="max-w-4xl mt-6 mx-auto text-lg leading-relaxed">
+          Improve application resiliency and reduce costly downtime with enterprise-grade chaos engineering. 
+          Harness enables organizations to securely scale chaos engineering across their entire infrastructure 
+          with expert support from the creators of Litmus, whether you are exploring advanced chaos testing 
+          or need a partner to build custom reliability solutions.
+        </Paragraph>
+        <div className="mt-8 text-center">
+          <RegularButton
+            external
+            href="https://harness.io/products/chaos-engineering"
+            className="inline-block"
+          >
+            Try now!
+          </RegularButton>
+        </div>
+      </div>
+
+      {/* Features Section */}
+      <div className="my-8 md:my-16">
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+          {HCEData.map(feature => (
+            <div 
+              key={feature.title}
+              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+            >
+              <div className="flex items-center mb-4">
                 <img
                   src={`/support/${feature.image1}.svg`}
                   alt={feature.title}
                   height={48}
                   width={48}
+                  className="mr-3"
                 />
-                <p className="text-lg md:text-xl font-medium leading-tight">
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900 leading-tight">
                   {feature.title}
-                </p>
-                {feature.description && (
-                  <p className="text-xs md:text-sm text-hint mt-2">
-                    {feature.description}
-                  </p>
-                )}
-                {feature.image2 && (
-                  <img
-                    src={`/support/${feature.image2}.svg`}
-                    alt="Feature"
-                    className="h-12 w-auto mt-4"
-                  />
-                )}
+                </h3>
               </div>
-            ))}
-          </div>
+              {feature.description && (
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4">
+                  {feature.description}
+                </p>
+              )}
+              {feature.image2 && (
+                <img
+                  src={`/support/${feature.image2}.svg`}
+                  alt="Feature"
+                  className="h-12 w-auto"
+                />
+              )}
+            </div>
+          ))}
         </div>
       </div>
+
     </Container>
   )
 }

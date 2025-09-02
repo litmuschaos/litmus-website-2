@@ -3,7 +3,8 @@ const { ContainerFluid } = require("@layouts/Container")
 const { RegularButton } = require("./CTA")
 const { Paragraph } = require("./Texts")
 const { BodyHead } = require("./Texts")
-import { CNCFLogo, CnSVG, LitmusLogoDark } from "@components/SVG/FooterSVG"
+import Image from "next/image"
+import { CNCFLogo, CnSVG, LitmusLogo } from "@components/SVG/FooterSVG"
 import { GithubButton } from "@components/SVG/NavbarSVG"
 import styles from "@includes/scss/Footer.module.scss"
 import Link from "next/link"
@@ -11,11 +12,11 @@ import { FooterData } from "./Footer.data"
 
 const PreFooter = props => {
   return (
-    <ContainerFluid className={`${props.attached ? "" : "bg-[#FAFBFC]"}`}>
-      <Container className="flex flex-col gap-8 items-center md:flex-row py-6 md:py-12 lg:py-20">
+    <ContainerFluid className={`${props.attached ? "" : "bg-white"}`}>
+      <Container className="flex flex-col gap-8 items-center md:flex-row py-8 md:py-16">
         <div className="w-full md:w-1/2">
-          <BodyHead>Chaos Engineering made easy</BodyHead>
-          <Paragraph hint className="mt-4">
+          <BodyHead className="text-center md:text-left">Chaos Engineering made easy</BodyHead>
+          <Paragraph hint className="mt-4 text-center md:text-left">
             Litmus is highly extensible and integrates with other tools to
             enable the creation of custom experiments. Kubernetes developers &
             SREs use Litmus to manage chaos in a declarative manner and find
@@ -50,15 +51,20 @@ const BottomFooter = props => {
       <ContainerFluid className={styles.footerFluidCont}>
         <Container className={styles.footerCont}>
           <div className={styles.companyDetCont}>
-            <Link href="/">
-              <a>
-                <LitmusLogoDark />
-              </a>
-            </Link>
-            <Paragraph dark secondary className="mb-4">
-              Copyright © 2020 LitmusChaos Authors. All rights reserved.
+          <Link href="/">
+                <a>
+                  <Image
+                    src="/logos/dark-logo.svg"
+                    alt="Litmus"
+                    height={51.26}
+                    width={134}
+                  />
+                </a>
+              </Link>
+            <Paragraph secondary className="mb-4 text-[#573e69cc]">
+              Copyright © {new Date().getFullYear()} LitmusChaos Authors. All rights reserved.
             </Paragraph>
-            <Paragraph dark secondary>
+            <Paragraph dark secondary className="text-[#808080]">
               The Linux Foundation has registered trademarks and uses
               trademarks. For a list of trademarks of The Linux Foundation,
               please see our{" "}
@@ -120,7 +126,7 @@ const BottomFooter = props => {
         </Container>
         <Container className="pb-12 flex justify-center items-center">
           <span className="flex gap-1 items-center md:items-baseline flex-col md:flex-row">
-            <Paragraph dark className="font-medium">
+            <Paragraph dark className="font-medium text-[#808080]">
               Originally created by
             </Paragraph>
             <Link href="https://www.chaosnative.com/">

@@ -97,10 +97,10 @@ const TopNavbar = () => {
               <Link href="/">
                 <a>
                   <Image
-                    src="/logo.png"
+                    src="/logos/dark-logo.svg"
                     alt="Litmus"
-                    height={51.26}
-                    width={134}
+                    height={40}
+                    width={120}
                   />
                 </a>
               </Link>

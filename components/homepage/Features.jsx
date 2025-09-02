@@ -4,38 +4,70 @@ import { BodyHead, Paragraph } from "@includes/Texts"
 import { Container, ContainerFluid } from "@layouts/Container"
 import { featureUtils } from "./utils/featureUtils"
 
-const FeatureCard = ({ feature }) => {
+const FeatureCard = ({ feature, index }) => {
   return (
-    <div className={styles.featureCard}>
-      {feature.svg ?? ""}
-      <h3 className="text-xl md:text-2xl text-primary font-medium mt-4 mb-2">
-        {feature.title}
-      </h3>
-      <Paragraph hint>{feature.content}</Paragraph>
+    <div 
+      className={styles.featureCard}
+      data-aos="fade-up"
+      data-aos-delay={index * 100}
+      data-aos-duration="600"
+    >
+      <div className={styles.featureMascot}>
+        <img 
+          src={feature.mascot} 
+          alt={`${feature.title} mascot`}
+          className="w-full h-full object-contain"
+        />
+      </div>
+      <div className={styles.featureContent}>
+        <h3 className="text-xl md:text-2xl font-medium mt-4 mb-2">
+          {feature.title}
+        </h3>
+        <Paragraph hint>{feature.content}</Paragraph>
+      </div>
     </div>
   )
 }
 
 const Features = () => {
   return (
-    <ContainerFluid className="bg-[#FAFBFC]">
-      <Container className="md:pt-36 md:pb-28 pt-16 pb-14">
-        <BodyHead className="text-center md:text-left">
-          Loaded with features to{" "}
-          <span className="text-accent md:block">achieve resilience</span>
-        </BodyHead>
-        <Paragraph className="md:max-w-3xl mt-4 text-center md:text-left">
-          Over time, with the monthly cadence releases and community engagement,
-          we have added a lot of features and made LitmusChaos much easier for
-          the end-users. With the launch of Litmus 2.0, a new way of chaos
-          engineering can be performed by the users.
-        </Paragraph>
+    <ContainerFluid className="bg-white">
+      <Container className="md:py-16 py-8">
+        <div className="text-center">
+          <BodyHead 
+            className="text-center"
+            data-aos="fade-down"
+            data-aos-duration="800"
+          >
+          Packed with features to{" "}
+            <span className="text-[#5b44ba] md:block">achieve resilience</span>
+          </BodyHead>
+          <Paragraph 
+            className="md:max-w-2xl mt-4 text-center mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="800"
+          >
+            Over time, with the monthly cadence releases and community engagement,
+            we have added a lot of features and made LitmusChaos much easier for
+            the end-users. With the launch of Litmus 2.0, a new way of chaos
+            engineering can be performed by the users.
+          </Paragraph>
+        </div>
         <div className={styles.featureCardCont}>
           {featureUtils.map((feature, index) => {
-            return <FeatureCard key={feature.title + index} feature={feature} />
+            return <FeatureCard key={feature.title + index} feature={feature} index={index} />
           })}
-          <div className={`${styles.featureCard} ${styles.cardBackImg}`}>
-            <h3 className="text-xl md:text-2xl text-success font-medium mt-4 mb-2">
+        </div>
+        
+        <div 
+          className={styles.moreFeatureCard}
+          data-aos="fade-up"
+          data-aos-delay="400"
+          data-aos-duration="800"
+        >
+          <div className={styles.content}>
+            <h3 className="text-xl md:text-2xl text-success font-medium mb-2">
               And many more features
             </h3>
             <TextLink
@@ -45,6 +77,7 @@ const Features = () => {
               View more features
             </TextLink>
           </div>
+          <div className={styles.mascot}></div>
         </div>
       </Container>
     </ContainerFluid>

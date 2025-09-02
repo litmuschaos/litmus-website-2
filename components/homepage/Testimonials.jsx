@@ -2,8 +2,9 @@ import { testimonialUtils } from "@components/homepage/utils/testimonialUtils"
 import styles from "@includes/scss/Hero.module.scss"
 import { BodyHead, Paragraph } from "@includes/Texts"
 import { Container } from "@layouts/Container"
+import { OutlinedButton } from "@includes/CTA"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const logos = ["orange", "red_hat", "kitopi", "container_solutions"]
 
@@ -170,14 +171,29 @@ const Testimonials = () => {
     }
   }
 
+  // Auto-scroll functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurr(prevCurr => {
+        if (prevCurr === testimonialUtils.length - 1) {
+          return 0
+        } else {
+          return prevCurr + 1
+        }
+      })
+    }, 2000) // Auto-scroll every 2 seconds
+
+    return () => clearInterval(interval) // Cleanup interval on component unmount
+  }, [])
+
   return (
-    <Container className="pt-20 md:pt-28 lg:pt-32 lg:pb-24 md:pb-20 pb-16">
-      <BodyHead>
-        <span style={{ color: "#696f8c" }}>See what our </span>users&nbsp;
-        <span style={{ color: "#696f8c" }}>are </span>saying
-        <br />
-        <span style={{ color: "#696f8c" }}> about us</span>
+    <Container className="py-8 md:py-16">
+      <BodyHead className="text-center">
+        What users are saying
       </BodyHead>
+      <Paragraph className="text-center text-gray-600 mt-4 mb-4 max-w-2xl mx-auto">
+        Discover how organizations worldwide are using LitmusChaos to build resilient systems and improve their chaos engineering practices
+      </Paragraph>
       <TestimonialCard
         testimonials={testimonialUtils}
         changePrevState={handlePrevState}
@@ -185,6 +201,27 @@ const Testimonials = () => {
         count={curr}
       />
       <Navigator handleChange={state => setCurr(state)} count={curr} />
+      
+      <div className="flex justify-center mt-8 md:mt-12">
+        <OutlinedButton href="/adopters">
+        <span className="flex items-center gap-2"> View more stories  <svg
+              width="7"
+              height="13"
+              viewBox="0 0 7 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1.1626L6 6.1626L1 11.1626"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+        </span>
+        </OutlinedButton>
+      </div>
     </Container>
   )
 }

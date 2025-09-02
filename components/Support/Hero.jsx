@@ -1,15 +1,12 @@
-import { GithubButton, SlackSVG } from "@components/SVG/NavbarSVG"
-import { OutlinedButton, RegularButton } from "@includes/CTA"
-import styles from "@includes/scss/Hero.module.scss"
 import { HeroHead, Paragraph } from "@includes/Texts"
 import { Container, ContainerFluid } from "@layouts/Container"
 
 const Hero = () => {
   return (
     <ContainerFluid className="bg-[#FAFBFC]">
-      <Container className={styles.heroCont}>
-        <div className={styles.textCont}>
-          <HeroHead hero>
+      <Container className="flex justify-between items-center py-8 md:py-16 flex-col lg:flex-row">
+        <div className="w-full min-w-0 lg:w-2/5 lg:min-w-[400px]">
+          <HeroHead className="text-center md:text-left !font-bold">
             <span className="block">Enterprise Editions</span>
             <span className="block">& Trainings</span>
           </HeroHead>
@@ -22,7 +19,7 @@ const Hero = () => {
             commercial support for LitmusChaos.
           </Paragraph>
         </div>
-        <div className={styles.heroImg}>
+        <div className="mt-8 flex justify-end items-center lg:mt-0 lg:ml-8">
           <img
             src="/landing_images/enterprise_back.svg"
             alt="LitmusChaos"

@@ -24,7 +24,7 @@ const HeroHead = props => {
   return (
     <h1
       className={`${styles.heading} ${props.className} ${
-        props.hero ? "font-bold text-center lg:text-left" : "font-medium"
+        props.hero ? "font-bold text-center" : "font-medium"
       } ${
         props.dark
           ? "text-white"
