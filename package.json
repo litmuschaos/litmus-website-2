@@ -19,7 +19,7 @@
     "aos": "^2.3.4",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.38",
-    "next": "^12.2.5",
+    "next": "^14.2.32",
     "next-seo": "^4.26.0",
     "next-sitemap": "^1.6.148",
     "raw-loader": "^4.0.2",
