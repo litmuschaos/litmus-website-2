@@ -6,15 +6,15 @@ import { featureUtils } from "./utils/featureUtils"
 
 const FeatureCard = ({ feature, index }) => {
   return (
-    <div 
+    <div
       className={styles.featureCard}
       data-aos="fade-up"
       data-aos-delay={index * 100}
       data-aos-duration="600"
     >
       <div className={styles.featureMascot}>
-        <img 
-          src={feature.mascot} 
+        <img
+          src={feature.mascot}
           alt={`${feature.title} mascot`}
           className="w-full h-full object-contain"
         />
@@ -34,33 +34,39 @@ const Features = () => {
     <ContainerFluid className="bg-white">
       <Container className="md:py-16 py-8">
         <div className="text-center">
-          <BodyHead 
+          <BodyHead
             className="text-center"
             data-aos="fade-down"
             data-aos-duration="800"
           >
-          Packed with features to{" "}
+            Packed with features to{" "}
             <span className="text-[#5b44ba] md:block">achieve resilience</span>
           </BodyHead>
-          <Paragraph 
+          <Paragraph
             className="md:max-w-2xl mt-4 text-center mx-auto"
             data-aos="fade-up"
             data-aos-delay="200"
             data-aos-duration="800"
           >
-            Over time, with the monthly cadence releases and community engagement,
-            we have added a lot of features and made LitmusChaos much easier for
-            the end-users. With the launch of Litmus 2.0, a new way of chaos
-            engineering can be performed by the users.
+            Over time, with the monthly cadence releases and community
+            engagement, we have added a lot of features and made LitmusChaos
+            much easier for the end-users. With the launch of Litmus 2.0, a new
+            way of chaos engineering can be performed by the users.
           </Paragraph>
         </div>
         <div className={styles.featureCardCont}>
           {featureUtils.map((feature, index) => {
-            return <FeatureCard key={feature.title + index} feature={feature} index={index} />
+            return (
+              <FeatureCard
+                key={feature.title + index}
+                feature={feature}
+                index={index}
+              />
+            )
           })}
         </div>
-        
-        <div 
+
+        <div
           className={styles.moreFeatureCard}
           data-aos="fade-up"
           data-aos-delay="400"

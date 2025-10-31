@@ -6,6 +6,7 @@ import Hero from "@components/homepage/Hero"
 import Testimonials from "@components/homepage/Testimonials"
 import { PreFooter } from "@includes/BottomFooter"
 import SEO from "@lib/SEO"
+import MCPServer from "@components/homepage/MCPServer"
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Hero />
       {/* <UpcomingEvent /> */}
       <Adopters />
+      <MCPServer />
       <AboutLitmus />
       <Features />
       <PreFooter />

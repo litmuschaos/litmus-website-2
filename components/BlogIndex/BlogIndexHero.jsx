@@ -14,11 +14,10 @@ const BlogIndexHero = () => {
             Insights & Knowledge Hub
           </HeroHead>
           <Paragraph className="mb-8 max-w-3xl mx-auto">
-            Discover the latest insights, tutorials, and best practices in chaos engineering. 
-            Learn from our community of experts and practitioners who are pushing the boundaries 
-            of system resilience.
+            Discover the latest insights, tutorials, and best practices in chaos
+            engineering. Learn from our community of experts and practitioners
+            who are pushing the boundaries of system resilience.
           </Paragraph>
-          
         </div>
       </Container>
 
@@ -28,7 +27,7 @@ const BlogIndexHero = () => {
           <div className="text-center mb-12">
             <SubHeading className="mb-4">Featured Article</SubHeading>
           </div>
-          
+
           <div className="relative rounded-2xl shadow-xl p-8 lg:p-12 bg-white">
             <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
               {/* Content */}
@@ -36,7 +35,7 @@ const BlogIndexHero = () => {
                 <h2 className="text-2xl lg:text-3xl font-medium text-gray-900 mb-4 leading-tight">
                   Exploring litmusctl: A Comprehensive Guide
                 </h2>
-                
+
                 <div className="flex items-center gap-3 mb-6 justify-center lg:justify-start">
                   <img
                     src="https://media.dev.to/cdn-cgi/image/width=50,height=50,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F719060%2F98312c30-e184-453d-8d53-bdb55c9a84c3.jpeg"
@@ -44,17 +43,23 @@ const BlogIndexHero = () => {
                     alt="Nagesh Bansal"
                   />
                   <div className="text-left">
-                    <p className="text-primary text-sm font-medium">Nagesh Bansal</p>
-                    <p className="text-hint text-xs">Chaos Engineering Expert</p>
+                    <p className="text-primary text-sm font-medium">
+                      Nagesh Bansal
+                    </p>
+                    <p className="text-hint text-xs">
+                      Chaos Engineering Expert
+                    </p>
                   </div>
                 </div>
 
                 <Paragraph className="text-gray-600 mb-6 text-lg leading-relaxed">
-                  This comprehensive guide explains how to run LitmusChaos on a remote cluster using Litmusctl. 
-                  Learn about scheduling Chaos Scenarios, managing remote clusters, and leveraging the powerful 
-                  command-line utility developed by the LitmusChaos community.
+                  This comprehensive guide explains how to run LitmusChaos on a
+                  remote cluster using Litmusctl. Learn about scheduling Chaos
+                  Scenarios, managing remote clusters, and leveraging the
+                  powerful command-line utility developed by the LitmusChaos
+                  community.
                 </Paragraph>
-                
+
                 <RegularButton
                   href="https://dev.to/nageshbansal/exploring-litmusctl-a-comprehensive-guide-170k"
                   external
@@ -94,7 +99,7 @@ const BlogIndexHero = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* Decorative elements */}
             <div className="absolute top-4 right-4 w-8 h-8 bg-purple-100 rounded-full opacity-60"></div>
             <div className="absolute bottom-4 left-4 w-6 h-6 bg-purple-200 rounded-full opacity-40"></div>

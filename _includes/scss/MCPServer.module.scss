@@ -1,0 +1,110 @@
+@import "@styles/scss/layoutMixins";
+@import "@styles/scss/Variables.scss";
+
+// Card container with light background and soft shadow (matching Features/Support)
+div.card {
+  margin-top: 2rem;
+  background: #f6fbff;
+  border-radius: 16px;
+  box-shadow: rgba(16, 49, 77, 0.05) 0px 0.706592px 0.706592px -0.291667px,
+    rgba(16, 49, 77, 0.06) 0px 1.80656px 1.80656px -0.583333px,
+    rgba(16, 49, 77, 0.06) 0px 3.62176px 3.62176px -0.875px,
+    rgba(16, 49, 77, 0.06) 0px 6.8656px 6.8656px -1.16667px,
+    rgba(16, 49, 77, 0.07) 0px 13.6468px 13.6468px -1.45833px,
+    rgba(16, 49, 77, 0.1) 0px 30px 30px -1.75px;
+
+  .cardContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+
+    @include mediumScreens {
+      grid-template-columns: 1.2fr 1fr;
+      align-items: stretch;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    @include largeScreens {
+      padding: 2.5rem;
+    }
+  }
+}
+
+// Feature list grid
+.featureGrid {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+
+  @include mediumScreens {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 0.5rem;
+
+  .bullet {
+    margin-top: 0.35rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #5b44ba, #8a6cf2);
+    box-shadow: 0 6px 20px rgba(91, 68, 186, 0.25);
+    flex-shrink: 0;
+  }
+}
+
+// Glassmorphism code preview pane (aligns with modern hero visuals)
+.glassPane {
+  position: relative;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(16, 49, 77, 0.12);
+}
+
+.glassInner {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.75) 0%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+}
+
+.codeHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 12px;
+  background: #eef4ff;
+  border-bottom: 1px solid rgba(16, 49, 77, 0.08);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d1d5db;
+}
+
+.codeBlock {
+  margin: 0;
+  padding: 14px 16px 18px 16px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #334155;
+  white-space: pre-wrap;
+}

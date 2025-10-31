@@ -91,6 +91,21 @@ const TopNavbar = () => {
             : ""
         }`}
       >
+        {/* Announcement banner */}
+        <div className={`${styles.bannerBackground} ${styles.announcementBar}`}>
+          <span className={styles.badge}>New</span>
+          We’ve launched the Litmus MCP Server! Experience AI-powered chaos
+          engineering
+          <Link href="https://github.com/litmuschaos/litmus-mcp-server">
+            <a
+              className={styles.announcementLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Check it out
+            </a>
+          </Link>
+        </div>
         <Container className={styles.navbarCont}>
           <nav className={styles.navbar}>
             <div className={styles.logoCont}>
