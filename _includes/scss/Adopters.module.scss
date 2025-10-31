@@ -29,8 +29,20 @@
 }
 
 .logoContainer {
-  mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
-  -webkit-mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+  mask: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgb(0, 0, 0) 10%,
+    rgb(0, 0, 0) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgb(0, 0, 0) 10%,
+    rgb(0, 0, 0) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
   overflow: hidden;
 }
 
@@ -43,7 +55,7 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   overflow: hidden;
-  
+
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
@@ -53,15 +65,19 @@
 .adopterLogoCard {
   position: relative;
   overflow: hidden;
-  
+
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
     pointer-events: none;
   }
 }

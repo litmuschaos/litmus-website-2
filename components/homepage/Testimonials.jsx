@@ -188,11 +188,10 @@ const Testimonials = () => {
 
   return (
     <Container className="py-8 md:py-16">
-      <BodyHead className="text-center">
-        What users are saying
-      </BodyHead>
+      <BodyHead className="text-center">What users are saying</BodyHead>
       <Paragraph className="text-center text-gray-600 mt-4 mb-4 max-w-2xl mx-auto">
-        Discover how organizations worldwide are using LitmusChaos to build resilient systems and improve their chaos engineering practices
+        Discover how organizations worldwide are using LitmusChaos to build
+        resilient systems and improve their chaos engineering practices
       </Paragraph>
       <TestimonialCard
         testimonials={testimonialUtils}
@@ -201,10 +200,13 @@ const Testimonials = () => {
         count={curr}
       />
       <Navigator handleChange={state => setCurr(state)} count={curr} />
-      
+
       <div className="flex justify-center mt-8 md:mt-12">
         <OutlinedButton href="/adopters">
-        <span className="flex items-center gap-2"> View more stories  <svg
+          <span className="flex items-center gap-2">
+            {" "}
+            View more stories{" "}
+            <svg
               width="7"
               height="13"
               viewBox="0 0 7 13"
@@ -219,7 +221,7 @@ const Testimonials = () => {
                 strokeLinejoin="round"
               />
             </svg>
-        </span>
+          </span>
         </OutlinedButton>
       </div>
     </Container>

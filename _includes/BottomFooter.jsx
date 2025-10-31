@@ -15,7 +15,9 @@ const PreFooter = props => {
     <ContainerFluid className={`${props.attached ? "" : "bg-white"}`}>
       <Container className="flex flex-col gap-8 items-center md:flex-row py-8 md:py-16">
         <div className="w-full md:w-1/2">
-          <BodyHead className="text-center md:text-left">Chaos Engineering made easy</BodyHead>
+          <BodyHead className="text-center md:text-left">
+            Chaos Engineering made easy
+          </BodyHead>
           <Paragraph hint className="mt-4 text-center md:text-left">
             Litmus is highly extensible and integrates with other tools to
             enable the creation of custom experiments. Kubernetes developers &
@@ -51,18 +53,19 @@ const BottomFooter = props => {
       <ContainerFluid className={styles.footerFluidCont}>
         <Container className={styles.footerCont}>
           <div className={styles.companyDetCont}>
-          <Link href="/">
-                <a>
-                  <Image
-                    src="/logos/dark-logo.svg"
-                    alt="Litmus"
-                    height={51.26}
-                    width={134}
-                  />
-                </a>
-              </Link>
+            <Link href="/">
+              <a>
+                <Image
+                  src="/logos/dark-logo.svg"
+                  alt="Litmus"
+                  height={51.26}
+                  width={134}
+                />
+              </a>
+            </Link>
             <Paragraph secondary className="mb-4 text-[#573e69cc]">
-              Copyright © {new Date().getFullYear()} LitmusChaos Authors. All rights reserved.
+              Copyright © {new Date().getFullYear()} LitmusChaos Authors. All
+              rights reserved.
             </Paragraph>
             <Paragraph dark secondary className="text-[#808080]">
               The Linux Foundation has registered trademarks and uses

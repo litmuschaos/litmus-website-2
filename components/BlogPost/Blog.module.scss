@@ -54,7 +54,7 @@ div.summaryCont {
     margin-bottom: 1.5rem;
     margin-top: 2rem;
     scroll-margin-top: 2rem;
-    
+
     &:first-child {
       margin-top: 0;
     }
@@ -213,7 +213,6 @@ div.summaryCont {
     max-width: 100%;
     margin: 2rem auto;
     border-radius: 12px;
-
   }
   img + em {
     color: #dbdbdb;
@@ -234,7 +233,7 @@ div.summaryCont {
       margin: 2.5rem 0;
       padding: 2rem;
     }
-    
+
     &::before {
       content: '"';
       position: absolute;
@@ -288,7 +287,8 @@ div.summaryCont {
   code {
     background: #f1f5f9;
     color: #7c3aed;
-    font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;
+    font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier,
+      monospace;
     padding: 0.125rem 0.25rem;
     font-size: 0.875em;
     border-radius: 4px;

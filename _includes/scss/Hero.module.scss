@@ -155,7 +155,8 @@
   justify-content: center;
   z-index: 10;
   cursor: pointer;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 .nextQuote {
   width: 48px;
@@ -169,7 +170,8 @@
   justify-content: center;
   z-index: 10;
   cursor: pointer;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 /* COMMUNITY */
 .slideNavigator {
@@ -316,13 +318,20 @@ div.heroCont {
   --border-top-width: 2px;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  background: linear-gradient(140deg, rgba(204, 205, 255, .7) 4%, rgba(235, 203, 247, .7) 60.07376126126126%, rgba(166, 140, 225, .7) 103%);
+  background: linear-gradient(
+    140deg,
+    rgba(204, 205, 255, 0.7) 4%,
+    rgba(235, 203, 247, 0.7) 60.07376126126126%,
+    rgba(166, 140, 225, 0.7) 103%
+  );
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-left: var(--border-left-width) var(--border-style) var(--border-color);
-  border-right: var(--border-right-width) var(--border-style) var(--border-color);
+  border-right: var(--border-right-width) var(--border-style)
+    var(--border-color);
   border-top: var(--border-top-width) var(--border-style) var(--border-color);
-  border-bottom: var(--border-bottom-width) var(--border-style) var(--border-color);
+  border-bottom: var(--border-bottom-width) var(--border-style)
+    var(--border-color);
   box-shadow: 0 0 16px 4px #b49cc51a;
   display: block;
   max-width: 996px;
@@ -347,7 +356,13 @@ div.heroCont {
   right: 16px;
   height: 50%;
   width: 100%;
-  background: linear-gradient(to top, rgb(255 255 255) 0%, rgb(255 255 255) 20%, rgb(255 255 255 / 53%) 60%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    to top,
+    rgb(255 255 255) 0%,
+    rgb(255 255 255) 20%,
+    rgb(255 255 255 / 53%) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
   pointer-events: none;
   z-index: 1;
 }

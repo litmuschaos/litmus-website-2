@@ -10,16 +10,16 @@ import Link from "next/link"
 const CommunityCard = ({ events, changePrevState, changeNextState, count }) => {
   const [touchStart, setTouchStart] = useState({})
   const [isMobile, setIsMobile] = useState(false)
-  
+
   React.useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 1024)
     }
     checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
   }, [])
-  
+
   const handleTouchStart = e => {
     const firstTouchEvent = e.touches[0]
     const location = {
@@ -72,12 +72,19 @@ const CommunityCard = ({ events, changePrevState, changeNextState, count }) => {
 
       {/* Carousel Container */}
       <div className="overflow-hidden">
-        <div className="flex transition-transform duration-300 ease-in-out" 
-             style={{ transform: `translateX(-${count * (isMobile ? 100 : 66.67)}%)` }}
-             onTouchStart={handleTouchStart}
-             onTouchEnd={handleTouchEnd}>
+        <div
+          className="flex transition-transform duration-300 ease-in-out"
+          style={{
+            transform: `translateX(-${count * (isMobile ? 100 : 66.67)}%)`
+          }}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           {events.map((event, idx) => (
-            <div key={idx} className="flex-shrink-0 w-full lg:w-2/3 px-4 md:pl-0 md:pr-4">
+            <div
+              key={idx}
+              className="flex-shrink-0 w-full lg:w-2/3 px-4 md:pl-0 md:pr-4"
+            >
               <div className="relative rounded-xl shadow-lg h-[450px] mb-2 overflow-hidden">
                 <Link href={event.link}>
                   <a target="_blank">
@@ -88,17 +95,25 @@ const CommunityCard = ({ events, changePrevState, changeNextState, count }) => {
                     />
                   </a>
                 </Link>
-                
+
                 {/* Content Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <p className="text-sm font-medium mb-2 text-purple-300">
                       {event.type}
                     </p>
-                    <h3 className="text-xl font-bold mb-2 line-clamp-2">{event.title}</h3>
-                    <p className="text-gray-200 mb-4 text-sm line-clamp-2">{event.content}</p>
+                    <h3 className="text-xl font-bold mb-2 line-clamp-2">
+                      {event.title}
+                    </h3>
+                    <p className="text-gray-200 mb-4 text-sm line-clamp-2">
+                      {event.content}
+                    </p>
                     <div className="inline-block">
-                      <TextLink href={event.link} external className="text-white hover:text-purple-300">
+                      <TextLink
+                        href={event.link}
+                        external
+                        className="text-white hover:text-purple-300"
+                      >
                         {event.link_text}
                       </TextLink>
                     </div>
@@ -163,7 +178,6 @@ const Community = () => {
     }
   }
 
-
   return (
     <Container className="py-8 md:py-16">
       <BodyHead className="text-center mb-4">
@@ -172,14 +186,14 @@ const Community = () => {
       <Paragraph className="text-center mb-12">
         Discover the events, projects and energy behind our Litmus community
       </Paragraph>
-      
+
       <CommunityCard
         events={eventUtils}
         changePrevState={handlePrevState}
         changeNextState={handleNextState}
         count={curr}
       />
-      
+
       <DotNavigator
         handleChange={state => setCurr(state)}
         count={curr}
@@ -188,7 +202,10 @@ const Community = () => {
 
       {/* Join Our Community Button */}
       <div className="flex justify-center md:mt-12 mt-8">
-        <RegularButton href="https://kubernetes.slack.com/?redir=%2Farchives%2FCNXNB0ZTN" external>
+        <RegularButton
+          href="https://kubernetes.slack.com/?redir=%2Farchives%2FCNXNB0ZTN"
+          external
+        >
           <span className="flex items-center gap-2">
             Join our community
             <svg

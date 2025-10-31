@@ -13,7 +13,7 @@ const BlogDeskCard = ({ data, slug }) => {
     ttr,
     profileImage
   } = data
-  
+
   return (
     <div className="flex flex-col h-full group">
       <Link href={`blog/${slug}`}>
@@ -26,9 +26,9 @@ const BlogDeskCard = ({ data, slug }) => {
                 <img
                   src={blog_image}
                   alt={image_alt}
-                   height={192}
-                    width="auto"
-                    layout="responsive"
+                  height={192}
+                  width="auto"
+                  layout="responsive"
                   className="object-cover"
                 />
               ) : (
@@ -42,7 +42,7 @@ const BlogDeskCard = ({ data, slug }) => {
                   />
                 </div>
               )}
-              
+
               {/* Decorative elements */}
               <div className="absolute top-4 right-4 w-6 h-6 bg-white/30 rounded-full backdrop-blur-sm"></div>
               <div className="absolute bottom-4 left-4 w-4 h-4 bg-white/20 rounded-full backdrop-blur-sm"></div>
@@ -60,7 +60,7 @@ const BlogDeskCard = ({ data, slug }) => {
                 <div>
                   <p className="text-sm font-medium text-gray-900">{author}</p>
                   <p className="text-xs text-gray-500">
-                    {date && moment(date).format('MMM DD, YYYY')}
+                    {date && moment(date).format("MMM DD, YYYY")}
                   </p>
                 </div>
               </div>

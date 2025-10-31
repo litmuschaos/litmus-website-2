@@ -12,41 +12,39 @@ const Hero = () => {
         <Container className="flex flex-col items-center justify-center text-center py-8 md:pt-16">
           <div className="max-w-4xl mx-auto">
             <div className="content-container">
-          <HeroHead hero>
+              <HeroHead hero>
+                <span className="block">Open Source</span>
+                <span className="block">Chaos Engineering platform</span>
+              </HeroHead>
+              <Paragraph hint className="mt-6 text-center">
+                Litmus is a CNCF-hosted, open-source Chaos Engineering platform
+                that helps teams indentify infrastructure weaknesses through
+                safe, controlled chaos tests, simple for developers and SREs,
+                built on modern practices, and powered by the community.
+              </Paragraph>
 
-
-            <span className="block">Open Source</span>
-            <span className="block">Chaos Engineering platform</span>
-
-          </HeroHead>
-          <Paragraph hint className="mt-6 text-center">
-          Litmus is a CNCF-hosted, open-source Chaos Engineering platform that helps teams indentify infrastructure weaknesses through safe, controlled chaos tests, simple for developers and SREs, built on modern practices, and powered by the community.
-          </Paragraph>
-      
-          <div className="mt-8 flex gap-4 justify-center">
-            <RegularButton
-              href="https://github.com/litmuschaos/litmus"
-              external
-            >
-              <span className="flex items-center">
-             Try Litmus
-              </span>
-            </RegularButton>
-            <OutlinedButton
-              external
-              href="https://kubernetes.slack.com/?redir=%2Farchives%2FCNXNB0ZTN"
-            >
-              <span className="flex items-center">
-                <SlackSVG />
-                Join Slack
-              </span>
-            </OutlinedButton>
-          </div>
+              <div className="mt-8 flex gap-4 justify-center">
+                <RegularButton
+                  href="https://github.com/litmuschaos/litmus"
+                  external
+                >
+                  <span className="flex items-center">Try Litmus</span>
+                </RegularButton>
+                <OutlinedButton
+                  external
+                  href="https://kubernetes.slack.com/?redir=%2Farchives%2FCNXNB0ZTN"
+                >
+                  <span className="flex items-center">
+                    <SlackSVG />
+                    Join Slack
+                  </span>
+                </OutlinedButton>
+              </div>
             </div>
           </div>
         </Container>
       </div>
-      
+
       {/* Hero Image Container - will scroll under the sticky content */}
       <Container className="relative -mt-8">
         <div className="max-w-4xl mx-auto">
@@ -63,7 +61,6 @@ const Hero = () => {
           </div>
         </div>
       </Container>
-      
     </ContainerFluid>
   )
 }

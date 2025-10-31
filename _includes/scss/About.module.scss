@@ -30,10 +30,10 @@ div.partDiv {
 .getStartedLeftContainer {
   background-color: rgb(230, 230, 252);
   border-radius: 12px;
-  box-shadow: rgba(50, 87, 120, 0.09) 0px 0.796192px 0.796192px -0.4375px, 
-              rgba(50, 87, 120, 0.1) 0px 2.41451px 2.41451px -0.875px, 
-              rgba(50, 87, 120, 0.11) 0px 6.38265px 6.38265px -1.3125px, 
-              rgba(50, 87, 120, 0.16) 0px 20px 20px -1.75px;
+  box-shadow: rgba(50, 87, 120, 0.09) 0px 0.796192px 0.796192px -0.4375px,
+    rgba(50, 87, 120, 0.1) 0px 2.41451px 2.41451px -0.875px,
+    rgba(50, 87, 120, 0.11) 0px 6.38265px 6.38265px -1.3125px,
+    rgba(50, 87, 120, 0.16) 0px 20px 20px -1.75px;
   opacity: 1;
   height: 100%;
   padding: 24px;
@@ -47,14 +47,14 @@ div.partDiv {
 .getStartedRightContainer {
   background-color: white;
   border-radius: 12px;
-  box-shadow: rgba(50, 87, 120, 0.09) 0px 0.796192px 0.796192px -0.4375px, 
-              rgba(50, 87, 120, 0.1) 0px 2.41451px 2.41451px -0.875px, 
-              rgba(50, 87, 120, 0.11) 0px 6.38265px 6.38265px -1.3125px, 
-              rgba(50, 87, 120, 0.16) 0px 20px 20px -1.75px;
+  box-shadow: rgba(50, 87, 120, 0.09) 0px 0.796192px 0.796192px -0.4375px,
+    rgba(50, 87, 120, 0.1) 0px 2.41451px 2.41451px -0.875px,
+    rgba(50, 87, 120, 0.11) 0px 6.38265px 6.38265px -1.3125px,
+    rgba(50, 87, 120, 0.16) 0px 20px 20px -1.75px;
   padding: 0;
   width: 100%;
   border: 1px solid rgb(228, 223, 220);
-  
+
   @include mediumScreens {
     min-height: 300px;
   }
@@ -79,11 +79,11 @@ div.partDiv {
   color: rgb(90, 68, 185);
   font-size: 1.125rem; /* 18px - mobile base */
   font-weight: 600;
-  
+
   @include mediumScreens {
     font-size: 1.25rem; /* 20px - tablet */
   }
-  
+
   @include mediumScreensDesk {
     font-size: 1.5rem; /* 24px - desktop */
   }

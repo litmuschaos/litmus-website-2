@@ -58,9 +58,9 @@ const CommunityList = () => {
               >
                 {/* Logo Card */}
                 <div className="flex-shrink-0 w-full lg:w-96">
-                  <div 
+                  <div
                     className="relative rounded-2xl shadow-xl p-8 lg:p-12 flex items-center justify-center min-h-[280px] transition-transform duration-300 hover:scale-105"
-                    style={{ 
+                    style={{
                       background: item.bgColor
                     }}
                   >
@@ -69,11 +69,11 @@ const CommunityList = () => {
                       alt={item.subHeading}
                       className="object-contain filter drop-shadow-lg"
                       style={{
-                        maxWidth: '80%',
-                        maxHeight: '120px'
+                        maxWidth: "80%",
+                        maxHeight: "120px"
                       }}
                     />
-                    
+
                     {/* Decorative elements */}
                     <div className="absolute top-4 right-4 w-8 h-8 bg-white/20 rounded-full"></div>
                     <div className="absolute bottom-4 left-4 w-6 h-6 bg-white/10 rounded-full"></div>
@@ -93,7 +93,7 @@ const CommunityList = () => {
                       {item.paragraph2}
                     </Paragraph>
                   )}
-                  
+
                   <RegularButton
                     href={item.link}
                     external

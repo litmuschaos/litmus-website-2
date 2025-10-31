@@ -24,7 +24,6 @@ const PostContent = ({ links, body }) => {
         </Container>
       </div>
 
-
       {/* Call to Action Section */}
       <div className="bg-gradient-to-r from-purple-100 to-blue-200 py-16">
         <Container>
@@ -33,7 +32,8 @@ const PostContent = ({ links, body }) => {
               Ready to Start Your Chaos Engineering Journey?
             </h2>
             <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-              Join thousands of engineers who are building more resilient systems with LitmusChaos.
+              Join thousands of engineers who are building more resilient
+              systems with LitmusChaos.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <RegularButton
@@ -42,8 +42,20 @@ const PostContent = ({ links, body }) => {
               >
                 <span className="flex items-center">
                   Get Started
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="ml-2">
-                    <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    className="ml-2"
+                  >
+                    <path
+                      d="M6 12L10 8L6 4"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </span>
               </RegularButton>

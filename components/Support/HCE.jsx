@@ -49,14 +49,14 @@ const HCE = () => {
             />
           </div>
         </div>
-        <BodyHead className="mb-4">
-          Harness Chaos Engineering
-        </BodyHead>
+        <BodyHead className="mb-4">Harness Chaos Engineering</BodyHead>
         <Paragraph className="max-w-4xl mt-6 mx-auto text-lg leading-relaxed">
-          Improve application resiliency and reduce costly downtime with enterprise-grade chaos engineering. 
-          Harness enables organizations to securely scale chaos engineering across their entire infrastructure 
-          with expert support from the creators of Litmus, whether you are exploring advanced chaos testing 
-          or need a partner to build custom reliability solutions.
+          Improve application resiliency and reduce costly downtime with
+          enterprise-grade chaos engineering. Harness enables organizations to
+          securely scale chaos engineering across their entire infrastructure
+          with expert support from the creators of Litmus, whether you are
+          exploring advanced chaos testing or need a partner to build custom
+          reliability solutions.
         </Paragraph>
         <div className="mt-8 text-center">
           <RegularButton
@@ -73,7 +73,7 @@ const HCE = () => {
       <div className="my-8 md:my-16">
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
           {HCEData.map(feature => (
-            <div 
+            <div
               key={feature.title}
               className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
             >
@@ -105,7 +105,6 @@ const HCE = () => {
           ))}
         </div>
       </div>
-
     </Container>
   )
 }
