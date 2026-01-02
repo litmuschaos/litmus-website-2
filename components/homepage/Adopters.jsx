@@ -24,6 +24,7 @@ const Adopters = () => {
     "kubeflare",
     "orange",
     "openebs",
+    "intertech",
     "pravega",
     "kubesphere",
     "klanik",
