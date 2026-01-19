@@ -132,11 +132,7 @@ const BottomFooter = props => {
             <Paragraph dark className="font-medium text-[#808080]">
               Originally created by
             </Paragraph>
-            <Link href="https://www.chaosnative.com/">
-              <a rel="noopener noreferrer" target="_blank" className="accent">
                 <CnSVG />
-              </a>
-            </Link>
           </span>
         </Container>
       </ContainerFluid>
