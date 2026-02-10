@@ -18,7 +18,7 @@ const Hero = () => {
               </HeroHead>
               <Paragraph hint className="mt-6 text-center">
                 Litmus is a CNCF-hosted, open-source Chaos Engineering platform
-                that helps teams indentify infrastructure weaknesses through
+                that helps teams identify infrastructure weaknesses through
                 safe, controlled chaos tests, simple for developers and SREs,
                 built on modern practices, and powered by the community.
               </Paragraph>
