@@ -132,7 +132,7 @@ const BottomFooter = props => {
             <Paragraph dark className="font-medium text-[#808080]">
               Originally created by
             </Paragraph>
-                <CnSVG />
+            <CnSVG />
           </span>
         </Container>
       </ContainerFluid>

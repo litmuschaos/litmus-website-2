@@ -24,6 +24,7 @@ const Adopters = () => {
     "kubeflare",
     "orange",
     "openebs",
+    "canonical",
     "intertech",
     "pravega",
     "kubesphere",
@@ -52,7 +53,8 @@ const Adopters = () => {
     "nuBank",
     "outsystems",
     "wingie",
-    "emirates-nbd"
+    "emirates-nbd",
+    "motorola"
   ]
 
   // Distribute logos across 4 rows (11-12 logos per row)
