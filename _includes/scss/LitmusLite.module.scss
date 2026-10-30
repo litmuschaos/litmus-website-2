@@ -1,0 +1,817 @@
+@import "@styles/scss/layoutMixins";
+@import "@styles/scss/Variables.scss";
+
+// litmus-lite palette: Litmus purple and periwinkle, plus Pip's yellow.
+$ll-dark: #1c0732;
+$ll-dark-2: #2a0a44;
+$ll-yellow: #ffb547;
+$ll-yellow-soft: #fdeb8c;
+$ll-ink: #22223a;
+
+// ---------------------------------------------------------------- spotlight
+div.intro {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    160deg,
+    $ll-dark 0%,
+    $ll-dark-2 60%,
+    #3a1465 100%
+  );
+  color: #fff;
+}
+
+div.glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+      600px 360px at 85% 20%,
+      rgba(135, 142, 222, 0.35),
+      transparent 70%
+    ),
+    radial-gradient(
+      500px 300px at 10% 90%,
+      rgba(255, 181, 71, 0.12),
+      transparent 70%
+    );
+}
+
+div.introInner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  align-items: center;
+
+  @include largeScreens {
+    grid-template-columns: 1fr 1.05fr;
+    gap: 3.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+div.introText {
+  min-width: 0;
+  text-align: left;
+}
+
+span.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.3rem 0.9rem 0.3rem 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #e7e4f7;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+}
+
+span.pillNew {
+  padding: 0.1rem 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $ll-dark;
+  background: $ll-yellow;
+  border-radius: 999px;
+}
+
+.title {
+  margin-top: 1.1rem;
+  font-size: 2.1rem;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #fff;
+
+  @include mediumScreens {
+    font-size: 2.9rem;
+  }
+  @include largeScreens {
+    font-size: 3.4rem;
+  }
+}
+
+span.titleAccent {
+  background: linear-gradient(90deg, $ll-yellow-soft, $ll-yellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: $ll-yellow;
+}
+
+.lead {
+  margin-top: 1.25rem;
+  max-width: 34rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #cfcaec;
+
+  @include mediumScreens {
+    font-size: 1.1rem;
+  }
+}
+
+ul.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+
+  li {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: $ll-yellow-soft;
+    border: 1px solid rgba(253, 235, 140, 0.35);
+    border-radius: 999px;
+  }
+}
+
+div.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+a.ctaPrimary,
+a.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 12px;
+  transition: transform 150ms ease, background 150ms ease, box-shadow 150ms ease;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+a.ctaPrimary {
+  color: $ll-dark;
+  background: $ll-yellow;
+  box-shadow: 0 10px 30px rgba(255, 181, 71, 0.3);
+
+  &:hover {
+    background: #ffc468;
+  }
+}
+
+a.ctaSecondary {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.16);
+  }
+}
+
+a.more {
+  display: inline-block;
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #c9c5ee;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+// ------------------------------------------------------------- demo card
+div.introVisual {
+  position: relative;
+  min-width: 0;
+  padding-top: 4.5rem;
+}
+
+img.pip {
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+  z-index: 2;
+  width: 6rem;
+  height: auto;
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.35));
+  animation: pipFloat 5s ease-in-out infinite;
+
+  @include mediumScreens {
+    width: 6.75rem;
+    right: 1.5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes pipFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+div.demo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #140524;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+}
+
+div.demoHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 38px;
+  padding: 0 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+span.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+span.demoFile {
+  margin-left: 0.75rem;
+  font-size: 0.75rem;
+  color: #9e97c9;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+div.tabs {
+  display: flex;
+  overflow-x: auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+button.tab {
+  flex: 1 0 auto;
+  padding: 0.8rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #9e97c9;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 150ms ease;
+
+  &:hover {
+    color: #fff;
+  }
+  &:focus-visible {
+    outline: 2px solid $ll-yellow;
+    outline-offset: -2px;
+  }
+}
+
+button.tabActive {
+  color: #fff;
+  border-bottom-color: $ll-yellow;
+}
+
+div.panel {
+  min-height: 19rem;
+  padding: 1.25rem;
+}
+
+div.prompt {
+  padding: 1rem 1.1rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #fff;
+  background: rgba(135, 142, 222, 0.18);
+  border: 1px solid rgba(135, 142, 222, 0.4);
+  border-radius: 12px;
+}
+
+span.promptLabel {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $ll-yellow-soft;
+}
+
+ul.askList {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.85rem;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #d7d3f1;
+  }
+}
+
+svg.check {
+  flex: 0 0 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.1rem;
+}
+
+pre.code {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", monospace;
+  font-size: 0.78rem;
+  line-height: 1.65;
+  color: #e4e1f7;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+span.line {
+  display: block;
+}
+
+span.ps {
+  color: $ll-yellow;
+  user-select: none;
+}
+
+span.comment {
+  color: #8e87bb;
+}
+
+// ----------------------------------------------------------------- steps
+div.quickDark {
+  background: linear-gradient(180deg, #3a1465 0%, $ll-dark-2 100%);
+  color: #fff;
+}
+
+div.quickLight {
+  background: #f6fbff;
+}
+
+h3.quickHeadDark {
+  padding-top: 2.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+
+ol.steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 2rem;
+  padding: 0;
+  list-style: none;
+
+  @include mediumScreens {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+li.step {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(16, 49, 77, 0.08);
+  color: $text-color;
+}
+
+div.quickDark li.step {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: none;
+  color: #fff;
+}
+
+span.stepNum {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, $litmus-blue, #8a6cf2);
+  border-radius: 50%;
+}
+
+div.quickDark span.stepNum {
+  color: $ll-dark;
+  background: $ll-yellow;
+}
+
+h4.stepTitle {
+  margin-top: 0.9rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+p.stepDesc {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: $text-hint;
+}
+
+div.quickDark p.stepDesc {
+  color: #cfcaec;
+}
+
+pre.stepCode {
+  margin: 1rem 0 0;
+  padding: 0.75rem 1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+  color: #e4e1f7;
+  background: $ll-dark;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+blockquote.stepQuote {
+  margin: 1rem 0 0;
+  padding: 0.7rem 1rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: $text-color;
+  background: #eeeafb;
+  border-left: 3px solid $litmus-blue;
+  border-radius: 0 10px 10px 0;
+}
+
+div.quickDark blockquote.stepQuote {
+  color: #fff;
+  background: rgba(135, 142, 222, 0.2);
+  border-left-color: $ll-yellow;
+}
+
+a.stepLink {
+  margin-top: auto;
+  padding-top: 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: $litmus-blue;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+div.quickDark a.stepLink {
+  color: $ll-yellow-soft;
+}
+
+// ------------------------------------------------------------------- why
+div.whyGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+
+  @include mediumScreens {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include largeScreens {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+div.whyCard {
+  padding: 1.75rem;
+  background: #f6fbff;
+  border-radius: 16px;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(16, 49, 77, 0.1);
+  }
+}
+
+span.whyIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  color: $litmus-blue;
+  background: #eeeafb;
+  border-radius: 12px;
+
+  svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}
+
+h3.whyTitle {
+  margin-top: 1rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: $text-color;
+}
+
+p.whyDesc {
+  margin-top: 0.5rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: $text-hint;
+}
+
+// ------------------------------------------------------------------ docs
+div.docsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2.5rem;
+
+  @include smallScreens {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include largeScreens {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+a.docsCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid #e3e6ef;
+  border-radius: 12px;
+  transition: border-color 150ms ease, box-shadow 150ms ease,
+    transform 150ms ease;
+
+  &:hover {
+    border-color: $litmus-blue;
+    box-shadow: 0 10px 30px rgba(91, 68, 186, 0.15);
+    transform: translateY(-2px);
+  }
+}
+
+span.docsCardTitle {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $text-color;
+
+  span {
+    color: $litmus-blue;
+  }
+}
+
+span.docsCardDesc {
+  font-size: 0.85rem;
+  color: $text-hint;
+}
+
+// --------------------------------------------------------------- compare
+div.compareGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+
+  @include mediumScreens {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+div.compareCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(16, 49, 77, 0.08);
+}
+
+span.compareTag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $litmus-blue;
+}
+
+h3.compareName {
+  margin-top: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: $text-color;
+}
+
+ul.comparePoints {
+  display: grid;
+  gap: 0.7rem;
+  margin: 1.25rem 0 0;
+
+  li {
+    position: relative;
+    padding-left: 1.4rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: $text-hint;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, $litmus-blue, #8a6cf2);
+    }
+  }
+}
+
+// --------------------------------------------------------------- closing
+div.closing {
+  background: linear-gradient(160deg, $ll-dark 0%, $ll-dark-2 100%);
+  color: #fff;
+}
+
+div.closingInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  text-align: center;
+
+  div.ctas {
+    justify-content: center;
+  }
+}
+
+img.closingPip {
+  width: 8rem;
+  height: auto;
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.35));
+  animation: pipFloat 5s ease-in-out infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+h2.closingTitle {
+  max-width: 40rem;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  line-height: 1.2;
+  font-weight: 700;
+
+  @include mediumScreens {
+    font-size: 2.4rem;
+  }
+}
+
+p.closingText {
+  max-width: 36rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #cfcaec;
+}
+
+// ------------------------------------------------- developers and agents
+div.builtHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  @include mediumScreens {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
+img.builtPip {
+  flex: 0 0 auto;
+  width: 8rem;
+  height: auto;
+  animation: pipFloat 5s ease-in-out infinite;
+
+  @include mediumScreens {
+    width: 10rem;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+// Speech bubble with its tail pointing at Pip
+div.bubble {
+  position: relative;
+  max-width: 26rem;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: $text-color;
+  background: #fff;
+  border: 2px solid $ll-ink;
+  border-radius: 18px;
+  box-shadow: 4px 4px 0 $ll-yellow;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-left: 2px solid $ll-ink;
+    border-top: 2px solid $ll-ink;
+    top: -9px;
+    left: 50%;
+    margin-left: -7px;
+    transform: rotate(45deg);
+
+    @include mediumScreens {
+      top: 50%;
+      left: -9px;
+      margin: -7px 0 0;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+h2.builtTitle {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  color: $text-color;
+
+  span {
+    color: $litmus-blue;
+  }
+
+  @include mediumScreens {
+    font-size: 2.4rem;
+  }
+}
+
+p.family {
+  margin-top: 1.75rem;
+  font-size: 0.95rem;
+  text-align: center;
+  color: $text-hint;
+
+  a {
+    color: $litmus-blue;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+// Pip peeking over the corner of the quick start step that asks the agent.
+li.stepPip {
+  position: relative;
+}
+
+img.stepPipImg {
+  position: absolute;
+  top: -1.9rem;
+  right: 1rem;
+  width: 3.4rem;
+  height: auto;
+}

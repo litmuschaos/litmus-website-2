@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" role="img" aria-labelledby="pip-title">
+  <title id="pip-title">Pip, the litmus-lite mascot: a small bird in round glasses holding a litmus strip</title>
+  <g stroke="#22223a" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="130" cy="240" rx="58" ry="7" fill="#5a44ba" fill-opacity="0.12" stroke="none"/>
+
+    <path d="M70 46 Q72 62 88 64 Q72 66 70 82 Q68 66 52 64 Q68 62 70 46 Z" fill="#878ede" stroke-width="3"/>
+    <path d="M44 96 Q45 104 53 105 Q45 106 44 114 Q43 106 35 105 Q43 104 44 96 Z" fill="#878ede" stroke-width="2.5"/>
+
+    <ellipse cx="111" cy="221" rx="13" ry="7" fill="#ffb547" stroke-width="4"/>
+    <ellipse cx="149" cy="221" rx="13" ry="7" fill="#ffb547" stroke-width="4"/>
+
+    <path d="M106 88 C96 76 104 62 116 68 C116 52 134 48 140 62 C148 50 166 56 160 72 C170 74 170 88 158 90 Z" fill="#878ede" stroke-width="5"/>
+
+    <ellipse cx="130" cy="150" rx="72" ry="70" fill="#fdeb8c" stroke-width="5"/>
+    <ellipse cx="130" cy="178" rx="42" ry="32" fill="#fff6c8" stroke="none"/>
+
+    <path d="M64 148 C42 158 46 194 72 188" fill="#f7dc6a" stroke-width="5"/>
+
+    <rect x="198" y="72" width="20" height="62" rx="5" fill="#ffffff" stroke-width="4"/>
+    <path d="M198 104 H218 V129 A5 5 0 0 1 213 134 H203 A5 5 0 0 1 198 129 Z" fill="#5a44ba" stroke-width="4"/>
+    <path d="M194 150 C190 132 214 124 222 140 C226 150 212 160 200 156" fill="#f7dc6a" stroke-width="5"/>
+
+    <path d="M88 128 L64 120" fill="none" stroke-width="4.5"/>
+    <path d="M172 128 L196 120" fill="none" stroke-width="4.5"/>
+    <circle cx="106" cy="130" r="21" fill="#ffffff" fill-opacity="0.92" stroke-width="5"/>
+    <circle cx="154" cy="130" r="21" fill="#ffffff" fill-opacity="0.92" stroke-width="5"/>
+    <path d="M126 127 Q130 121 134 127" fill="none" stroke-width="4.5"/>
+
+    <circle cx="111" cy="127" r="7" fill="#22223a" stroke="none"/>
+    <circle cx="159" cy="127" r="7" fill="#22223a" stroke="none"/>
+    <circle cx="113.5" cy="124.5" r="2.4" fill="#ffffff" stroke="none"/>
+    <circle cx="161.5" cy="124.5" r="2.4" fill="#ffffff" stroke="none"/>
+
+    <path d="M92 100 Q106 95 120 100" fill="none" stroke-width="4"/>
+    <path d="M142 98 Q156 88 170 96" fill="none" stroke-width="4"/>
+
+    <ellipse cx="82" cy="164" rx="9" ry="6" fill="#f79a9a" fill-opacity="0.7" stroke="none"/>
+    <ellipse cx="178" cy="164" rx="9" ry="6" fill="#f79a9a" fill-opacity="0.7" stroke="none"/>
+
+    <path d="M119 158 Q130 149 141 158 Q130 171 119 158 Z" fill="#ffb547" stroke-width="4"/>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="litmus-lite">
+  <g stroke="#22223a" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 34 C32 24 39 12 49 17 C49 4 64 1 68 13 C75 3 90 9 85 22 C94 24 93 36 83 37 Z" fill="#878ede" stroke-width="5"/>
+    <circle cx="60" cy="68" r="46" fill="#fdeb8c" stroke-width="5"/>
+    <path d="M30 60 L16 56" fill="none" stroke-width="4.5"/>
+    <path d="M90 60 L104 56" fill="none" stroke-width="4.5"/>
+    <circle cx="44" cy="62" r="15" fill="#ffffff" stroke-width="4.5"/>
+    <circle cx="76" cy="62" r="15" fill="#ffffff" stroke-width="4.5"/>
+    <path d="M57 60 Q60 55 63 60" fill="none" stroke-width="4"/>
+    <circle cx="47.5" cy="60" r="5" fill="#22223a" stroke="none"/>
+    <circle cx="79.5" cy="60" r="5" fill="#22223a" stroke="none"/>
+    <circle cx="49.3" cy="58.2" r="1.7" fill="#ffffff" stroke="none"/>
+    <circle cx="81.3" cy="58.2" r="1.7" fill="#ffffff" stroke="none"/>
+    <path d="M67 38 Q77 31 88 37" fill="none" stroke-width="4"/>
+    <ellipse cx="30" cy="86" rx="7" ry="4.5" fill="#f79a9a" fill-opacity="0.7" stroke="none"/>
+    <ellipse cx="90" cy="86" rx="7" ry="4.5" fill="#f79a9a" fill-opacity="0.7" stroke="none"/>
+    <path d="M51 86 Q60 79 69 86 Q60 96 51 86 Z" fill="#ffb547" stroke-width="4"/>
+  </g>
+</svg>

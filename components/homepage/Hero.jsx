@@ -3,6 +3,7 @@ import { OutlinedButton, RegularButton } from "@includes/CTA"
 import styles from "@includes/scss/Hero.module.scss"
 import { HeroHead, Paragraph } from "@includes/Texts"
 import { Container, ContainerFluid } from "@layouts/Container"
+import Link from "next/link"
 
 const Hero = () => {
   return (
@@ -12,6 +13,18 @@ const Hero = () => {
         <Container className="flex flex-col items-center justify-center text-center py-8 md:pt-16">
           <div className="max-w-4xl mx-auto">
             <div className="content-container">
+              <Link href="/litmus-lite">
+                <a className="inline-flex items-center gap-2 mb-6 pl-1 pr-3 py-1 rounded-full border border-[#5b44ba]/25 bg-[#5b44ba]/5 text-xs md:text-sm text-primary hover:bg-[#5b44ba]/10 transition-colors">
+                  <img
+                    src="/litmus-lite/pip-head.svg"
+                    alt=""
+                    aria-hidden="true"
+                    className="w-6 h-6"
+                  />
+                  Introducing litmus-lite: chaos testing for developers
+                  <span aria-hidden="true">→</span>
+                </a>
+              </Link>
               <HeroHead hero>
                 <span className="block">Open Source</span>
                 <span className="block">Chaos Engineering platform</span>
