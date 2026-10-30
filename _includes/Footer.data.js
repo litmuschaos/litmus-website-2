@@ -23,6 +23,11 @@ export const FooterData = [
       },
       {
         svg: null,
+        text: "litmus-lite",
+        linkTo: "/litmus-lite"
+      },
+      {
+        svg: null,
         text: "Blog",
         linkTo: "/blog"
       },
@@ -40,6 +45,12 @@ export const FooterData = [
         svg: <DocsSVG />,
         text: "Docs",
         linkTo: "https://docs.litmuschaos.io/",
+        external: true
+      },
+      {
+        svg: <DocsSVG />,
+        text: "litmus-lite Docs",
+        linkTo: "https://litmuschaos.github.io/litmus-lite/",
         external: true
       },
       {

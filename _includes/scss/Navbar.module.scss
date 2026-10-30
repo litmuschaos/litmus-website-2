@@ -420,3 +420,17 @@ div.announcementBar {
   border-radius: 999px;
   white-space: nowrap;
 }
+
+// "New" marker next to a nav link
+span.navNew {
+  margin-left: 6px;
+  padding: 1px 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #1c0732;
+  background: #ffb547;
+  border-radius: 999px;
+  vertical-align: middle;
+}

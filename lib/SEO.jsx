@@ -32,17 +32,16 @@ const SeoKeywords = ({ blog }) => {
   )
 }
 
-const SEO = ({ page, blog, adopter }) => {
+const SEO = ({ page, blog, adopter, title, description }) => {
+  const defaultTitle = "LitmusChaos - Open Source Chaos Engineering Platform"
+  const defaultDescription =
+    "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast."
   return (
     <>
       <SeoKeywords blog={blog} />
       <NextSeo
-        title={
-          blog ? page : "LitmusChaos - Open Source Chaos Engineering Platform"
-        }
-        description={
-          "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast."
-        }
+        title={blog ? page : title || defaultTitle}
+        description={description || defaultDescription}
         canonical={
           blog
             ? `https://litmuschaos.io/blog/${blog.localSlug}`
@@ -56,12 +55,8 @@ const SEO = ({ page, blog, adopter }) => {
             : adopter
             ? `https://litmuschaos.io/adopters/${adopter.name}`
             : `https://litmuschaos.io/${page}`,
-          title: blog
-            ? page
-            : "LitmusChaos - Open Source Chaos Engineering Platform",
-          description: [
-            "LitmusChaos is an open source Chaos Engineering platform that enables teams to identify weaknesses & potential outages in infrastructures by inducing chaos tests in a controlled way. Based on modern Chaos Engineering practices, LitmusChaos is easy to use, scalable & fast."
-          ],
+          title: blog ? page : title || defaultTitle,
+          description: [description || defaultDescription],
           images: [
             {
               url: [

@@ -94,16 +94,17 @@ const TopNavbar = () => {
         {/* Announcement banner */}
         <div className={`${styles.bannerBackground} ${styles.announcementBar}`}>
           <span className={styles.badge}>New</span>
-          We’ve launched the Litmus MCP Server! Experience AI-powered chaos
-          engineering
-          <Link href="https://github.com/litmuschaos/litmus-mcp-server">
-            <a
-              className={styles.announcementLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Check it out
-            </a>
+          <img
+            src="/litmus-lite/pip-head.svg"
+            alt=""
+            aria-hidden="true"
+            width="20"
+            height="20"
+          />
+          Meet litmus-lite: chaos testing for developers. Ask for it in Cursor
+          or run it from a terminal.
+          <Link href="/litmus-lite">
+            <a className={styles.announcementLink}>Check it out</a>
           </Link>
         </div>
         <Container className={styles.navbarCont}>
@@ -128,6 +129,16 @@ const TopNavbar = () => {
             </div>
             <div className="items-center hidden md:flex">
               <ul className={styles.navLinks}>
+                <li>
+                  <Link href="/litmus-lite">
+                    <a
+                      className={`text-hint hover:text-primary transition-all text-xs lg:text-sm font-medium ${styles.navLink}`}
+                    >
+                      litmus-lite
+                      <span className={styles.navNew}>New</span>
+                    </a>
+                  </Link>
+                </li>
                 <li>
                   <Link href="/enterprise">
                     <a
@@ -310,6 +321,20 @@ const TopNavbar = () => {
                                 </Link>
                               </td>
                             </tr>
+                            <tr>
+                              <td>
+                                <Link href="https://litmuschaos.github.io/litmus-lite/">
+                                  <a
+                                    className="text-hint text-sm flex items-center hover:text-primary transition-all"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    <DocumentationSVG />
+                                    litmus-lite docs
+                                  </a>
+                                </Link>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                         <table className={styles.docsDropDown}>
@@ -476,6 +501,16 @@ const TopNavbar = () => {
             <Container className={styles.navbarMobileCont}>
               <div className={styles.linkMainCont}>
                 <ul className={styles.mobileNavbarUL}>
+                  <li onClick={() => openNavbar(false)}>
+                    <Link href="/litmus-lite">
+                      <a>
+                        <span>
+                          litmus-lite
+                          <MobileArrows />
+                        </span>
+                      </a>
+                    </Link>
+                  </li>
                   <li>
                     <Link href="/enterprise">
                       <a>
@@ -695,6 +730,19 @@ const TopNavbar = () => {
                                     rel="noopener noreferrer"
                                   >
                                     <ResourcesSVG /> Resources
+                                  </a>
+                                </Link>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <Link href="https://litmuschaos.github.io/litmus-lite/">
+                                  <a
+                                    className="w-full flex py-1 text-sm text-hint"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    <DocumentationSVG /> litmus-lite docs
                                   </a>
                                 </Link>
                               </td>

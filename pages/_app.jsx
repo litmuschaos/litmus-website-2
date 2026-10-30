@@ -9,7 +9,14 @@ import "../styles/globals.css"
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
-  const noPreFooterPages = ["/", "/#", "/enterprise", "/enterprise#", "/blog"]
+  const noPreFooterPages = [
+    "/",
+    "/#",
+    "/enterprise",
+    "/enterprise#",
+    "/blog",
+    "/litmus-lite"
+  ]
 
   useEffect(() => {
     AOS.init({

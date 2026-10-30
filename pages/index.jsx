@@ -3,6 +3,7 @@ import Adopters from "@components/homepage/Adopters"
 import Community from "@components/homepage/Community"
 import Features from "@components/homepage/Features"
 import Hero from "@components/homepage/Hero"
+import LitmusLite from "@components/homepage/LitmusLite"
 import Testimonials from "@components/homepage/Testimonials"
 import { PreFooter } from "@includes/BottomFooter"
 import SEO from "@lib/SEO"
@@ -13,6 +14,7 @@ const Home = () => {
     <>
       <SEO page={""} />
       <Hero />
+      <LitmusLite />
       {/* <UpcomingEvent /> */}
       <Adopters />
       <MCPServer />
