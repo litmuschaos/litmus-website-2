@@ -157,13 +157,18 @@ const Intro = ({ page }) => {
               GitHub
             </a>
           </div>
-          {!page && (
-            <Link href="/litmus-lite">
-              <a className={styles.more}>
-                Why litmus-lite, and how it works with your agent →
-              </a>
+          <div className={styles.moreLinks}>
+            <Link href={links.blog}>
+              <a className={styles.more}>Read the launch post →</a>
             </Link>
-          )}
+            {!page && (
+              <Link href="/litmus-lite">
+                <a className={styles.more}>
+                  Why litmus-lite, and how it works with your agent →
+                </a>
+              </Link>
+            )}
+          </div>
         </div>
         <div className={styles.introVisual}>
           <img

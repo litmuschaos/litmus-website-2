@@ -21,6 +21,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { RegularButton, TextLink } from "./CTA"
+import { LAUNCH_POST } from "@components/litmuslite/data"
 
 const TopNavbar = () => {
   const url = "https://api.github.com/repos/litmuschaos/litmus"
@@ -103,8 +104,8 @@ const TopNavbar = () => {
           />
           Meet litmus-lite: chaos testing for developers. Ask for it in Cursor
           or run it from a terminal.
-          <Link href="/litmus-lite">
-            <a className={styles.announcementLink}>Check it out</a>
+          <Link href={LAUNCH_POST}>
+            <a className={styles.announcementLink}>Read the launch post</a>
           </Link>
         </div>
         <Container className={styles.navbarCont}>
