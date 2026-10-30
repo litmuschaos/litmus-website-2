@@ -5,7 +5,14 @@ export const DOCS = "https://litmuschaos.github.io/litmus-lite/"
 export const REPO = "https://github.com/litmuschaos/litmus-lite"
 export const RELEASES = `${REPO}/releases`
 
+// The launch post is published on dev.to under the litmus-chaos organisation
+// and served by this site's blog at the same slug.
+export const LAUNCH_POST_SLUG =
+  "break-it-before-you-merge-it-introducing-litmus-lite-4bo2"
+export const LAUNCH_POST = `/blog/${LAUNCH_POST_SLUG}`
+
 export const links = {
+  blog: LAUNCH_POST,
   docs: DOCS,
   repo: REPO,
   releases: RELEASES,

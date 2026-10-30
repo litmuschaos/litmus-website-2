@@ -1,5 +1,6 @@
 import styles from "@includes/scss/LitmusLite.module.scss"
 import { Container, ContainerFluid } from "@layouts/Container"
+import Link from "next/link"
 import { links } from "./data"
 
 const ClosingCTA = () => (
@@ -45,6 +46,9 @@ const ClosingCTA = () => (
           Share feedback
         </a>
       </div>
+      <Link href={links.blog}>
+        <a className={styles.closingLink}>Read the launch post →</a>
+      </Link>
     </Container>
   </ContainerFluid>
 )
