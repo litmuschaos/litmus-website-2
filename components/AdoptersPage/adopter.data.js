@@ -7,7 +7,9 @@ const Adopters = [
     paragraph:
       "Intuit is the brand that disrupts, innovates, obsesses with its customers & remains uncompromised on its employees first policy with the mission of powering prosperity. Engineers who are building Intuit products for taxation, small business accounting, and personal financial management for customers are all over the world.",
     width: "250",
-    link: "intuit"
+    link: "intuit",
+    name: "Intuit",
+    hideLogo: true
   },
   {
     key: 2,

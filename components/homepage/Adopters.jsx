@@ -7,7 +7,6 @@ import styles from "@includes/scss/Adopters.module.scss"
 
 const Adopters = () => {
   const AdopterList = [
-    "intuit",
     "okteto",
     "netapp",
     "redhat",

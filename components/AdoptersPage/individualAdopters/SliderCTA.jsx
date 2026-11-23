@@ -7,7 +7,7 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick-theme.css"
 import "slick-carousel/slick/slick.css"
 
-const CtaCard = ({ bgcolor, adopter, width, text }) => (
+const CtaCard = ({ bgcolor, adopter, width, text, hideLogo, name }) => (
   <Link href={`/adopters/${adopter}`}>
     <a>
       <div className="w-full">
@@ -19,19 +19,27 @@ const CtaCard = ({ bgcolor, adopter, width, text }) => (
             src={`/adoptersPage/${adopter}/pattern-${adopter}.svg`}
             alt="pattern"
           />
-          <div className={`absolute top-4 right-6 ${width} h-16`}>
-            <Image
-              src={`/adoptersPage/${adopter}/logo.svg`}
-              layout="fill"
-              alt={`${adopter} logo`}
-            />
-          </div>
-          <div className="absolute top-4 right-4">
-            <img
-              src={`/adoptersPage/adopter-logo/${adopter}.png`}
-              alt={adopter}
-            />
-          </div>
+          {hideLogo ? (
+            <p className="absolute top-4 right-6 text-white text-2xl font-medium">
+              {name}
+            </p>
+          ) : (
+            <>
+              <div className={`absolute top-4 right-6 ${width} h-16`}>
+                <Image
+                  src={`/adoptersPage/${adopter}/logo.svg`}
+                  layout="fill"
+                  alt={`${adopter} logo`}
+                />
+              </div>
+              <div className="absolute top-4 right-4">
+                <img
+                  src={`/adoptersPage/adopter-logo/${adopter}.png`}
+                  alt={adopter}
+                />
+              </div>
+            </>
+          )}
           <div className="absolute w-3/4 bottom-4 left-4">
             <SubHeading dark>{text}</SubHeading>
           </div>
@@ -73,6 +81,8 @@ const SliderCTA = () => {
               width={item.ctaWidth}
               bgcolor={item.bgColor}
               text={item.subHeading}
+              hideLogo={item.hideLogo}
+              name={item.name}
             />
           )
         })}
