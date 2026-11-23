@@ -27,16 +27,24 @@ const AdoptersList = () => {
                           "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
                       }}
                     >
-                      <img
-                        style={{
-                          width: adopter.width ? `${adopter.width}px` : "auto",
-                          maxWidth: "80%",
-                          maxHeight: "120px"
-                        }}
-                        src={`/adoptersPage/${adopter.link}/logo.svg`}
-                        alt={`${adopter.link} logo`}
-                        className="object-contain filter drop-shadow-lg"
-                      />
+                      {adopter.hideLogo ? (
+                        <p className="text-white text-4xl lg:text-5xl font-medium tracking-tight">
+                          {adopter.name}
+                        </p>
+                      ) : (
+                        <img
+                          style={{
+                            width: adopter.width
+                              ? `${adopter.width}px`
+                              : "auto",
+                            maxWidth: "80%",
+                            maxHeight: "120px"
+                          }}
+                          src={`/adoptersPage/${adopter.link}/logo.svg`}
+                          alt={`${adopter.link} logo`}
+                          className="object-contain filter drop-shadow-lg"
+                        />
+                      )}
 
                       {/* Decorative elements */}
                       <div className="absolute top-4 right-4 w-8 h-8 bg-white/20 rounded-full"></div>

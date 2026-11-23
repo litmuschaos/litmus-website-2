@@ -218,6 +218,7 @@ const Data = [
   {
     key: "intuit",
     adopter: "Intuit",
+    hideLogo: true,
     subHeading:
       "Testing reliability of our next-gen platform on Kubernetes Keiko.",
     paragraph:

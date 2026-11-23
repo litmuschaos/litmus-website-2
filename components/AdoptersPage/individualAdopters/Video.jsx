@@ -39,12 +39,14 @@ const Video = ({ data }) => {
           >
             {data.other.modalUrl && (
               <>
-                <img
-                  className={styles.adopterLogo}
-                  src={`/adoptersPage/${data.key}/logo.svg`}
-                  alt={`${data.key} logo`}
-                  draggable={false}
-                />
+                {!data.hideLogo && (
+                  <img
+                    className={styles.adopterLogo}
+                    src={`/adoptersPage/${data.key}/logo.svg`}
+                    alt={`${data.key} logo`}
+                    draggable={false}
+                  />
+                )}
                 <img
                   src={`/adoptersPage/playButton.svg`}
                   alt="Play video"
